@@ -4,6 +4,7 @@ title: Avaliação dos transtornos neurocognitivos
 info: Do rastreio ao diagnóstico sindrômico — o que a testagem responde e o que ela não responde
 date: "2026-09-03"
 colorSchema: light
+download: true
 layout: capa
 kicker: Aula 01 · Psicologia
 subtitle: Do rastreio ao diagnóstico sindrômico — e do escore à pessoa que fez o teste.

@@ -54,7 +54,7 @@ jobs:
       - name: Conferir o dist/
         run: |
           test -f dist/index.html || { echo "dist/index.html não existe — build falhou?"; exit 1; }
-          ls dist/*/*.pdf >/dev/null || { echo "nenhum PDF em dist/<aula>/ — a exportação falhou?"; exit 1; }
+          ls dist/*/*.pdf >/dev/null || { echo "nenhum PDF em dist/<aula>/ — falta 'download: true' no headmatter, ou a impressão falhou?"; exit 1; }
 
       - name: Empacotar o dist/
         uses: actions/upload-pages-artifact@v5

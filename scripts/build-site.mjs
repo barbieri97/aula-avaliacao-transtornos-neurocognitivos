@@ -8,10 +8,10 @@
 // Um `slidev build` por aula, de propósito: o `--base` do CLI vale para a invocação inteira,
 // e cada aula precisa do seu (é o que faz os assets resolverem sob /<repo>/<slug>/).
 //
-// Cada aula sai também em PDF, no mesmo diretório do deck (dist/<slug>/<slug>.pdf), e a
-// página inicial linka os dois. Quem exporta é o Chromium do playwright-chromium — se ele
-// não estiver instalado, o build falha aqui e diz o que fazer. `SEM_PDF=1` pula a etapa
-// (útil para um build rápido de conferência).
+// O PDF de cada aula sai do próprio `slidev build`, porque o deck pede: `download: true` no
+// headmatter faz o Slidev imprimir `slidev-exported.pdf` dentro de dist/<slug>/ e mostrar o
+// botão de download na barra do deck. Quem imprime é o Chromium do playwright-chromium.
+// Aula que não deva ter PDF é só não trazer o campo.
 import { execFileSync } from 'node:child_process'
 import { cpSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { basename, join } from 'node:path'
@@ -94,8 +94,6 @@ run(join(root, 'scripts', 'lint.mjs'), [])
 rmSync(distDir, { recursive: true, force: true })
 mkdirSync(distDir, { recursive: true })
 
-const semPdf = process.env.SEM_PDF === '1'
-
 for (const deck of decks) {
   console.log(`\n── ${deck.slug} ──`)
   run(slidevBin, [
@@ -106,26 +104,6 @@ for (const deck of decks) {
     // o 404.html da raiz do site, então history quebraria o refresh dentro de /<slug>/.
     '--router-mode', 'hash',
   ])
-
-  if (semPdf) continue
-
-  // O `export` sobe um servidor próprio e imprime pelo Chromium; por isso ele roda depois do
-  // build e não reaproveita nada dele. Um slide por página, com os cliques já revelados.
-  console.log(`\n   PDF de ${deck.slug}…`)
-  try {
-    run(slidevBin, [
-      'export', deck.path,
-      '--format', 'pdf',
-      '--output', join(distDir, deck.slug, `${deck.slug}.pdf`),
-    ])
-  } catch (err) {
-    throw new Error(
-      `falhou ao exportar o PDF de ${deck.slug}.\n`
-      + 'A exportação precisa do Chromium do Playwright: `npm install -D playwright-chromium`.\n'
-      + 'Para buildar o site sem os PDFs, rode com SEM_PDF=1.\n'
-      + `(erro original: ${err.message})`,
-    )
-  }
 }
 
 // As fontes do design system também servem a página inicial — ela é HTML avulso, fora do
@@ -138,7 +116,7 @@ if (existsSync(fontesDir)) cpSync(fontesDir, join(distDir, 'fontes'), { recursiv
 
 const cards = decks.map((deck, i) => `
       <li class="card">
-        <a class="deck" href="./${deck.slug}/">
+        <a href="./${deck.slug}/">
           <span class="num">${String(i + 1).padStart(2, '0')}</span>
           <span class="body">
             <span class="title">${escapeHtml(deck.title)}</span>
@@ -147,7 +125,6 @@ const cards = decks.map((deck, i) => `
           </span>
           <span class="go" aria-hidden="true">→</span>
         </a>
-        ${semPdf ? '' : `<a class="pdf" href="./${deck.slug}/${deck.slug}.pdf">PDF</a>`}
       </li>`).join('')
 
 // Landing estática e self-contained, pintada com os tokens do design system (ver tokensCss()).
@@ -191,18 +168,15 @@ ${tokensCss()}
   .rule { width: 2.6rem; height: 3px; background: var(--ds-accent); margin: 2rem 0; }
   ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
   /* Um filete entre as aulas, como na lista do roteiro dentro do deck. */
-  .card { position: relative; border-top: var(--ds-border) solid var(--ds-rule); }
+  .card { border-top: var(--ds-border) solid var(--ds-rule); }
   .card:last-child { border-bottom: var(--ds-border) solid var(--ds-rule); }
-  /* a.deck, e não só a: o link do PDF também é um <a> dentro do cartão, e herdaria
-     o display:flex e o padding daqui — virando uma caixa alta no canto.
-     (Sem crase nesta linha: este CSS mora dentro de um template literal.) */
-  .card a.deck {
+  .card a {
     display: flex; align-items: baseline; gap: 1.1rem;
-    padding: 1.15rem 4.5rem 1.15rem .2rem; text-decoration: none; color: inherit;
+    padding: 1.15rem 1rem 1.15rem .2rem; text-decoration: none; color: inherit;
     border-left: 3px solid transparent;
     transition: background .15s ease, border-color .15s ease;
   }
-  .card a.deck:hover, .card a.deck:focus-visible {
+  .card a:hover, .card a:focus-visible {
     background: var(--ds-accent-wash); border-left-color: var(--ds-accent); outline: none;
   }
   .num {
@@ -214,16 +188,7 @@ ${tokensCss()}
   .info { color: var(--ds-muted); font-size: .95rem; }
   .date { color: var(--ds-muted); font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; }
   .go { color: var(--ds-muted); font-size: 1.2rem; }
-  .card a.deck:hover .go { color: var(--ds-accent); }
-  /* O PDF é um link à parte, por cima do link do deck. */
-  .pdf {
-    position: absolute; top: 50%; right: .2rem; transform: translateY(-50%);
-    line-height: 1.4;
-    padding: .25rem .5rem; border: var(--ds-border) solid var(--ds-rule-forte, var(--ds-rule));
-    color: var(--ds-muted); font-size: .72rem; font-weight: 700; letter-spacing: .1em;
-    text-decoration: none; text-transform: uppercase; background: var(--ds-surface);
-  }
-  .pdf:hover { border-color: var(--ds-accent); color: var(--ds-accent-forte, var(--ds-accent)); }
+  .card a:hover .go { color: var(--ds-accent); }
   footer { margin-top: 3rem; color: var(--ds-muted); font-size: .85rem; }
   footer a { color: inherit; }
 </style>

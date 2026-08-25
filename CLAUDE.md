@@ -60,6 +60,7 @@ um componente — a exceção honesta é o desenho que só existe naquele slide.
 | Imagens | `aulas/public/` — **não** na raiz do repo (veja "Por que `aulas/public/`" abaixo) |
 | Fontes | `aulas/styles/fontes/*.woff2`, servidas pelo site — nunca o campo `fonts:` (rede) |
 | Headmatter | além de `theme`/`title`, cada aula traz `info:` (ementa de uma linha) e `date:` (`YYYY-MM-DD`, entre aspas) — os dois alimentam a landing page |
+| PDF | `download: true` no headmatter: o build imprime o PDF e o deck ganha o botão de download |
 | Identidade do curso | `site.config.json` na raiz (`title`, `institution`, `description`, `intro`) — o único lugar com o nome da disciplina |
 
 O bloco de abertura de um deck é headmatter **e** frontmatter do primeiro slide ao mesmo
@@ -72,8 +73,7 @@ npm run dev                                  # abre a primeira aula de aulas/ co
 npm run dev -- 03                            # abre a aula cujo nome contém "03"
 npm run ref                                  # abre o catálogo de layouts/componentes
 npm run lint                                 # valida todos os decks
-npm run build                                # builda tudo em dist/ (lint antes, PDF depois)
-SEM_PDF=1 npm run build                      # o mesmo, sem exportar os PDFs
+npm run build                                # builda tudo em dist/ (lint antes; PDF junto)
 ```
 
 `npm run dev` serve **uma aula por vez**, na raiz (`/`). O conjunto das aulas mais a página
@@ -97,12 +97,15 @@ subpasta funciona com tema npm, mas não funcionaria com layouts locais colocado
 
 `scripts/build-site.mjs` roda um `slidev build` **por aula** (cada uma precisa do seu próprio
 `--base`, que é único por invocação do CLI), com `--router-mode hash` — o modo que o Slidev
-documenta para deploy em subdiretório como o GitHub Pages. Em seguida exporta o PDF de cada
-aula para `dist/<slug>/<slug>.pdf`, pelo Chromium do `playwright-chromium` (devDependency;
-`SEM_PDF=1` pula a etapa). Depois gera a landing `dist/index.html` lendo o headmatter de cada
-deck, com link para o deck e para o PDF; o CSS dela é pintado com os tokens de
+documenta para deploy em subdiretório como o GitHub Pages. Depois gera a landing
+`dist/index.html` lendo o headmatter de cada deck; o CSS dela é pintado com os tokens de
 `aulas/styles/tokens.css` e usa as mesmas fontes (copiadas de `aulas/styles/fontes/` para
 `dist/fontes/`), então a página inicial acompanha o visual das aulas.
+
+**O PDF não é passo do script.** Ele sai do próprio `slidev build`, porque a aula pede:
+`download: true` no headmatter faz o Slidev imprimir `dist/<slug>/slidev-exported.pdf` (pelo
+Chromium do `playwright-chromium`, devDependency) e mostrar o botão de download na barra do
+deck. Aula sem o campo builda mais rápido e sai sem PDF.
 
 A publicação é pelo **artefato do Actions**: o job `build` empacota o `dist/` com
 `upload-pages-artifact` e o job `deploy` o entrega ao Pages com `deploy-pages` (OIDC — daí
