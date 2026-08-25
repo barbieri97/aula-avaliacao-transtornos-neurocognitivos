@@ -11,17 +11,18 @@
    ========================================================================== */
 
 /* A cor "primary" que o Slidev usa nos próprios controles e no `text-primary`
-   do UnoCSS passa a ser o nosso accent — assim a barra de navegação, o cursor
-   do modo desenho e os links combinam com o deck. */
+   do UnoCSS passa a ser o marinho — a barra de navegação, o cursor do modo
+   desenho e os links combinam com o deck. */
 :root {
-  --slidev-theme-primary: var(--ds-accent);
+  --slidev-theme-primary: var(--ds-marinho);
   --slidev-code-background: var(--ds-surface);
   --slidev-code-foreground: var(--ds-ink);
   --slidev-code-radius: var(--ds-radius);
-  --slidev-code-font-size: 13px;
-  --slidev-code-line-height: 20px;
-  /* A tarja que sobra quando a janela não é 16:9. O padrão do Slidev é preto. */
-  --slidev-slide-container-background: var(--ds-rule);
+  --slidev-code-font-size: 15px;
+  --slidev-code-line-height: 24px;
+  /* A tarja que sobra quando a janela não é 16:9. O padrão do Slidev é preto —
+     aqui ela é o marinho, e o slide de papel fica como uma folha sobre a mesa. */
+  --slidev-slide-container-background: var(--ds-marinho-fundo);
 }
 
 /* O Slidev pinta o fundo do palco com o shortcut `bg-main` (branco / #121212).
@@ -43,49 +44,69 @@ body,
   font-size: var(--ds-text-base);
   line-height: var(--ds-leading-normal);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* --- títulos -------------------------------------------------------------- */
+/* --- títulos --------------------------------------------------------------
+   Serifa em todos. O contraste com o corpo em sans é o que dá a voz do deck:
+   o título é a fala do professor, o corpo é o que fica no caderno. */
+
+.slidev-layout :is(h1, h2, h3) {
+  font-family: var(--ds-font-serif);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
 
 .slidev-layout h1 {
+  position: relative;
   margin: 0 0 var(--ds-space-5);
+  padding-bottom: var(--ds-space-3);
   font-size: var(--ds-text-2xl);
-  font-weight: 700;
   line-height: var(--ds-leading-tight);
-  letter-spacing: -0.02em;
-  text-wrap: balance;
+}
+
+/* O fio curto de ouro sob o título de slide: a assinatura do deck. Ele não
+   atravessa a página — marca só a largura de uma palavra. */
+.slidev-layout h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2.6rem;
+  height: 3px;
+  background: var(--ds-ouro);
 }
 
 .slidev-layout h2 {
   margin: var(--ds-space-6) 0 var(--ds-space-3);
   font-size: var(--ds-text-xl);
-  font-weight: 650;
   line-height: var(--ds-leading-tight);
-  letter-spacing: -0.01em;
 }
 
 .slidev-layout h3 {
   margin: var(--ds-space-5) 0 var(--ds-space-2);
   font-size: var(--ds-text-lg);
-  font-weight: 650;
 }
 
-/* h4 é o subtítulo discreto de um bloco; h5/h6 quase não aparecem em aula. */
+/* h4 é o subtítulo discreto de um bloco; h5/h6 viram rótulo em caixa alta. */
 .slidev-layout h4 {
   margin: var(--ds-space-4) 0 var(--ds-space-2);
+  font-family: var(--ds-font-sans);
   font-size: var(--ds-text-base);
-  font-weight: 650;
+  font-weight: 600;
   color: var(--ds-muted);
 }
 
 .slidev-layout h5,
 .slidev-layout h6 {
   margin: var(--ds-space-4) 0 var(--ds-space-2);
-  font-size: var(--ds-text-sm);
-  font-weight: 600;
+  font-family: var(--ds-font-sans);
+  font-size: var(--ds-text-xs);
+  font-weight: 700;
   letter-spacing: var(--ds-tracking-kicker);
   text-transform: uppercase;
-  color: var(--ds-accent);
+  color: var(--ds-accent-forte);
   opacity: 1;
 }
 
@@ -96,16 +117,20 @@ body,
 
 /* --- texto corrido -------------------------------------------------------- */
 
-.slidev-layout p {
+/* `:not([class])` é o que faz `.ds-lead` (e o parágrafo de dentro de um
+   componente) conseguir mandar no próprio corpo: sem isso este seletor, mais
+   específico, venceria e devolveria o texto ao ritmo do markdown puro. */
+.slidev-layout p:not([class]) {
   margin: var(--ds-space-4) 0;
   line-height: var(--ds-leading-loose);
-  max-width: 62ch;
+  max-width: 58ch;
 }
 
+/* Negrito é ênfase editorial: muda a cor para o ouro escuro, não só o peso. */
 .slidev-layout strong,
 .slidev-layout b {
-  font-weight: 650;
-  color: var(--ds-accent);
+  font-weight: 600;
+  color: var(--ds-accent-forte);
 }
 
 .slidev-layout em {
@@ -113,13 +138,13 @@ body,
 }
 
 .slidev-layout a {
-  color: var(--ds-accent);
-  border-bottom: 1px dashed currentColor;
+  color: var(--ds-accent-forte);
+  border-bottom: 1px solid var(--ds-accent-wash);
   text-decoration: none;
 }
 
 .slidev-layout a:hover {
-  border-bottom-style: solid;
+  border-bottom-color: var(--ds-ouro);
 }
 
 .slidev-layout hr {
@@ -129,12 +154,22 @@ body,
   border-top: var(--ds-border) solid var(--ds-rule);
 }
 
-/* --- listas --------------------------------------------------------------- */
+/* --- listas ---------------------------------------------------------------
+   O marcador é um quadradinho de ouro alinhado com a primeira linha. Desenhado
+   com ::before, e não com ::marker, porque é o que sobrevive ao export de PDF. */
 
+/* `list-style: decimal` não é redundante: o reset do UnoCSS (que o Slidev
+   carrega antes daqui) zera o marcador de toda lista, e sem isto uma lista
+   numerada do markdown sai sem número nenhum. */
 .slidev-layout ul,
 .slidev-layout ol {
   margin: var(--ds-space-4) 0;
   padding-left: 1.3em;
+  max-width: 58ch;
+}
+
+.slidev-layout ol {
+  list-style: decimal;
 }
 
 .slidev-layout ul {
@@ -142,42 +177,41 @@ body,
   padding-left: 0;
 }
 
-/* Marcador desenhado na mão: um traço curto no accent, alinhado com a primeira
-   linha. `list-style: none` + padding é mais previsível que ::marker na hora de
-   exportar PDF. */
 .slidev-layout ul > li {
   position: relative;
-  margin: var(--ds-space-2) 0;
-  padding-left: 1.35em;
+  margin: var(--ds-space-3) 0;
+  padding-left: 1.5em;
   line-height: var(--ds-leading-loose);
 }
 
 .slidev-layout ul > li::before {
   content: "";
   position: absolute;
-  top: 0.72em;
+  top: 0.62em;
   left: 0.1em;
-  width: 0.7em;
-  height: 2px;
-  background: var(--ds-accent);
-  border-radius: 2px;
+  width: 0.42em;
+  height: 0.42em;
+  background: var(--ds-ouro);
 }
 
 .slidev-layout ol > li {
-  margin: var(--ds-space-2) 0;
+  margin: var(--ds-space-3) 0;
   padding-left: 0.3em;
   line-height: var(--ds-leading-loose);
 }
 
 .slidev-layout ol > li::marker {
-  color: var(--ds-accent);
-  font-weight: 650;
+  color: var(--ds-accent-forte);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
-/* Sublistas: menores, sem o traço, recuadas. */
+/* Sublistas: um traço em vez do quadrado, e um corpo menor. */
 .slidev-layout li ul > li::before {
-  background: var(--ds-muted);
-  width: 0.45em;
+  top: 0.78em;
+  width: 0.55em;
+  height: 2px;
+  background: var(--ds-rule-forte);
 }
 
 .slidev-layout li :is(ul, ol) {
@@ -190,15 +224,14 @@ body,
 
 .slidev-layout blockquote {
   margin: var(--ds-space-5) 0;
-  padding: var(--ds-space-2) 0 var(--ds-space-2) var(--ds-space-5);
+  padding: var(--ds-space-1) 0 var(--ds-space-1) var(--ds-space-5);
   border: 0;
-  border-left: var(--ds-border-thick) solid var(--ds-accent);
+  border-left: var(--ds-border-thick) solid var(--ds-ouro);
   border-radius: 0;
   background: transparent;
   color: var(--ds-ink);
   font-family: var(--ds-font-serif);
   font-size: var(--ds-text-lg);
-  font-style: italic;
   line-height: var(--ds-leading-normal);
 }
 
@@ -211,10 +244,9 @@ body,
 
 .slidev-layout code {
   font-family: var(--ds-font-mono);
-  font-size: 0.88em;
+  font-size: 0.86em;
 }
 
-/* Código inline (fora de um bloco) ganha um chip discreto. */
 .slidev-layout :not(pre) > code {
   padding: 0.15em 0.4em;
   border-radius: var(--ds-radius-sm);
@@ -228,7 +260,9 @@ body,
   border-radius: var(--ds-radius);
 }
 
-/* --- tabela --------------------------------------------------------------- */
+/* --- tabela ---------------------------------------------------------------
+   Sem grade: só o filete embaixo de cada linha e o cabeçalho em caixa alta.
+   Tabela de aula é para comparar duas colunas, não para caber num relatório. */
 
 .slidev-layout table {
   width: 100%;
@@ -239,10 +273,10 @@ body,
 
 .slidev-layout th {
   padding: var(--ds-space-2) var(--ds-space-3);
-  border-bottom: 2px solid var(--ds-rule);
-  color: var(--ds-muted);
+  border-bottom: 2px solid var(--ds-marinho);
+  color: var(--ds-ink);
   font-size: var(--ds-text-xs);
-  font-weight: 650;
+  font-weight: 700;
   letter-spacing: var(--ds-tracking-kicker);
   text-align: left;
   text-transform: uppercase;
@@ -267,7 +301,7 @@ body,
 
 .slidev-layout kbd {
   padding: 0.1em 0.4em;
-  border: var(--ds-border) solid var(--ds-rule);
+  border: var(--ds-border) solid var(--ds-rule-forte);
   border-bottom-width: 2px;
   border-radius: var(--ds-radius-sm);
   background: var(--ds-surface);
@@ -286,6 +320,39 @@ body,
    é porque ele grava width/height como atributo no próprio <svg>. */
 .slidev-layout .slidev-mermaid svg {
   max-width: 100% !important;
-  max-height: 58vh;
+  max-height: 54vh;
   height: auto !important;
+}
+
+/* --- slides invertidos ----------------------------------------------------
+   Capa, seção e fecho rodam sobre marinho. Em vez de cada um repintar texto,
+   fio e ouro, todos ganham a classe `ds-inverso` e herdam daqui. */
+
+.ds-inverso {
+  --ds-bg: var(--ds-marinho-fundo);
+  --ds-surface: rgba(255, 255, 255, 0.06);
+  --ds-ink: #f4f2ea;
+  --ds-muted: #b8b6d4;
+  --ds-rule: rgba(244, 242, 234, 0.22);
+  --ds-rule-forte: rgba(244, 242, 234, 0.38);
+  --ds-accent: var(--ds-ouro-luz);
+  --ds-accent-forte: var(--ds-ouro-luz);
+  --ds-ink-wash: rgba(244, 242, 234, 0.08);
+  --ds-accent-wash: rgba(217, 193, 118, 0.16);
+  background: var(--ds-marinho-fundo);
+  color: var(--ds-ink);
+}
+
+.ds-inverso :is(h1, h2, h3, strong, b) {
+  color: var(--ds-ink);
+}
+
+.ds-inverso h1::after {
+  background: var(--ds-ouro-luz);
+}
+
+/* A marca do v-mark (rough-notation) desenha em SVG por cima do texto; sobre o
+   marinho ela precisa clarear junto. */
+.ds-inverso ul > li::before {
+  background: var(--ds-ouro-luz);
 }

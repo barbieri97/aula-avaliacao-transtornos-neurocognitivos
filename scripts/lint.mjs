@@ -12,7 +12,7 @@ import { existsSync, readFileSync } from 'node:fs'
 import { readFile } from 'node:fs/promises'
 import { basename, join, relative } from 'node:path'
 import { parse } from '@slidev/parser'
-import { allDeckFiles, knownNames, layoutsDir, publicDir, root, vueNames } from './lib.mjs'
+import { allDeckFiles, knownNames, layoutsDir, publicDir, readHeadmatter, root, vueNames } from './lib.mjs'
 
 /**
  * Campos que o Slidev consome no frontmatter e NÃO repassa como prop para o layout.
@@ -90,6 +90,16 @@ async function lintDeck (file) {
 
   const [primeiro] = deck.slides
   const head = primeiro?.frontmatter ?? {}
+
+  // O parser do Slidev é tolerante com YAML torto; o do build não é. Ler o headmatter aqui
+  // do mesmo jeito que `scripts/build-site.mjs` lê faz o erro aparecer no lint, e não no
+  // meio do build. O caso clássico é um valor com `: ` no meio (`meta: 2h · leitura: X`),
+  // que precisa de aspas.
+  try {
+    readHeadmatter(file)
+  } catch (err) {
+    erro(`headmatter inválido: ${err.message.split('\n')[0]} — valor com \`: \` ou \`,\` no meio precisa de aspas`, 1)
+  }
 
   // --- headmatter: o que a landing do site precisa ------------------------------------
   if (!bancada) {

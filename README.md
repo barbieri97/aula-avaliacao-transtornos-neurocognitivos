@@ -1,16 +1,18 @@
-# Template de aulas em Slidev
+# Avaliação de transtornos neurocognitivos — aulas
 
-Um repositório para escrever aulas em [Slidev](https://sli.dev/) e publicá-las no GitHub
-Pages, **uma aula por arquivo** em [`aulas/`](aulas/), cada uma na sua própria URL.
+As aulas da disciplina, escritas em [Slidev](https://sli.dev/) e publicadas no GitHub Pages,
+**uma aula por arquivo** em [`aulas/`](aulas/), cada uma na sua própria URL — e cada uma
+também em PDF.
 
 ```
-https://<usuario>.github.io/<repo>/                                    ← índice
-https://<usuario>.github.io/<repo>/aula-01-uma-breve-historia-da-tipografia/
+https://<usuario>.github.io/<repo>/                                            ← índice
+https://<usuario>.github.io/<repo>/aula-01-avaliacao-dos-transtornos-neurocognitivos/
+https://<usuario>.github.io/<repo>/aula-01-.../aula-01-....pdf                 ← o PDF da aula
 ```
 
-É **agnóstico de tema**. De fábrica vem um design system próprio — tokens, seis layouts e oito
-componentes, tudo em `aulas/` — e nenhum tema npm (`theme: none`). Quando for escrever a sua
-disciplina, escolha:
+É **agnóstico de tema**. Aqui dentro vem um design system próprio — tokens, onze layouts e
+treze componentes, tudo em `aulas/` — e nenhum tema npm (`theme: none`). Quando for escrever
+outra disciplina, escolha:
 
 - **instalar um tema pronto** (`npm i slidev-theme-<nome>`) e escrever para ele; ou
 - **manter/gerar um design system** e ter layouts com o nome e a forma do seu conteúdo.
@@ -18,9 +20,9 @@ disciplina, escolha:
 O roteiro dos dois caminhos, com o que quebra o deploy em cada um, está em
 [`docs/temas.md`](docs/temas.md).
 
-As três aulas em `aulas/` são exemplos de assuntos aleatórios — tipografia, bicicleta e
-fermentação. Elas existem para o site ficar de pé e servir de vitrine; apague quando for
-escrever as suas.
+A aula em `aulas/` é a primeira da disciplina de avaliação de transtornos neurocognitivos, e
+serve também de vitrine do design system: ela usa todos os layouts e todos os componentes pelo
+menos uma vez.
 
 ## Uso diário
 
@@ -30,8 +32,12 @@ npm run dev                                   # abre a primeira aula com hot rel
 npm run dev -- 03                             # abre a aula cujo nome contém "03"
 npm run ref                                   # catálogo de layouts e componentes
 npm run lint                                  # valida os decks
-npm run build                                 # gera dist/ igual ao que vai pro ar
+npm run build                                 # gera dist/ igual ao que vai pro ar (com os PDFs)
+SEM_PDF=1 npm run build                       # o mesmo, pulando a exportação em PDF
 ```
+
+O `npm install` também baixa um Chromium (pacote `playwright-chromium`): é ele que imprime o
+PDF de cada aula durante o build.
 
 `npm run dev` serve **uma aula por vez**, na raiz. O conjunto das aulas mais a página inicial
 só existe depois do `npm run build` — é o build que dá a cada deck o seu `--base` e monta o
@@ -50,12 +56,15 @@ Resumo das convenções em [`CLAUDE.md`](CLAUDE.md).
 
 ```
 aulas/
-├── aula-01-*.md … aula-03-*.md   as três aulas de exemplo
+├── aula-01-*.md                  as aulas da disciplina
 ├── _design-system.md             o catálogo (o `_` mantém fora do site)
-├── styles/                       tokens.css · base.css · utilities.css
-├── layouts/                      capa · secao · destaque · roteiro · figura · fecho
-├── components/                   Nota · Grade · Cartao · Termo · Citacao · Pessoa · LinhaDoTempo · Fonte
+├── styles/                       tokens.css · base.css · utilities.css · fontes.css + fontes/
+├── layouts/                      default · capa · secao · roteiro · destaque · pergunta
+│                                 caso · comparacao · esquema · figura · fecho
+├── components/                   Nota · Termo · Citacao · Grade · Cartao · Dado · Criterios
+│                                 LinhaDoTempo · Fluxo · Continuum · Perfil · Legenda · Fonte
 ├── lib/asset.ts                  resolve caminho de imagem contra a base do site
+├── lib/Moldura.vue               a lombada dos slides (usada pelos layouts)
 └── public/                       imagens (`/foto.svg` no markdown)
 docs/                             design-system.md · temas.md
 scripts/                          dev.mjs · lint.mjs · build-site.mjs · lib.mjs
@@ -107,7 +116,7 @@ do repositório no CI, e a identidade do curso mora em [`site.config.json`](site
 2. Escolha o visual: tema npm ou design system próprio, seguindo
    [`docs/temas.md`](docs/temas.md). Para ficar com o design system que já vem, o único
    arquivo a mexer é `aulas/styles/tokens.css`.
-3. Apague as aulas de exemplo em `aulas/` e escreva a primeira. **O build falha de propósito
+3. Apague as aulas em `aulas/` e escreva a primeira. **O build falha de propósito
    com `aulas/` vazio** — não deixe o repo sem nenhuma aula esperando o CI ficar verde.
 4. **Settings → Pages → Source: `GitHub Actions`.** Configuração de repositório não vem do
    template — este passo é sempre manual, e precisa vir antes do primeiro push.
@@ -141,9 +150,12 @@ nome do repositório não aparece em lugar nenhum do código.
 2. roda `scripts/lint.mjs` em todos — erro aqui aborta o build;
 3. roda **um `slidev build` por aula**, cada uma com o seu `--base` e `--router-mode hash`
    (necessário porque o Pages serve tudo sob `/<repo>/` e só tem um `404.html`, na raiz);
-4. gera a landing `dist/index.html` listando as aulas, com os textos de `site.config.json` e o
-   CSS pintado com os tokens de `aulas/styles/tokens.css` — assim a página inicial acompanha o
-   visual dos decks.
+4. exporta **o PDF de cada aula** para dentro do diretório do próprio deck
+   (`dist/<slug>/<slug>.pdf`), pelo Chromium do `playwright-chromium` — `SEM_PDF=1` pula esta
+   etapa;
+5. gera a landing `dist/index.html` listando as aulas (com link para o deck e para o PDF), com
+   os textos de `site.config.json`, o CSS pintado com os tokens de `aulas/styles/tokens.css` e
+   as mesmas fontes dos slides — assim a página inicial acompanha o visual dos decks.
 
 O `--base` vem da variável `SITE_BASE` (`/` local, `/<repo>/` no CI).
 

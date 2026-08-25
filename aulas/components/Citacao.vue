@@ -1,8 +1,10 @@
 <!--
   <Citacao> — a palavra de outra pessoa, com crédito.
 
-  <Citacao autor="Elizabeth Eisenstein" fonte="A revolução da imprensa, 1979">
-  A prensa não criou a leitura. Ela criou o leitor que compara.
+  <Citacao autor="Petersen" fonte="J Intern Med, 2004">
+
+  O comprometimento cognitivo leve é um estado, não um destino.
+
   </Citacao>
 
   Para uma frase de efeito ocupando o slide inteiro, o layout `destaque` serve
@@ -33,10 +35,9 @@ defineProps<{
 blockquote {
   margin: 0;
   padding: 0 0 0 var(--ds-space-5);
-  border-left: var(--ds-border-thick) solid var(--ds-accent);
+  border-left: var(--ds-border-thick) solid var(--ds-ouro);
   font-family: var(--ds-font-serif);
   font-size: var(--ds-text-lg);
-  font-style: italic;
   line-height: var(--ds-leading-normal);
 }
 
@@ -52,11 +53,13 @@ figcaption {
   flex-wrap: wrap;
   margin-top: var(--ds-space-3);
   padding-left: calc(var(--ds-space-5) + var(--ds-border-thick));
-  font-size: var(--ds-text-sm);
+  font-size: var(--ds-text-xs);
 }
 
 .autor {
-  font-weight: 650;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .fonte {

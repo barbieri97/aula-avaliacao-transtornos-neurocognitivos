@@ -1,10 +1,10 @@
 <!--
-  <LinhaDoTempo> — sequência com marcos. Serve para história e também para
-  processo ("o que acontece em cada etapa").
+  <LinhaDoTempo> — sequência com marcos. Serve para história do conceito e
+  também para processo ("o que acontece em cada etapa").
 
   <LinhaDoTempo :itens="[
-    { quando: '1450', o_que: 'Gutenberg', desc: 'tipos móveis na Europa' },
-    { quando: '1501', o_que: 'Itálico', desc: 'Aldo Manúcio imprime em bolso' },
+    { quando: '1907', o_que: 'Alzheimer', desc: 'o caso de Auguste D.' },
+    { quando: '2013', o_que: 'DSM-5', desc: 'demência vira transtorno neurocognitivo' },
   ]" />
 
   `desc` é opcional. `o_que` e `desc` aceitam HTML.
@@ -18,7 +18,7 @@ defineProps<{
 <template>
   <ol class="ds-linha">
     <li v-for="(item, i) in itens" :key="i">
-      <span class="quando">{{ item.quando }}</span>
+      <span class="quando ds-num">{{ item.quando }}</span>
       <span class="texto">
         <span class="o-que" v-html="item.o_que" />
         <span v-if="item.desc" class="desc" v-html="item.desc" />
@@ -28,16 +28,17 @@ defineProps<{
 </template>
 
 <style scoped>
-/* O fio vertical é a borda esquerda da lista; cada bolinha é um ::before
-   posicionado em cima dela. Sem pseudo-elemento no <li> não há como manter o
+/* O fio vertical é a borda esquerda da lista; cada marca é um ::before
+   posicionado em cima dele. Sem pseudo-elemento no <li> não há como manter o
    alinhamento quando um item tem duas linhas de texto. */
 .ds-linha {
-  margin: var(--ds-space-5) 0;
-  padding: 0 0 0 var(--ds-space-5);
-  border-left: 2px solid var(--ds-rule);
-  list-style: none;
   display: grid;
   gap: var(--ds-space-5);
+  margin: var(--ds-space-5) 0;
+  padding: 0 0 0 var(--ds-space-5);
+  max-width: none;
+  border-left: 1px solid var(--ds-rule-forte);
+  list-style: none;
 }
 
 .ds-linha li {
@@ -49,32 +50,31 @@ defineProps<{
   padding: 0;
 }
 
+/* Um quadrado, e não um círculo: é o mesmo marcador das listas do deck. */
 .ds-linha li::before {
   content: "";
   position: absolute;
-  top: 0.45em;
-  left: calc(-1 * var(--ds-space-5) - 7px);
-  width: 12px;
-  height: 12px;
+  top: 0.5em;
+  left: calc(-1 * var(--ds-space-5) - 5px);
+  width: 9px;
+  height: 9px;
   border: 2px solid var(--ds-bg);
-  border-radius: 50%;
-  background: var(--ds-accent);
+  background: var(--ds-ouro);
 }
 
-/* Largura fixa, não `min-width`: com min-width um rótulo comprido ("0–10min de forno")
-   empurra só a sua linha para a direita e a coluna dos títulos sai torta. */
+/* Largura fixa, não `min-width`: com min-width um rótulo comprido empurra só a
+   sua linha para a direita e a coluna dos títulos sai torta. */
 .quando {
-  flex: 0 0 6.5rem;
-  color: var(--ds-accent);
+  flex: 0 0 5rem;
+  color: var(--ds-accent-forte);
   font-size: var(--ds-text-sm);
   font-weight: 700;
-  font-variant-numeric: tabular-nums;
 }
 
 .texto {
   display: flex;
   flex-direction: column;
-  gap: var(--ds-space-1);
+  gap: 0.1rem;
 }
 
 .o-que {

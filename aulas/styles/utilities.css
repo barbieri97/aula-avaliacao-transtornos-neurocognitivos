@@ -9,10 +9,11 @@
    ajustes pontuais; use estas para o que tem significado editorial.
    ========================================================================== */
 
-/* Rótulo acima de um título: "Aula 02", "Parte 1", o nome do módulo. */
+/* Rótulo acima de um título: "Aula 01", "Parte 2", o nome do módulo. */
 .ds-kicker {
-  margin: 0 0 var(--ds-space-2);
-  color: var(--ds-accent);
+  margin: 0 0 var(--ds-space-3);
+  color: var(--ds-accent-forte);
+  font-family: var(--ds-font-sans);
   font-size: var(--ds-text-xs);
   font-weight: 700;
   letter-spacing: var(--ds-tracking-kicker);
@@ -21,7 +22,7 @@
 
 /* Parágrafo de abertura — maior e mais claro que o corpo. */
 .ds-lead {
-  max-width: 46ch;
+  max-width: 44ch;
   color: var(--ds-muted);
   font-size: var(--ds-text-lg);
   line-height: var(--ds-leading-normal);
@@ -34,26 +35,42 @@
 /* Destaque inline. Serve principalmente para os campos de frontmatter que
    aceitam HTML: `title: A pergunta <span class="ds-em">certa</span>`. */
 .ds-em {
-  color: var(--ds-accent);
-  font-weight: 650;
+  color: var(--ds-accent-forte);
+  font-weight: 600;
 }
 
 .ds-em-2 {
-  color: var(--ds-accent-2);
-  font-weight: 650;
+  color: var(--ds-ink);
+  font-weight: 600;
+}
+
+/* O grifo: uma faixa de ouro atrás da palavra, como marca-texto passado à mão.
+   É o irmão estático do `v-mark` — use onde não cabe diretiva do Vue, isto é,
+   dentro de campo de frontmatter (que é renderizado com v-html). */
+.ds-grifo {
+  background-image: linear-gradient(transparent 52%, var(--ds-accent-wash) 52%, var(--ds-accent-wash) 92%, transparent 92%);
+  padding: 0 0.12em;
+  font-weight: 600;
 }
 
 /* Texto pequeno de rodapé: fonte, crédito, observação. */
 .ds-small {
   color: var(--ds-muted);
-  font-size: var(--ds-text-sm);
+  font-size: var(--ds-text-xs);
+  line-height: var(--ds-leading-normal);
+}
+
+/* Número que precisa alinhar em coluna (escore, idade, percentil). */
+.ds-num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
 }
 
 /* Colunas. `--ds-cols` deixa mudar a quantidade sem uma classe por número:
-   <div class="ds-grid" style="--ds-cols: 4"> */
+   <div class="ds-grid" style="--ds-cols: 3"> */
 .ds-grid {
   display: grid;
-  gap: var(--ds-space-4);
+  gap: var(--ds-space-4) var(--ds-space-6);
   grid-template-columns: repeat(var(--ds-cols, 2), minmax(0, 1fr));
   align-items: start;
 }
@@ -65,11 +82,36 @@
   gap: var(--ds-space-4);
 }
 
-/* Uma régua fina no accent — separador com mais intenção que o <hr>. */
+/* Uma régua curta de ouro — separador com mais intenção que o <hr>. */
 .ds-rule {
-  width: 3.5rem;
+  width: 2.6rem;
   height: 3px;
   margin: var(--ds-space-4) 0;
-  border-radius: 3px;
-  background: var(--ds-accent);
+  background: var(--ds-ouro);
+}
+
+/* --- as cores do v-mark ---------------------------------------------------
+   O `v-mark` desenha a marca com o rough-notation, num <svg> que não fica
+   dentro do slide — ele é anexado ao <body>. Por isso a cor não pode vir de
+   `<style scoped>` nem herdar do texto marcado: o jeito de pintá-la sem
+   escrever hex no meio da aula é passar uma classe.
+
+     <span v-mark="{ at: 2, type: 'underline', class: 'ds-marca-ouro' }">assim</span>
+
+   O rough-notation usa `currentColor` quando nenhuma cor é dada — então basta
+   a classe definir `color`. */
+.rough-annotation.ds-marca-ouro {
+  color: var(--ds-ouro);
+}
+
+.rough-annotation.ds-marca-marinho {
+  color: var(--ds-marinho);
+}
+
+.rough-annotation.ds-marca-erro {
+  color: var(--ds-danger);
+}
+
+.rough-annotation.ds-marca-ok {
+  color: var(--ds-ok);
 }

@@ -1,0 +1,47 @@
+/* ============================================================================
+   FONTES — servidas pelo próprio site, não pelo Google.
+
+   Por que não usar o campo `fonts:` do headmatter (que puxa do Google Fonts):
+   o deck é exibido em sala, às vezes sem rede, e é exportado em PDF por um
+   navegador headless no CI. Fonte que depende de rede vira fallback do sistema
+   na hora errada — e o slide inteiro se desalinha.
+
+   Os arquivos são os subsets `latin` (cobrem todo o português) das famílias
+   Newsreader e Source Sans 3, ambas sob SIL Open Font License 1.1. São fontes
+   variáveis: um arquivo serve todos os pesos da faixa declarada.
+
+   O caminho é RELATIVO de propósito (`./fontes/…`): assim o Vite reescreve a
+   URL no build e o site continua achando a fonte publicado em subdiretório.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: block;
+  src: url("./fontes/newsreader-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: block;
+  src: url("./fontes/newsreader-latin-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: block;
+  src: url("./fontes/source-sans-3-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: block;
+  src: url("./fontes/source-sans-3-latin-italic.woff2") format("woff2");
+}
