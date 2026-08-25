@@ -7,8 +7,10 @@ também em PDF.
 ```
 https://<usuario>.github.io/<repo>/                                            ← índice
 https://<usuario>.github.io/<repo>/aula-01-avaliacao-dos-transtornos-neurocognitivos/
-https://<usuario>.github.io/<repo>/aula-01-.../aula-01-....pdf                 ← o PDF da aula
 ```
+
+O PDF de cada aula é gerado no build e baixado pelo **botão de download na barra do próprio
+deck** — quem manda nisso é o campo `download: true` no headmatter da aula.
 
 É **agnóstico de tema**. Aqui dentro vem um design system próprio — tokens, onze layouts e
 treze componentes, tudo em `aulas/` — e nenhum tema npm (`theme: none`). Quando for escrever
@@ -33,11 +35,11 @@ npm run dev -- 03                             # abre a aula cujo nome contém "0
 npm run ref                                   # catálogo de layouts e componentes
 npm run lint                                  # valida os decks
 npm run build                                 # gera dist/ igual ao que vai pro ar (com os PDFs)
-SEM_PDF=1 npm run build                       # o mesmo, pulando a exportação em PDF
 ```
 
 O `npm install` também baixa um Chromium (pacote `playwright-chromium`): é ele que imprime o
-PDF de cada aula durante o build.
+PDF das aulas que trazem `download: true` no headmatter. Aula sem esse campo builda mais
+rápido e sai sem PDF.
 
 `npm run dev` serve **uma aula por vez**, na raiz. O conjunto das aulas mais a página inicial
 só existe depois do `npm run build` — é o build que dá a cada deck o seu `--base` e monta o
@@ -150,12 +152,13 @@ nome do repositório não aparece em lugar nenhum do código.
 2. roda `scripts/lint.mjs` em todos — erro aqui aborta o build;
 3. roda **um `slidev build` por aula**, cada uma com o seu `--base` e `--router-mode hash`
    (necessário porque o Pages serve tudo sob `/<repo>/` e só tem um `404.html`, na raiz);
-4. exporta **o PDF de cada aula** para dentro do diretório do próprio deck
-   (`dist/<slug>/<slug>.pdf`), pelo Chromium do `playwright-chromium` — `SEM_PDF=1` pula esta
-   etapa;
-5. gera a landing `dist/index.html` listando as aulas (com link para o deck e para o PDF), com
-   os textos de `site.config.json`, o CSS pintado com os tokens de `aulas/styles/tokens.css` e
-   as mesmas fontes dos slides — assim a página inicial acompanha o visual dos decks.
+4. gera a landing `dist/index.html` listando as aulas, com os textos de `site.config.json`, o
+   CSS pintado com os tokens de `aulas/styles/tokens.css` e as mesmas fontes dos slides —
+   assim a página inicial acompanha o visual dos decks.
+
+O PDF não é passo do script: ele sai do próprio `slidev build`, porque a aula pede
+(`download: true` no headmatter). O Slidev imprime `slidev-exported.pdf` dentro de
+`dist/<slug>/` e põe o botão de download na barra do deck.
 
 O `--base` vem da variável `SITE_BASE` (`/` local, `/<repo>/` no CI).
 

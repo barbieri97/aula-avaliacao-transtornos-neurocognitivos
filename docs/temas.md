@@ -133,13 +133,14 @@ npm run dev -- 02        # uma aula por vez, com hot reload — é assim que se 
 npm run ref              # o catálogo do design system
 npm run lint             # o que quebraria o build
 npm run build            # gera dist/ igual ao que vai pro ar, com o PDF de cada aula
-SEM_PDF=1 npm run build  # o mesmo, sem a exportação em PDF (bem mais rápido)
 ```
 
-O PDF é impresso pelo Chromium do `playwright-chromium`, que entra como devDependency e é
-baixado no `npm install`. Um visual que dependa de rede em tempo de exibição (fonte de CDN,
-imagem remota) sai errado justamente aí — o navegador headless imprime antes de o recurso
-chegar.
+O PDF sai do próprio `slidev build`, porque a aula pede: `download: true` no headmatter faz o
+Slidev imprimir `slidev-exported.pdf` dentro de `dist/<slug>/` e mostrar o botão de download
+na barra do deck. Quem imprime é o Chromium do `playwright-chromium`, que entra como
+devDependency e é baixado no `npm install` — e um visual que dependa de rede em tempo de
+exibição (fonte de CDN, imagem remota) sai errado justamente aí: o navegador headless imprime
+antes de o recurso chegar.
 
 O `npm run dev` serve **um deck**, na raiz (`/`) e com todas as rotas do Slidev — é o modo de
 trabalho normal. O conjunto de aulas mais a página inicial só existe depois do `npm run build`
