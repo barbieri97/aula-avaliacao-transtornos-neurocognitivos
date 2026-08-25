@@ -10,6 +10,7 @@
    Arquivo novo em styles/ só passa a valer depois de entrar aqui.
    ========================================================================== */
 
+@import "./fontes.css"; /* as duas famílias, servidas localmente */
 @import "./tokens.css"; /* o vocabulário: cor, tipo, espaço */
 @import "./base.css"; /* como o markdown puro se parece */
 @import "./utilities.css"; /* as classes `ds-*` que os slides usam */

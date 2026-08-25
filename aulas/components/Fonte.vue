@@ -1,7 +1,8 @@
 <!--
-  <Fonte> — o crédito no pé do slide, ancorado embaixo à esquerda.
+  <Fonte> — o crédito no pé do slide, ancorado embaixo à esquerda, alinhado
+  com a lombada.
 
-  <Fonte>IBGE, <em>Censo 2022</em> · gráfico refeito pela autora</Fonte>
+  <Fonte>APA, <em>DSM-5-TR</em>, 2022 · tradução da autora</Fonte>
 
   Fica em `position: absolute`, então não empurra o conteúdo: pode aparecer em
   qualquer posição do markdown do slide.
@@ -15,9 +16,9 @@
 <style scoped>
 .ds-fonte {
   position: absolute;
-  left: 3.2rem;
+  left: 4.4rem;
   right: 3.2rem;
-  bottom: 1.4rem;
+  bottom: 1.1rem;
   margin: 0;
   max-width: none;
   color: var(--ds-muted);

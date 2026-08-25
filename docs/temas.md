@@ -63,8 +63,11 @@ Se o tema declarado não estiver instalado, o lint erra na cara: `theme: x não 
 o roteiro é:
 
 1. **`theme: none`** no headmatter de todas as aulas.
-2. **Tokens primeiro**, em `aulas/styles/tokens.css`: cor, escala de tipo, espaço, forma. Tema
-   claro em `:root`, escuro em `.dark`. Nenhuma cor pode existir só no bloco escuro.
+2. **Tokens primeiro**, em `aulas/styles/tokens.css`: cor, escala de tipo, espaço, forma. O
+   tema claro mora em `:root`; se o deck também for ter modo escuro, ele mora em `.dark` (a
+   classe que o Slidev põe no `<html>`) — e aí nenhuma cor pode existir **só** no bloco
+   escuro. O design system deste repositório é claro só, de propósito: as aulas trazem
+   `colorSchema: light` e projetam em sala com luz acesa.
 3. **`aulas/styles/base.css`**: como o markdown puro se parece — títulos, listas, tabela,
    citação, código. Só seletor de elemento dentro de `.slidev-layout`, tudo em cima de
    `var(--ds-*)`.
@@ -74,7 +77,11 @@ o roteiro é:
 5. **Layouts** em `aulas/layouts/*.vue`, um por *forma* de slide (abertura, divisor, frase
    solta, imagem + texto, fechamento) — não um por decoração.
 6. **Componentes** em `aulas/components/*.vue`, auto-importados.
-7. Um slide de cada coisa em `aulas/_design-system.md`, e `npm run ref` para conferir.
+7. **Fontes**, se o visual depender delas: baixe os `.woff2` para `aulas/styles/fontes/` e
+   declare o `@font-face` em `aulas/styles/fontes.css`, com caminho **relativo**. Servir a
+   fonte pelo próprio site (em vez do campo `fonts:` do headmatter, que puxa do Google) é o
+   que garante o mesmo desenho em sala sem rede e no PDF exportado pelo CI.
+8. Um slide de cada coisa em `aulas/_design-system.md`, e `npm run ref` para conferir.
 
 As armadilhas do Slidev que quebram um DS gerado (campo `src:`, campos reservados que não
 chegam como prop, caminho de imagem em prop, markdown dentro de componente) estão em
@@ -97,8 +104,9 @@ aviso: o componente simplesmente não existe.
 
 ### 2. Caminho absoluto em prop precisa de `asset()`
 
-`![](/foto.png)` funciona porque o Vite reescreve o caminho no build. `<Pessoa foto="/foto.png">`
-não funciona: é uma string em tempo de execução, e no Pages ela aponta para a raiz do domínio.
+`![](/foto.png)` funciona porque o Vite reescreve o caminho no build. Um `imagem: /foto.png`
+no frontmatter, que chega ao layout como prop, não funciona: é uma string em tempo de
+execução, e no Pages ela aponta para a raiz do domínio.
 Passe por `aulas/lib/asset.ts`. **Localmente os dois funcionam** (a base é `/`), então esse
 erro só aparece depois do deploy — é o mais caro da lista.
 
@@ -121,11 +129,17 @@ E, fora do visual, o que também derruba o build:
 ## Testar antes de publicar
 
 ```bash
-npm run dev -- 02      # uma aula por vez, com hot reload — é assim que se escreve
-npm run ref            # o catálogo do design system
-npm run lint           # o que quebraria o build
-npm run build          # gera dist/ igual ao que vai pro ar
+npm run dev -- 02        # uma aula por vez, com hot reload — é assim que se escreve
+npm run ref              # o catálogo do design system
+npm run lint             # o que quebraria o build
+npm run build            # gera dist/ igual ao que vai pro ar, com o PDF de cada aula
+SEM_PDF=1 npm run build  # o mesmo, sem a exportação em PDF (bem mais rápido)
 ```
+
+O PDF é impresso pelo Chromium do `playwright-chromium`, que entra como devDependency e é
+baixado no `npm install`. Um visual que dependa de rede em tempo de exibição (fonte de CDN,
+imagem remota) sai errado justamente aí — o navegador headless imprime antes de o recurso
+chegar.
 
 O `npm run dev` serve **um deck**, na raiz (`/`) e com todas as rotas do Slidev — é o modo de
 trabalho normal. O conjunto de aulas mais a página inicial só existe depois do `npm run build`

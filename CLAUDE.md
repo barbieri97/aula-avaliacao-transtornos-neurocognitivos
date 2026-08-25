@@ -1,11 +1,13 @@
-# Template de aulas em Slidev
+# Aulas em Slidev — avaliação de transtornos neurocognitivos
 
 Um repositório de decks [Slidev](https://sli.dev/) **agnóstico de tema**. **Uma aula por
-arquivo `.md`** em `aulas/`, publicadas no GitHub Pages, cada uma na sua própria URL.
+arquivo `.md`** em `aulas/`, publicadas no GitHub Pages, cada uma na sua própria URL — e cada
+uma exportada também em PDF pelo build.
 
-De fábrica não há tema npm (`theme: none`): o visual vem de um design system local, escrito em
-`aulas/styles`, `aulas/layouts` e `aulas/components`. Trocar por um tema pronto, ou gerar
-outro DS, é decisão de quem usa o template — os scripts não sabem qual é o visual.
+Não há tema npm (`theme: none`): o visual vem de um design system local, escrito em
+`aulas/styles`, `aulas/layouts` e `aulas/components` — papel claro, tinta azul-marinho, ouro
+como ênfase, serifa nos títulos e sans no corpo. Trocar por um tema pronto, ou gerar outro DS,
+é decisão de quem usa o repositório — os scripts não sabem qual é o visual.
 
 ## Antes de escrever ou editar qualquer deck
 
@@ -19,7 +21,7 @@ por layout e por componente. O `_` no nome mantém esse deck fora do site.
 Se a aula for usar outro visual, o roteiro dos dois caminhos (tema npm ou DS gerado) está em
 **[`docs/temas.md`](docs/temas.md)**.
 
-### As quatro coisas que mais quebram deck
+### As cinco coisas que mais quebram deck
 
 - **`src:` no frontmatter apaga o slide.** É o campo com que o Slidev importa outro `.md`. Um
   `src: /foto.png` faz o slide desaparecer sem mensagem nenhuma — por isso o layout `figura`
@@ -33,8 +35,11 @@ Se a aula for usar outro visual, o roteiro dos dois caminhos (tema npm ou DS ger
   parse do arquivo inteiro.
 - **Markdown dentro de componente só funciona com linha em branco** depois da tag de abertura
   e antes da de fechamento. Sem elas, `**negrito**` aparece com os asteriscos na tela.
+- **Valor de frontmatter com `: ` no meio precisa de aspas** (`meta: "2 horas · leitura: X"`),
+  e dentro de `{ chave: valor }` a vírgula abre outro campo — `valor: "2 anos, lenta"`. Sem
+  aspas o YAML falha e o build para.
 
-`npm run lint` pega as três primeiras. Rode antes de commitar.
+`npm run lint` pega todas menos a quarta. Rode antes de commitar.
 
 ### Nada de CSS solto no slide
 
@@ -50,8 +55,10 @@ um componente — a exceção honesta é o desenho que só existe naquele slide.
 | URL | o nome do arquivo (sem `.md`) vira o caminho: `/<repo>/aula-NN-slug-descritivo/` |
 | Deck de bancada | prefixo `_` (`aulas/_design-system.md`) — o site não publica |
 | Tema | `theme: none` + design system local; ou um pacote npm, ver `docs/temas.md` |
+| Cor | claro só: todo deck traz `colorSchema: light` (não existe bloco `.dark` nos tokens) |
 | Idioma | conteúdo em português |
 | Imagens | `aulas/public/` — **não** na raiz do repo (veja "Por que `aulas/public/`" abaixo) |
+| Fontes | `aulas/styles/fontes/*.woff2`, servidas pelo site — nunca o campo `fonts:` (rede) |
 | Headmatter | além de `theme`/`title`, cada aula traz `info:` (ementa de uma linha) e `date:` (`YYYY-MM-DD`, entre aspas) — os dois alimentam a landing page |
 | Identidade do curso | `site.config.json` na raiz (`title`, `institution`, `description`, `intro`) — o único lugar com o nome da disciplina |
 
@@ -65,7 +72,8 @@ npm run dev                                  # abre a primeira aula de aulas/ co
 npm run dev -- 03                            # abre a aula cujo nome contém "03"
 npm run ref                                  # abre o catálogo de layouts/componentes
 npm run lint                                 # valida todos os decks
-npm run build                                # builda tudo em dist/ (roda o lint antes)
+npm run build                                # builda tudo em dist/ (lint antes, PDF depois)
+SEM_PDF=1 npm run build                      # o mesmo, sem exportar os PDFs
 ```
 
 `npm run dev` serve **uma aula por vez**, na raiz (`/`). O conjunto das aulas mais a página
@@ -89,9 +97,12 @@ subpasta funciona com tema npm, mas não funcionaria com layouts locais colocado
 
 `scripts/build-site.mjs` roda um `slidev build` **por aula** (cada uma precisa do seu próprio
 `--base`, que é único por invocação do CLI), com `--router-mode hash` — o modo que o Slidev
-documenta para deploy em subdiretório como o GitHub Pages. Depois gera a landing
-`dist/index.html` lendo o headmatter de cada deck; o CSS dela é pintado com os tokens de
-`aulas/styles/tokens.css`, então a página inicial acompanha o visual das aulas.
+documenta para deploy em subdiretório como o GitHub Pages. Em seguida exporta o PDF de cada
+aula para `dist/<slug>/<slug>.pdf`, pelo Chromium do `playwright-chromium` (devDependency;
+`SEM_PDF=1` pula a etapa). Depois gera a landing `dist/index.html` lendo o headmatter de cada
+deck, com link para o deck e para o PDF; o CSS dela é pintado com os tokens de
+`aulas/styles/tokens.css` e usa as mesmas fontes (copiadas de `aulas/styles/fontes/` para
+`dist/fontes/`), então a página inicial acompanha o visual das aulas.
 
 A publicação é pelo **artefato do Actions**: o job `build` empacota o `dist/` com
 `upload-pages-artifact` e o job `deploy` o entrega ao Pages com `deploy-pages` (OIDC — daí

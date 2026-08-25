@@ -32,6 +32,12 @@ jobs:
 
       - run: npm ci
 
+      # O PDF de cada aula é impresso por um Chromium headless. O pacote playwright-chromium
+      # já baixa o navegador durante o `npm ci`; este passo garante as bibliotecas de sistema
+      # de que ele precisa no runner (e é no-op se já estiver tudo lá).
+      - name: Preparar o Chromium do Playwright
+        run: npx playwright install --with-deps chromium
+
       # Descobre a URL pública do site. O output `base_path` é o caminho dela:
       # "/<nome-do-repo>" num repo comum, "/" num repo <usuario>.github.io.
       - name: Configurar Pages
@@ -46,7 +52,9 @@ jobs:
           SITE_BASE: ${{ steps.pages.outputs.base_path }}
 
       - name: Conferir o dist/
-        run: test -f dist/index.html || { echo "dist/index.html não existe — build falhou?"; exit 1; }
+        run: |
+          test -f dist/index.html || { echo "dist/index.html não existe — build falhou?"; exit 1; }
+          ls dist/*/*.pdf >/dev/null || { echo "nenhum PDF em dist/<aula>/ — a exportação falhou?"; exit 1; }
 
       - name: Empacotar o dist/
         uses: actions/upload-pages-artifact@v5

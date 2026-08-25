@@ -1,10 +1,11 @@
 <!--
-  figura — imagem de um lado, texto do outro.
+  figura — imagem de um lado, texto do outro. Para quando a imagem É o
+  argumento e o texto comenta.
 
   ---
   layout: figura
-  imagem: /exemplo-figura.svg
-  legenda: Duas séries medidas na mesma escala.
+  imagem: /curva-normal.svg
+  legenda: A régua da normalidade é uma distribuição, não uma nota de corte.
   lado: direita        # onde fica a IMAGEM (padrão: direita)
   ajuste: contain      # contain (padrão, mostra a figura inteira) | cover
   ---
@@ -14,13 +15,15 @@
   O caminho da imagem é absoluto e sem a pasta: `/arquivo.svg` procura em
   `aulas/public/arquivo.svg`. `legenda` aceita HTML.
 
-  O campo se chama `imagem` e não `src` de propósito: `src` é reservado pelo Slidev
-  (importa outro .md) e um slide que o usasse para imagem sumiria do deck, sem erro.
+  O campo se chama `imagem` e não `src` de propósito: `src` é reservado pelo
+  Slidev (importa outro .md) e um slide que o usasse para imagem sumiria do
+  deck, sem erro.
 -->
 <script setup lang="ts">
 // `asset()` é obrigatório em caminho que chega por prop — sem ele a imagem some quando o
 // site é publicado em subdiretório. O porquê está em aulas/lib/asset.ts.
 import { asset } from '../lib/asset'
+import Moldura from '../lib/Moldura.vue'
 
 const props = withDefaults(defineProps<{
   imagem?: string
@@ -37,7 +40,9 @@ const arquivo = asset(props.imagem)
 
 <template>
   <div class="slidev-layout ds-figura" :class="`img-${lado}`">
+    <Moldura />
     <div class="texto"><slot /></div>
+
     <figure class="figura">
       <img v-if="arquivo" :src="arquivo" :style="{ objectFit: ajuste }" alt="">
       <figcaption v-if="legenda" class="ds-small" v-html="legenda" />
@@ -47,6 +52,7 @@ const arquivo = asset(props.imagem)
 
 <style scoped>
 .ds-figura {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--ds-space-7);
@@ -60,6 +66,14 @@ const arquivo = asset(props.imagem)
   order: 2;
 }
 
+.texto {
+  min-width: 0;
+}
+
+.texto :deep(> :first-child) {
+  margin-top: 0;
+}
+
 .figura {
   display: flex;
   flex-direction: column;
@@ -71,12 +85,14 @@ const arquivo = asset(props.imagem)
 
 .figura img {
   width: 100%;
-  max-height: 62vh;
-  border-radius: var(--ds-radius);
+  max-height: 21rem;
+  border-radius: 0;
 }
 
+/* A legenda pendura num fio de ouro: é o mesmo gesto do fio embaixo do título,
+   e amarra a figura ao resto do slide. */
 figcaption {
   padding-left: var(--ds-space-3);
-  border-left: 2px solid var(--ds-rule);
+  border-left: var(--ds-border-thick) solid var(--ds-ouro);
 }
 </style>
