@@ -106,11 +106,17 @@ const colunas = props.colunas ?? []
   display: contents;
 }
 
+/* `min-width: 0` e `overflow-wrap` são o par que segura uma palavra sem
+   espaço — "Neurodesenvolvimento" numa coluna de três: sem eles a célula
+   cresce além do `1fr` e o texto vaza por cima da coluna vizinha. Onde a
+   quebra tem lugar certo, escreva um `&shy;` no próprio texto. */
 .celula {
+  min-width: 0;
   padding: var(--ds-space-3) var(--ds-space-4);
   border-top: var(--ds-border) solid var(--ds-rule);
   font-size: var(--ds-text-sm);
   line-height: var(--ds-leading-normal);
+  overflow-wrap: break-word;
 }
 
 .cabecalho .celula {
@@ -140,6 +146,8 @@ const colunas = props.colunas ?? []
   font-size: var(--ds-text-lg);
   font-weight: 600;
   line-height: var(--ds-leading-tight);
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .sub {

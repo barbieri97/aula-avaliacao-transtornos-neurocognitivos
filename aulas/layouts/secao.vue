@@ -1,6 +1,10 @@
 <!--
-  secao — a virada de assunto. Fundo marinho, o número da parte desenhado em
-  contorno atrás do título: é o respiro entre dois blocos da aula.
+  secao — a virada de assunto. Papel, como todo o resto do deck, com o número
+  da parte desenhado em contorno grande na faixa direita: é o respiro entre
+  dois blocos da aula.
+
+  Sem o fundo escuro (o template do evento pede papel em todo slide), quem
+  marca a virada é o numeral e a régua de ouro sob o kicker.
 
   ---
   layout: secao
@@ -25,11 +29,12 @@ const title = props.frontmatter?.title
 </script>
 
 <template>
-  <div class="slidev-layout ds-secao ds-inverso">
+  <div class="slidev-layout ds-secao">
     <span v-if="numero" class="numeral" aria-hidden="true">{{ numero }}</span>
 
     <div class="texto">
       <p v-if="kicker" class="ds-kicker" v-html="kicker" />
+      <div class="ds-rule" />
       <h1 v-if="title" v-html="title" />
       <p v-if="note" class="note" v-html="note" />
     </div>
@@ -47,7 +52,13 @@ const title = props.frontmatter?.title
 .texto {
   position: relative;
   z-index: 1;
-  max-width: 68%;
+  max-width: 58%;
+}
+
+/* A régua entre o kicker e o título: é ela, e não mais o fundo escuro, que
+   anuncia que a aula mudou de bloco. */
+.texto .ds-rule {
+  margin-top: 0;
 }
 
 .ds-secao :deep(h1) {
@@ -67,11 +78,14 @@ const title = props.frontmatter?.title
 
 /* O numeral é só contorno: presença sem peso, e não disputa leitura com o
    título. `-webkit-text-stroke` é suportado pelo Chromium, que é quem exibe e
-   quem exporta o PDF. */
+   quem exporta o PDF.
+
+   Sobre papel o contorno é o ouro de preencher, e não o ouro claro: ele passa
+   por cima da marca-d'água sem sumir nela nem virar uma segunda mancha. */
 .numeral {
   position: absolute;
   top: 50%;
-  right: 2.4rem;
+  right: 3.2rem;
   transform: translateY(-50%);
   color: transparent;
   font-family: var(--ds-font-serif);
@@ -79,6 +93,6 @@ const title = props.frontmatter?.title
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.04em;
-  -webkit-text-stroke: 2px rgba(217, 193, 118, 0.5);
+  -webkit-text-stroke: 2px rgba(148, 123, 47, 0.55);
 }
 </style>

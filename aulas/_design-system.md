@@ -7,7 +7,6 @@ colorSchema: light
 layout: capa
 kicker: Deck de bancada
 subtitle: Um slide para cada <span class="ds-em">layout</span> e cada <span class="ds-em">componente</span>. Abra com <code>npm run ref</code>.
-imagem: /capa-perfil.svg
 meta: O nome começa com <code>_</code>, então o site não publica este deck. Ele existe para você ver antes de escrever.
 ---
 
@@ -16,7 +15,8 @@ Este é o catálogo do design system: a versão renderizada do que docs/design-s
 descreve por escrito. Toda vez que você criar um layout ou componente novo em aulas/,
 acrescente um slide aqui — é o que mantém o catálogo confiável.
 
-O slide que você está vendo é o layout `capa`, com o campo `imagem`.
+O slide que você está vendo é o layout `capa`. Ele não aceita imagem: o canto superior
+esquerdo é do logotipo da Giunti, que `slide-top.vue` desenha em todo deck.
 -->
 
 ---
@@ -53,21 +53,21 @@ layout: default
   <div><span class="chip" style="background: var(--ds-pastel-azul)"></span><code>--ds-pastel-azul</code><em>agrupa</em></div>
   <div><span class="chip" style="background: var(--ds-pastel-ouro)"></span><code>--ds-pastel-ouro</code><em>agrupa</em></div>
   <div><span class="chip" style="background: var(--ds-pastel-verde)"></span><code>--ds-pastel-verde</code><em>agrupa</em></div>
-  <div><span class="chip" style="background: var(--ds-pastel-terra)"></span><code>--ds-pastel-terra</code><em>agrupa</em></div>
-  <div><span class="chip" style="background: var(--ds-ok)"></span><code>--ds-ok</code><em>preservado</em></div>
-  <div><span class="chip" style="background: var(--ds-warn)"></span><code>--ds-warn</code><em>atenção</em></div>
-  <div><span class="chip" style="background: var(--ds-danger)"></span><code>--ds-danger</code><em>prejuízo</em></div>
-  <div><span class="chip" style="background: var(--ds-surface); border-color: var(--ds-rule-forte)"></span><code>--ds-surface</code><em>cartões</em></div>
+<div><span class="chip" style="background: var(--ds-pastel-terra)"></span><code>--ds-pastel-terra</code><em>agrupa</em></div>
+<div><span class="chip" style="background: var(--ds-ok)"></span><code>--ds-ok</code><em>preservado</em></div>
+<div><span class="chip" style="background: var(--ds-warn)"></span><code>--ds-warn</code><em>atenção</em></div>
+<div><span class="chip" style="background: var(--ds-danger)"></span><code>--ds-danger</code><em>prejuízo</em></div>
+<div><span class="chip" style="background: var(--ds-surface); border-color: var(--ds-rule-forte)"></span><code>--ds-surface</code><em>cartões</em></div>
 </div>
 
 <Fonte>Trocar a identidade visual das aulas = editar <code>aulas/styles/tokens.css</code>, e só ele.</Fonte>
 
 <style>
 .amostras {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--ds-space-2) var(--ds-space-5);
-  margin-top: var(--ds-space-4);
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: var(--ds-space-2) var(--ds-space-5);
+margin-top: var(--ds-space-4);
 }
 .amostras > div { display: flex; align-items: center; gap: var(--ds-space-2); font-size: var(--ds-text-xs); }
 .amostras .chip {
@@ -190,6 +190,22 @@ legenda: Título em cima, o desenho ocupando tudo o que sobra, legenda embaixo. 
   { titulo: 'Uma etapa', desc: 'com descrição curta' },
   { titulo: 'Outra', desc: 'a seta é SVG, não caractere' },
   { titulo: 'A última', desc: 'destacada em ouro', cor: 'ouro' },
+]" />
+
+---
+layout: esquema
+kicker: componente
+title: Fluxo em fileiras
+legenda: "Acima de cinco etapas, cada caixa fica com menos de 60px de texto útil. `por-linha` quebra o fluxo em fileiras, que se leem como texto: da esquerda para a direita, de cima para baixo."
+---
+
+<Fluxo :por-linha="4" :etapas="[
+  { titulo: 'Primeira', desc: 'a fileira de cima tem quatro' },
+  { titulo: 'Segunda', desc: 'e a de baixo, as que sobraram' },
+  { titulo: 'Terceira', desc: 'sem seta virando a linha' },
+  { titulo: 'Quarta', desc: 'a leitura vira sozinha' },
+  { titulo: 'Quinta', desc: 'as vagas que faltam entram vazias' },
+  { titulo: 'Sexta', desc: 'para as duas fileiras terem a mesma medida' },
 ]" />
 
 ---

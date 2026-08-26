@@ -19,9 +19,10 @@ Três decisões sustentam o resto:
 
 - **Serifa nos títulos, sans no corpo.** O título é a fala do professor; o corpo é o que fica
   no caderno. O contraste entre as duas famílias é o que dá voz ao deck.
-- **Capa, seção e fecho rodam sobre o marinho; o miolo, sobre o papel.** Fundo escuro
-  significa que a aula mudou de estado. É o ritmo do deck, e é de graça: os três layouts
-  compartilham a classe `.ds-inverso`.
+- **O deck inteiro roda sobre o papel.** Foi o template do evento que pediu (ver [A marca da
+  Giunti](#a-marca-da-giunti)): a marca-d'água e o logotipo são azuis sobre claro, e sobre um
+  fundo escuro os dois sumiam. O que anuncia a virada de bloco é o numeral gigante em contorno
+  de ouro da `secao`, não o fundo.
 - **A lombada.** Todo slide de miolo tem, na margem esquerda, um fio vertical com um tique de
   ouro no alto e o número da página no pé. Quem desenha isso é `aulas/lib/Moldura.vue`, que os
   layouts chamam sozinhos — não é coisa de se escrever no markdown.
@@ -48,6 +49,8 @@ aulas/
 │   └── utilities.css    ← as classes `ds-*` que um slide pode usar
 ├── layouts/*.vue        ← a forma do slide (campo `layout:` do frontmatter)
 ├── components/*.vue     ← peças usadas dentro do slide (auto-importadas, sem `import`)
+├── slide-bottom.vue     ← a marca-d'água da Giunti, ATRÁS do layout de todo slide
+├── slide-top.vue        ← o logotipo Giunti · Vetor, À FRENTE do layout de todo slide
 ├── lib/asset.ts         ← resolve caminho de imagem contra a base do site
 ├── lib/Moldura.vue      ← a lombada; usada pelos layouts, não pelo markdown
 └── public/              ← imagens; `/foto.png` no markdown = `aulas/public/foto.png`
@@ -79,10 +82,9 @@ Dois cuidados com a cor:
 - **`--ds-accent` (`#947b2f`) é o ouro de preencher**: fio, régua, marcador de lista, fundo de
   chip. Para **texto pequeno sobre papel** use `--ds-accent-forte`, que é o mesmo ouro
   escurecido até passar no contraste. Os kickers e os rótulos daqui usam o forte.
-- **Sobre o marinho tudo inverte.** Em vez de repintar cada peça, os layouts escuros ganham a
-  classe `.ds-inverso` (definida no fim de `base.css`), que redefine `--ds-bg`, `--ds-ink`,
-  `--ds-muted`, `--ds-rule` e o ouro. Componente que só usa token funciona nos dois fundos sem
-  saber onde está.
+- **O marinho é tinta, não fundo.** Ele pinta título, fio e selo; nenhum layout o usa como
+  campo. `--ds-marinho-fundo` sobrou para a tarja de fora do slide (quando a janela não é 16:9)
+  e para o bloco de "Síndrome" de um esquema ou outro.
 
 O deck é **claro só**: não existe bloco `.dark`, e as aulas trazem `colorSchema: light` no
 headmatter. É uma escolha de projeção em sala com luz acesa.
@@ -113,8 +115,8 @@ Vão no campo `layout:` do frontmatter do slide. Os campos de cada um viram prop
 | layout | quando usar | campos |
 |---|---|---|
 | `default` | o slide comum (é o que vale sem `layout:`) | — |
-| `capa` | o primeiro slide da aula · **fundo marinho** | `kicker` `title` `subtitle` `imagem` `meta` |
-| `secao` | a virada de assunto · **fundo marinho** | `numero` `kicker` `title` `note` |
+| `capa` | o primeiro slide da aula · o logotipo entra em cima, pelo `slide-top` | `kicker` `title` `subtitle` `meta` |
+| `secao` | a virada de assunto · o numeral em contorno na faixa direita | `numero` `kicker` `title` `note` |
 | `roteiro` | o índice da aula; repita com `atual:` diferente | `kicker` `title` `itens[]` `atual` |
 | `destaque` | uma frase sozinha na tela: a tese, o número | `kicker` `title` `fonte` |
 | `pergunta` | a pergunta antes da resposta · **fundo azul pastel** | `kicker` `title` `pistas[]` |
@@ -122,7 +124,7 @@ Vão no campo `layout:` do frontmatter do slide. Os campos de cada um viram prop
 | `comparacao` | a tabela de diferencial: 2 ou 3 colunas, linha a linha | `title` `colunas[]` `linhas[]` |
 | `esquema` | o slide cujo conteúdo é um desenho | `kicker` `title` `legenda` |
 | `figura` | quando a imagem **é** o argumento e o texto comenta | `imagem` `legenda` `lado` `ajuste` |
-| `fecho` | o último slide · **fundo marinho** | `kicker` `title` `pontos[]` `proximo` |
+| `fecho` | o último slide | `kicker` `title` `pontos[]` `proximo` |
 
 Os layouts do próprio Slidev continuam valendo (`center`, `two-cols`, `image-right`, `full`,
 `none`…), mas eles não desenham a lombada — quem quiser a moldura usa os daqui.
@@ -182,6 +184,48 @@ Duas regras práticas:
 Para ver tudo renderizado em vez de lido: **`npm run ref`** abre `aulas/_design-system.md`,
 que tem um slide por layout e por componente, com a situação de uso nas notas. O nome começa
 com `_`, então o site não o publica.
+
+---
+
+## A marca da Giunti
+
+O evento pediu que a aula seguisse o template da Giunti. Dele vieram duas camadas, e a
+geometria das duas saiu do próprio `.pptx`:
+
+| camada | arquivo | onde | de onde veio |
+|---|---|---|---|
+| marca-d'água | `public/image1.png` | faixa direita, `x=43% … 100%`, de topo a pé | `mask.png` do `slideLayout1`/`3`/`4` |
+| logotipo, no miolo | `public/image2.png` | canto inferior direito | `slideMaster2`, `x=70,6% · y=91% · w=24,7%` |
+| logotipo, na capa | `public/image2.png` | canto superior esquerdo, acima do título | `slideLayout1` ("Cover 1"), `x=4,9% · y=10,1% · w=38,9%` |
+
+**Nenhum layout desenha as duas.** Quem as põe é um par de arquivos na raiz de `aulas/`, com
+nomes que o Slidev procura sozinho e renderiza dentro de cada slide:
+
+- **`slide-bottom.vue`** — antes do layout, e portanto atrás do texto. É a marca-d'água. A
+  arte já é translúcida (azul `#006EB7` a 20% de alfa), então ela entra sem opacidade nem
+  blend: basta ser desenhada por baixo.
+- **`slide-top.vue`** — depois do layout, e portanto à frente de qualquer fundo de cartão ou
+  de tabela. É o logotipo. Ele lê `$frontmatter.layout` para saber se está na capa.
+
+Vale igual na apresentação e no PDF: os dois entram pelo `SlideWrapper`, que o export usa
+também. Um layout novo ganha as duas camadas sem escrever uma linha.
+
+O `.pptx` de origem **não mora no repositório**: ele traz marcações de "Confidential: For
+internal use", e tudo o que está em `aulas/public/` é copiado para `dist/` e servido no site,
+que é público. Ele fica em `referencias/`, que o `.gitignore` cobre. As duas imagens da marca
+(`image1.png` e `image2.png`) são as únicas coisas do template que entram — e essas precisam
+ser servidas.
+
+Três consequências para quem escreve slide:
+
+- **`.slidev-layout` tem fundo transparente.** Quem pinta o papel é `.slidev-page`; entre os
+  dois mora a marca-d'água. Layout que precise de outro campo — a `pergunta` é o único — pinta
+  o seu com uma cor **translúcida**, senão apaga a marca.
+- **O canto inferior direito é do logotipo.** Quem escreve lá embaixo para em 33% da largura:
+  é o que `<Fonte>` e o `proximo` do `fecho` já fazem. Os layouts de fluxo normal não
+  precisam de nada — o padding de pé do slide já os mantém acima da faixa.
+- **A capa não aceita imagem.** O template pede que ali estejam só a marca-d'água e o
+  logotipo, então o campo `imagem` saiu de `capa.vue`.
 
 ---
 

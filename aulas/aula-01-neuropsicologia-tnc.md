@@ -7,11 +7,9 @@ colorSchema: light
 download: true
 layout: capa
 kicker: Semana da Psicologia · Psicologia e Neurociências
-imagem: /capa-tnc.svg
-meta: "40 minutos · base: DSM-5, capítulo de Transtornos Neurocognitivos"
+subtitle: O que o DSM-5 pede para diagnosticar, e o que a avaliação neuropsicológica acrescenta.
+meta: "Base: DSM-5 · capítulo de Transtornos Neurocognitivos"
 ---
-
-<p class="ds-lead">O que o DSM-5 pede para diagnosticar, e o que a avaliação neuropsicológica acrescenta.</p>
 
 <!--
 TNC — transtorno neurocognitivo.
@@ -21,14 +19,14 @@ O capítulo de referência é o de Transtornos Neurocognitivos da edição brasi
 
 ---
 layout: roteiro
-kicker: 40 minutos
+kicker: Roteiro
 title: O caminho de hoje
 itens:
-  - { tema: Conceito e classificação, desc: "3 min · o que faz de um transtorno um TNC" }
-  - { tema: Critérios diagnósticos, desc: "9 min · delirium, TNC maior, TNC leve" }
-  - { tema: Etiologias, desc: "3 min · a mesma síndrome, causas diferentes" }
-  - { tema: Domínios cognitivos, desc: "7 min · o que se mede, e com o quê" }
-  - { tema: Avaliação neuropsicológica, desc: "11 min · cognição e funcionalidade" }
+  - { tema: Conceito e classificação, desc: o que faz de um transtorno um TNC }
+  - { tema: Critérios diagnósticos, desc: "delirium, TNC maior, TNC leve" }
+  - { tema: Etiologias, desc: "a mesma síndrome, causas diferentes" }
+  - { tema: Domínios cognitivos, desc: "o que se mede, e com o quê" }
+  - { tema: Avaliação neuropsicológica, desc: cognição e funcionalidade }
 ---
 
 <!--
@@ -38,7 +36,7 @@ Os cinco blocos reaparecem adiante como slides de seção, numerados de 01 a 05.
 ---
 layout: secao
 numero: "01"
-kicker: Bloco 1 · 3 min
+kicker: Bloco 1
 title: Conceito e classificação
 note: Déficits cognitivos existem em quase todo transtorno mental. Três características separam os que entram nesta categoria.
 ---
@@ -49,35 +47,38 @@ layout: default
 
 # O que define um transtorno neurocognitivo
 
-<Termo palavra="Transtorno neurocognitivo (TNC)" origem="DSM-5, abertura do capítulo">
+<Termo palavra="Transtorno neurocognitivo (TNC)" origem="DSM-5">
 
-Grupo de transtornos em que o **déficit clínico primário está na função cognitiva** e em que
-a cognição prejudicada **não estava presente ao nascimento ou muito no início da vida** —
-representando, portanto, um declínio a partir de um nível de funcionamento alcançado
-anteriormente.
+Déficit clínico **primário** na função cognitiva, **adquirido** — um declínio a partir de um
+nível de funcionamento antes alcançado.
 
 </Termo>
 
 <Nota titulo="Duas palavras fazem o trabalho">
 
-**Primário** exclui a esquizofrenia e o transtorno bipolar, em que há déficit cognitivo mas
-a característica central é outra. **Adquirido** exclui a deficiência intelectual e o
-transtorno específico da aprendizagem, em que a função nunca esteve preservada.
+**Primário** exclui esquizofrenia e transtorno bipolar. **Adquirido** exclui deficiência
+intelectual e transtorno específico da aprendizagem.
 
 </Nota>
 
-<Fonte>American Psychiatric Association, <em>DSM-5</em>, capítulo Transtornos Neurocognitivos.</Fonte>
+<Fonte>APA, <em>DSM-5</em> · capítulo Transtornos Neurocognitivos.</Fonte>
 
 <!--
-Deficiência intelectual e transtorno específico da aprendizagem: transtornos do
-neurodesenvolvimento, capítulo próprio do DSM-5.
+Na esquizofrenia e no bipolar há déficit cognitivo, mas a característica central é outra.
+Na deficiência intelectual e no transtorno de aprendizagem a função nunca esteve preservada —
+são transtornos do neurodesenvolvimento, capítulo próprio do DSM-5.
+
+Texto do manual, para quem quiser a formulação inteira: "grupo de transtornos em que o
+déficit clínico primário está na função cognitiva e em que a cognição prejudicada não estava
+presente ao nascimento ou muito no início da vida — representando, portanto, um declínio a
+partir de um nível de funcionamento alcançado anteriormente".
 -->
 
 ---
 layout: esquema
 kicker: Bloco 1
 title: Três marcas separam o TNC
-legenda: "A terceira marca é a mais incomum no manual: em nenhuma outra categoria do DSM-5 a investigação da patologia subjacente faz parte da própria estrutura do diagnóstico."
+legenda: "A terceira marca é a mais incomum no manual: em nenhuma outra categoria do DSM-5 a investigação da patologia subjacente faz parte da estrutura do diagnóstico."
 ---
 
 <img src="/tnc-tres-marcas.svg" alt="As três marcas do TNC: déficit primário na cognição, caráter adquirido e etiologia determinável" class="w-full max-h-full object-contain">
@@ -92,13 +93,13 @@ layout: comparacao
 title: A mesma queixa, três lugares diferentes do manual
 colunas:
   - { titulo: TNC, sub: adquirido, cor: azul }
-  - { titulo: Neurodesenvolvimento, sub: de origem, cor: verde }
+  - { titulo: Neuro&shy;desenvolvimento, sub: de origem, cor: verde }
   - { titulo: Outro transtorno mental, sub: secundário, cor: terra }
 linhas:
   - { criterio: Déficit central, valores: ["cognitivo", "cognitivo", "afetivo, psicótico ou ansioso"] }
-  - { criterio: Curso de vida, valores: ["a função existiu e se perdeu", "a função nunca se instalou", "a função oscila com o quadro"] }
+  - { criterio: Curso de vida, valores: ["existiu e se perdeu", "nunca se instalou", "oscila com o quadro"] }
   - { criterio: Etiologia, valores: ["frequentemente determinável", "multifatorial", "não determinada"] }
-  - { criterio: Exemplo, valores: ["engenheiro que perde o cálculo aos 70", "adulto com deficiência intelectual", "depressão maior com queixa de memória"] }
+  - { criterio: Exemplo, valores: ["perde o cálculo aos 70", "deficiência intelectual", "depressão com queixa de memória"] }
 ---
 
 <!--
@@ -109,7 +110,7 @@ diagnósticos diferenciais que mais aparecem na prática.
 ---
 layout: secao
 numero: "02"
-kicker: Bloco 2 · 9 min
+kicker: Bloco 2
 title: Critérios diagnósticos
 note: Delirium, TNC maior e TNC leve. O que interessa aqui não é decorar cada critério — é ver onde eles diferem.
 ---
@@ -121,16 +122,21 @@ layout: default
 # Delirium
 
 <Criterios :itens="[
-  { texto: 'Perturbação da <b>atenção</b> — dirigir, focalizar, manter, mudar — <b>e da consciência</b>.' },
-  { texto: 'Instala-se em <b>horas a poucos dias</b> e <b>oscila em gravidade dentro de um mesmo dia</b>.' },
-  { texto: 'Há perturbação adicional na cognição: memória, orientação, linguagem, visuoespacial.' },
-  { texto: 'Não é mais bem explicada por outro TNC preexistente, e não ocorre no coma.' },
-  { texto: 'Tem causa fisiológica: condição médica, substância, toxina ou múltiplas etiologias.' },
+  { texto: 'Perturbação da <b>atenção</b> e da <b>consciência</b>.' },
+  { texto: 'Instala-se em <b>horas a dias</b> e <b>oscila dentro do mesmo dia</b>.' },
+  { texto: 'Há alteração cognitiva adicional: memória, orientação, linguagem.' },
+  { texto: 'Não se explica por outro TNC preexistente, e não ocorre no coma.' },
+  { texto: 'Tem causa fisiológica: doença, substância ou toxina.' },
 ]" />
 
 <Fonte>Critérios A a E do delirium · APA, <em>DSM-5</em>.</Fonte>
 
 <!--
+Critério A por extenso: perturbação da atenção — dirigir, focalizar, manter e mudar o foco —
+E da consciência (menor orientação para o ambiente).
+Critério C: a perturbação adicional pode ser de memória, orientação, linguagem, capacidade
+visuoespacial ou percepção.
+Critério E: condição médica, intoxicação, abstinência, toxina ou múltiplas etiologias.
 Basal: o estado habitual da pessoa antes do episódio.
 Abstinência: quadro produzido pela retirada de uma substância de uso continuado.
 -->
@@ -156,26 +162,27 @@ layout: default
 # TNC maior
 
 <Criterios :itens="[
-  { texto: 'Declínio <b>importante</b> em um ou mais domínios: <b>queixa</b> de alguém <b>e</b> prejuízo documentado em teste.' },
-  { texto: 'Os déficits <b>interferem na independência</b> — precisa de ajuda nas atividades instrumentais.' },
+  { texto: 'Declínio <b>importante</b> em um ou mais domínios: <b>queixa e prejuízo no teste</b>.' },
+  { texto: 'Os déficits <b>interferem na independência</b> nas atividades instrumentais.' },
   { texto: 'Não ocorrem exclusivamente no contexto de um <b>delirium</b>.' },
-  { texto: 'Não são mais bem explicados por <b>outro transtorno mental</b> — depressão maior, esquizofrenia.' },
+  { texto: 'Não se explicam melhor por <b>outro transtorno mental</b>.' },
 ]" />
 
 <Nota titulo="É o que se chama de demência">
 
-*TNC maior* é mais amplo que o termo antigo: abrange também quem declinou em **um só
-domínio** — o que o DSM-IV chamava de transtorno amnéstico.
+*TNC maior* é mais amplo que o termo antigo: abrange também quem declinou em **um só domínio**.
 
 </Nota>
 
 <!--
-Transtorno amnéstico: categoria do DSM-IV para o prejuízo isolado de memória, sem os demais
-domínios afetados. No DSM-5 ele passou a ser codificado como TNC maior devido a outra
-condição médica — e, nesse caso, não se usa a palavra demência.
+O critério A pede as duas evidências: preocupação do próprio, de informante ou do clínico E
+prejuízo documentado, de preferência por teste padronizado.
+O critério D exclui, entre outros, depressão maior e esquizofrenia.
+Declínio em um só domínio: o que o DSM-IV chamava de transtorno amnéstico — categoria para o
+prejuízo isolado de memória. No DSM-5 passou a ser codificado como TNC maior devido a outra
+condição médica, e nesse caso não se usa a palavra demência.
 DSM-IV: a edição anterior do manual, de 1994.
-Atividades instrumentais: as tarefas complexas do dia a dia, listadas no slide de
-funcionalidade, no bloco 5.
+Atividades instrumentais: as tarefas complexas do dia a dia, listadas no bloco 5.
 -->
 
 ---
@@ -185,25 +192,25 @@ colunas:
   - { titulo: TNC leve, sub: "o CCL", cor: ouro }
   - { titulo: TNC maior, sub: "a demência", cor: terra }
 linhas:
-  - { criterio: "A · declínio", valores: ["declínio <b>pequeno</b>; prejuízo pequeno no desempenho cognitivo", "declínio <b>importante</b>; prejuízo substancial no desempenho"] }
-  - { criterio: "B · independência", valores: ["<b>preservada</b> — pode exigir mais esforço, estratégia compensatória ou acomodação", "<b>comprometida</b> — precisa de assistência nas atividades instrumentais"] }
-  - { criterio: "C · delirium", valores: ["mesmo critério", "mesmo critério"] }
-  - { criterio: "D · outro transtorno", valores: ["mesmo critério", "mesmo critério"] }
-  - { criterio: Exemplo, valores: ["passa a anotar o que antes lembrava, e dá conta", "erra a dose do próprio remédio"] }
+  - { criterio: "A · declínio", valores: ["<b>pequeno</b> — prejuízo modesto no teste", "<b>importante</b> — prejuízo substancial"] }
+  - { criterio: "B · independência", valores: ["<b>preservada</b>, com mais esforço ou estratégia", "<b>comprometida</b> — precisa de assistência"] }
+  - { criterio: Exemplo, valores: ["passa a anotar o que antes lembrava", "erra a dose do próprio remédio"] }
 ---
 
 <Nota tipo="alerta" titulo="A linha é clínica, não estatística">
 
-O que separa os dois níveis é a **funcionalidade**, e ela não sai da tabela normativa: sai da
-história e do informante.
+Os critérios C e D são idênticos nos dois níveis. O que separa um do outro é a
+**funcionalidade** — e ela não sai da tabela normativa.
 
 </Nota>
 
 <!--
-CCL — comprometimento cognitivo leve, nome consagrado na literatura para o que o DSM-5
-chama de TNC leve.
-AIVD — atividades instrumentais da vida diária: as tarefas complexas de manter a própria
-vida (dinheiro, medicação, transporte, telefone, compras, preparo de refeição).
+C (não ocorre exclusivamente durante um delirium) e D (não é mais bem explicado por outro
+transtorno mental) valem, com a mesma redação, para o TNC leve e para o maior.
+A funcionalidade sai da história e do informante, não do escore.
+CCL — comprometimento cognitivo leve, nome consagrado na literatura para o TNC leve.
+AIVD — atividades instrumentais da vida diária: dinheiro, medicação, transporte, telefone,
+compras, preparo de refeição.
 -->
 
 ---
@@ -239,22 +246,23 @@ layout: default
 
 <Termo palavra="Comprometimento cognitivo subjetivo (CCS)" origem="Jessen et al., 2014">
 
-Declínio cognitivo **percebido pela própria pessoa**, persistente, **com desempenho dentro
-do esperado** nos testes neuropsicológicos padronizados. Não é categoria do DSM-5.
+Declínio **percebido pela própria pessoa**, persistente, **com desempenho normal** nos testes.
+Não é categoria do DSM-5.
 
 </Termo>
 
-<Nota titulo="Por que ele interessa, e o que ele não é">
+<Nota titulo="Queixa não é diagnóstico">
 
-A *Subjective Cognitive Decline Initiative* o descreve como possível **primeira manifestação
-sintomática** da doença de Alzheimer, anterior ao CCL. Ainda assim, queixa não é diagnóstico:
-a maior parte não evolui, e o que o quadro pede é **reavaliação no tempo**.
+Pode ser a **primeira manifestação sintomática** da doença de Alzheimer, anterior ao CCL. Ainda
+assim a maior parte não evolui — o que o quadro pede é **reavaliação no tempo**.
 
 </Nota>
 
 <Fonte>Jessen F. et al. A conceptual framework for research on subjective cognitive decline in preclinical Alzheimer disease. <em>Alzheimer&#39;s &amp; Dementia</em>, 2014.</Fonte>
 
 <!--
+A Subjective Cognitive Decline Initiative descreve o CCS como possível primeira manifestação
+sintomática da doença de Alzheimer, anterior ao comprometimento cognitivo leve.
 SCD — subjective cognitive decline, a sigla em inglês do CCS.
 Pré-clínica: fase em que a patologia já existe mas ainda não produz alteração mensurável.
 -->
@@ -262,7 +270,7 @@ Pré-clínica: fase em que a patologia já existe mas ainda não produz alteraç
 ---
 layout: secao
 numero: "03"
-kicker: Bloco 3 · 3 min
+kicker: Bloco 3
 title: Etiologias
 note: A síndrome vem primeiro. A causa é acrescentada depois — e com o grau de certeza declarado.
 ---
@@ -292,52 +300,54 @@ layout: default
 
 <Cartao rotulo="etiologia" titulo="Doença de Alzheimer" cor="azul">
 
-Início insidioso, progressão gradual. Apresentação característica **amnéstica**: memória e
-aprendizagem primeiro.
+Início insidioso, progressão gradual. Apresentação **amnéstica**.
 
 </Cartao>
 
 <Cartao rotulo="etiologia" titulo="Doença vascular" cor="azul">
 
-Ligada no tempo a evento cerebrovascular, ou declínio em **atenção complexa e executiva
-frontal**.
+Ligada a evento cerebrovascular. Declínio **atencional e executivo**.
 
 </Cartao>
 
 <Cartao rotulo="etiologia" titulo="Frontotemporal" cor="azul">
 
-Variante **comportamental** (desinibição, apatia; cognição social e executivas) ou
-**linguística** (afasia). Memória poupada.
+Variante **comportamental** ou **linguística**. Memória poupada.
 
 </Cartao>
 
 <Cartao rotulo="etiologia" titulo="Corpos de Lewy" cor="azul">
 
-Cognição **oscilante**, alucinações visuais e parkinsonismo. Perfil **visuoperceptivo e
-atencional**; memória menos afetada.
+Cognição **oscilante**, alucinações visuais, parkinsonismo. Perfil **visuoperceptivo**.
 
 </Cartao>
 
 <Cartao rotulo="etiologia" titulo="Doença do príon" cor="azul">
 
-**Rara**: 1 a 2 casos por milhão ao ano. Progressão **rápida** — meses — com mioclonia ou
-ataxia.
+**Rara** e **rápida** — meses. Mioclonia ou ataxia.
 
 </Cartao>
 
 <Cartao rotulo="e ainda" titulo="Outras" cor="cinza">
 
-Parkinson, TCE, HIV, Huntington, substância, múltiplas etiologias, não especificado.
+Parkinson, TCE, HIV, Huntington, substância, múltiplas etiologias.
 
 </Cartao>
 
 </Grade>
 
-<Fonte>Subtipos etiológicos do <em>DSM-5</em> · perfil visuoperceptivo dos corpos de Lewy: Mori et al., 2000, e Calderón et al., 2001.</Fonte>
+<Fonte>Subtipos etiológicos do <em>DSM-5</em>.</Fonte>
 
 <!--
-Insidioso: de início lento e sem marco identificável. Platô: período de estabilidade dentro
-de um curso progressivo.
+Alzheimer: memória e aprendizagem primeiro.
+Vascular: ligada no tempo a um evento cerebrovascular, ou declínio em atenção complexa e
+função executiva frontal.
+Frontotemporal comportamental: desinibição, apatia, cognição social e executivas.
+Linguística: afasia.
+Corpos de Lewy: perfil visuoperceptivo e atencional, memória menos afetada — Mori et al.,
+2000, e Calderón et al., 2001.
+Príon: 1 a 2 casos por milhão ao ano.
+Insidioso: de início lento e sem marco identificável.
 Mioclonia: contração muscular breve e involuntária. Ataxia: incoordenação do movimento.
 Afasia: perda adquirida da linguagem. Parkinsonismo: rigidez, bradicinesia e tremor.
 -->
@@ -345,26 +355,27 @@ Afasia: perda adquirida da linguagem. Parkinsonismo: rigidez, bradicinesia e tre
 ---
 layout: figura
 imagem: /alois-alzheimer.jpg
-legenda: Alois Alzheimer (1864–1915). Em 1906 descreveu o caso de Auguste Deter, 51 anos, e a alteração do tecido cerebral encontrada na necropsia. Retrato em <b>domínio público</b>, Wikimedia Commons.
+legenda: Alois Alzheimer (1864–1915). Em 1906 descreveu o caso de Auguste Deter, 51 anos. Retrato em <b>domínio público</b>, Wikimedia Commons.
 lado: esquerda
 ajuste: contain
 ---
 
 # Uma causa nomeada não muda a síndrome
 
-O diagnóstico de base continua sendo **TNC leve** ou **TNC maior**. A etiologia é acrescentada
-depois, e com o grau de certeza declarado.
+O diagnóstico de base continua sendo **TNC leve** ou **TNC maior**.
 
 <Nota titulo="Por que o grau importa">
 
-**Provável** exige evidência forte — mutação, neuroimagem ou o perfil clínico completo.
-**Possível** é o que resta quando a clínica é compatível mas a confirmação não existe. No TNC
-leve essa confirmação costuma faltar: o DSM-5 observa que, nesse nível, com frequência o mais
-apropriado é o subtipo **não especificado**.
+**Provável** exige evidência forte: mutação, neuroimagem ou o perfil clínico completo.
+**Possível** é o que resta quando a clínica é compatível mas a confirmação não existe.
 
 </Nota>
 
 <!--
+No TNC leve a confirmação costuma faltar: o DSM-5 observa que, nesse nível, com frequência o
+mais apropriado é o subtipo "não especificado".
+Alzheimer descreveu, na necropsia de Auguste Deter, a alteração do tecido cerebral que hoje
+leva seu nome.
 Necropsia: exame do corpo após a morte. Até hoje a confirmação definitiva de várias dessas
 etiologias — a doença do príon inclusive — só é possível por biópsia ou necropsia.
 -->
@@ -372,7 +383,7 @@ etiologias — a doença do príon inclusive — só é possível por biópsia o
 ---
 layout: secao
 numero: "04"
-kicker: Bloco 4 · 7 min
+kicker: Bloco 4
 title: Domínios cognitivos
 note: É aqui que o neuropsicólogo entra. A alteração nos domínios é o critério A — o que sustenta o diagnóstico.
 ---
@@ -381,7 +392,7 @@ note: É aqui que o neuropsicólogo entra. A alteração nos domínios é o crit
 layout: esquema
 kicker: Bloco 4
 title: Os seis domínios
-legenda: O DSM-5 define os domínios em uma tabela de três colunas — o nome, os exemplos de sintomas ou observações e os exemplos de avaliação. Os dois próximos slides reproduzem essa tabela.
+legenda: O DSM-5 define os domínios em uma tabela de três colunas — o nome, os exemplos de sintomas e os exemplos de avaliação. Os dois próximos slides a condensam.
 ---
 
 <img src="/seis-dominios.svg" alt="Os seis domínios neurocognitivos do DSM-5 dispostos ao redor de um centro" class="w-full max-h-full object-contain">
@@ -398,15 +409,20 @@ colunas:
   - { titulo: Sintomas ou observações, sub: o que se vê no dia a dia, cor: azul }
   - { titulo: Exemplos de avaliação, sub: o que o teste pede, cor: ouro }
 linhas:
-  - { criterio: Atenção complexa, valores: ["distrai-se em ambiente com TV, rádio e conversa; não retém um telefone recém-dito; todo pensamento leva mais tempo que o normal", "atenção sustentada, seletiva e dividida; velocidade de processamento, quantificada ao cronometrar a tarefa"] }
-  - { criterio: Função executiva, valores: ["abandona projetos complexos; passa a depender de outros para planejar; multitarefa fica difícil; retomar tarefa interrompida cansa", "planejamento (labirinto); tomada de decisão; memória de trabalho (série de números de trás para a frente); resposta a feedback; inibição; flexibilidade mental"] }
-  - { criterio: Aprendizagem e memória, valores: ["repete-se na mesma conversa; não se atém a uma lista curta de compras; conta cada vez mais com lista e calendário", "memória imediata (repetir lista); memória recente em <b>evocação livre</b>, <b>evocação com pistas</b> e <b>reconhecimento</b>; memória semântica e autobiográfica; aprendizagem implícita"] }
+  - { criterio: Atenção complexa, valores: ["distrai-se com TV e conversa ao redor; não retém um telefone recém-dito", "atenção sustentada, seletiva e dividida; velocidade de processamento"] }
+  - { criterio: Função executiva, valores: ["abandona projetos complexos; multitarefa fica difícil", "planejamento; memória de trabalho; inibição; flexibilidade mental"] }
+  - { criterio: Aprendizagem e memória, valores: ["repete-se na mesma conversa; conta cada vez mais com lista e calendário", "<b>evocação livre</b>, <b>com pistas</b> e <b>reconhecimento</b>; memória semântica"] }
 ---
 
 <Fonte>Tabela 1 — Domínios neurocognitivos · APA, <em>DSM-5</em>. Texto condensado.</Fonte>
 
 <!--
-Memória de trabalho: manter uma informação por período curto E manipulá-la.
+Atenção complexa: todo pensamento leva mais tempo que o normal. Velocidade de processamento
+se quantifica cronometrando a tarefa.
+Função executiva: passa a depender de outros para planejar; retomar tarefa interrompida cansa.
+Testes de planejamento (labirinto), tomada de decisão, resposta a feedback.
+Memória de trabalho: manter uma informação por período curto E manipulá-la — série de números
+de trás para a frente.
 Memória semântica: memória de fatos. Autobiográfica: de eventos e pessoas da própria vida.
 Aprendizagem implícita: aprendizagem inconsciente de procedimentos e habilidades.
 -->
@@ -418,17 +434,23 @@ colunas:
   - { titulo: Sintomas ou observações, sub: o que se vê no dia a dia, cor: azul }
   - { titulo: Exemplos de avaliação, sub: o que o teste pede, cor: ouro }
 linhas:
-  - { criterio: Linguagem, valores: ["dificuldade visível para encontrar palavras; usa expressões como \"aquela coisa\" e prefere pronome genérico; erros de artigo e preposição; adiante, ecolalia e mutismo", "linguagem expressiva: nomeação confrontativa e fluência semântica ou fonêmica em um minuto; gramática e sintaxe; linguagem receptiva: compreensão e execução de comando verbal"] }
-  - { criterio: Perceptomotor, valores: ["dificuldade em atividades antes familiares, como dirigir e usar ferramenta; perde-se em ambiente conhecido; confunde-se ao anoitecer; estaciona com menos precisão", "percepção visual sem mediação verbal; visuoconstrutiva (desenhar, copiar, montar blocos); perceptomotora (encaixar pinos); práxis (mímica do uso de um objeto); gnosia (rostos, cores)"] }
-  - { criterio: Cognição social, valores: ["comportamento fora da variação social aceitável; insensibilidade a padrões de pudor; decide sem considerar a segurança; no leve, mudança sutil de atitude e menos empatia", "reconhecimento de emoções em imagens de rostos; teoria da mente, com cartões que contam uma história e perguntas sobre o estado mental dos personagens"] }
+  - { criterio: Linguagem, valores: ["dificuldade para achar palavras; usa \"aquela coisa\"; adiante, ecolalia e mutismo", "nomeação confrontativa; fluência semântica e fonêmica; compreensão de comando"] }
+  - { criterio: Perceptomotor, valores: ["perde-se em ambiente conhecido; dificuldade para dirigir e usar ferramenta", "visuoconstrutiva (copiar, montar); práxis; gnosia de rostos e cores"] }
+  - { criterio: Cognição social, valores: ["comportamento fora da variação aceitável; menos empatia; decide sem pesar risco", "reconhecimento de emoções em rostos; teoria da mente"] }
 ---
 
 <Fonte>Tabela 1 — Domínios neurocognitivos · APA, <em>DSM-5</em>. Texto condensado.</Fonte>
 
 <!--
+Linguagem: prefere pronome genérico, erra artigo e preposição. A fluência é medida em um
+minuto; a linguagem receptiva, por compreensão e execução de comando verbal.
+Perceptomotor: confunde-se ao anoitecer, estaciona com menos precisão. Também percepção visual
+sem mediação verbal e tarefas perceptomotoras (encaixar pinos).
+Cognição social: insensibilidade a padrões de pudor; decide sem considerar a segurança; no
+leve, mudança sutil de atitude. Teoria da mente se avalia com cartões que contam uma história
+e perguntas sobre o estado mental dos personagens.
 Nomeação confrontativa: mostrar uma figura e pedir o nome.
-Fluência semântica: dizer o máximo de itens de uma categoria (animais) em um minuto;
-fonêmica: palavras começadas por uma letra.
+Fluência semântica: itens de uma categoria (animais); fonêmica: palavras começadas por uma letra.
 Práxis: integridade dos movimentos aprendidos. Gnosia: integridade do reconhecimento.
 Ecolalia: repetição da fala do interlocutor. Mutismo: ausência de fala.
 -->
@@ -443,17 +465,15 @@ layout: default
 
 <Cartao rotulo="aprendizagem e memória" titulo="No TNC maior" cor="terra">
 
-Repete-se na conversação, frequentemente **na mesma conversa**. Não consegue se ater a uma
-lista curta de compras. Precisa de lembretes frequentes para orientar uma tarefa em
-andamento.
+Repete-se **na mesma conversa**. Não se atém a uma lista curta de compras. Precisa de
+lembretes frequentes.
 
 </Cartao>
 
 <Cartao rotulo="aprendizagem e memória" titulo="No TNC leve" cor="ouro">
 
-Dificuldade de recordar eventos recentes; conta **cada vez mais com listas e calendário**.
-Precisa de lembretes ocasionais ou de reler para acompanhar os personagens de um filme.
-Não sabe dizer se as contas já foram pagas.
+Conta **cada vez mais com listas e calendário**. Precisa reler para acompanhar os personagens
+de um filme.
 
 </Cartao>
 
@@ -461,12 +481,18 @@ Não sabe dizer se as contas já foram pagas.
 
 <Nota titulo="O que essa comparação mostra">
 
-Não são sintomas diferentes: é o **mesmo sintoma em outra intensidade**. É por isso que o
-critério que separa os dois níveis não está no domínio, e sim na funcionalidade.
+Não são sintomas diferentes: é o **mesmo sintoma em outra intensidade**. Por isso o critério
+que separa os níveis não está no domínio, e sim na funcionalidade.
 
 </Nota>
 
 <Fonte>Tabela 1, linha "Aprendizagem e memória" · APA, <em>DSM-5</em>.</Fonte>
+
+<!--
+No maior: precisa de lembretes frequentes para orientar uma tarefa em andamento.
+No leve: dificuldade de recordar eventos recentes; lembretes ocasionais; não sabe dizer se as
+contas já foram pagas.
+-->
 
 ---
 layout: esquema
@@ -499,7 +525,7 @@ Perfil ilustrativo, não um caso real.
 ---
 layout: secao
 numero: "05"
-kicker: Bloco 5 · 11 min
+kicker: Bloco 5
 title: Avaliação neuropsicológica — função e cognição
 note: Duas perguntas, não uma. A cognição diz se há declínio e em quê; a funcionalidade diz se é leve ou maior.
 ---
@@ -531,16 +557,15 @@ pistas:
 
 <v-click>
 
-Um escore baixo é o **fim** de uma cadeia, não o começo. A mesma pontuação em evocação livre
-pode vir de não ter prestado atenção, de não ter guardado, de não conseguir buscar ou de não
-achar a palavra — e cada uma dessas hipóteses leva a uma conduta diferente.
-
-**Separar essas hipóteses é o trabalho da avaliação neuropsicológica.** Nenhum instrumento de
-rastreio faz isso.
+Um escore baixo é o **fim** de uma cadeia, não o começo. Separar as hipóteses que levam a ele
+é o trabalho da avaliação neuropsicológica — **nenhum rastreio faz isso**.
 
 </v-click>
 
 <!--
+A mesma pontuação em evocação livre pode vir de não ter prestado atenção, de não ter guardado,
+de não conseguir buscar ou de não achar a palavra — e cada uma dessas hipóteses leva a uma
+conduta diferente.
 Acesso lexical: a recuperação da forma da palavra na memória de longo prazo — o "está na
 ponta da língua". É função de linguagem, não de memória episódica.
 Rastreio: instrumento breve de triagem, como o MEEM ou o MoCA, que produz um escore global.
@@ -550,55 +575,44 @@ Rastreio: instrumento breve de triagem, como o MEEM ou o MoCA, que produz um esc
 layout: default
 ---
 
-# Como cada pergunta se responde
+# As quatro perguntas por trás do escore
 
-<Grade :cols="2">
-
-<Cartao rotulo="pergunta 1" titulo="Memória ou atenção?" cor="azul">
-
-Se a atenção não sustentou a tarefa, o material **nunca foi codificado** — e o que parece
-esquecimento é falha de entrada. Compara-se a memória imediata com a recente, e as duas com
-a atenção sustentada e a velocidade de processamento.
-
-</Cartao>
-
-<Cartao rotulo="pergunta 2" titulo="A memória melhora com dica?" cor="ouro">
-
-Comparam-se **evocação livre**, **evocação com pistas** e **reconhecimento** — as três formas
-que o próprio DSM-5 lista. Se a pista recupera o item, ele estava guardado. Se não recupera,
-não estava.
-
-</Cartao>
-
-<Cartao rotulo="pergunta 3" titulo="Atenção ou controle inibitório?" cor="azul">
-
-São coisas diferentes na tabela: *atenção seletiva* é manter o foco apesar do distrator;
-*substituição de hábitos e inibição* é escolher a resposta difícil em vez da automática —
-nomear a cor da fonte, e não a palavra escrita.
-
-</Cartao>
-
-<Cartao rotulo="pergunta 4" titulo="Esquecimento ou acesso lexical?" cor="ouro">
-
-"Não lembro o nome" pode ser memória ou **linguagem**. A nomeação confrontativa e a fluência
-separam as duas: quem tem anomia falha em nomear a figura que está vendo — não há nada a
-esquecer ali.
-
-</Cartao>
-
-</Grade>
+<Criterios :itens="[
+  { letra: '1', titulo: 'Memória ou atenção?', texto: 'o material chegou a entrar?' },
+  { letra: '2', titulo: 'A memória melhora com dica?', texto: 'o item estava guardado, ou não estava?' },
+  { letra: '3', titulo: 'Atenção ou controle inibitório?', texto: 'sustentar o foco, ou vencer o automático?' },
+  { letra: '4', titulo: 'Esquecimento ou acesso lexical?', texto: 'memória episódica, ou linguagem?' },
+]" />
 
 <!--
+AS RESPOSTAS — não estão no slide de propósito; são a fala.
+
+1. Memória ou atenção? Se a atenção não sustentou a tarefa, o material nunca foi codificado, e
+   o que parece esquecimento é falha de entrada. Compara-se a memória imediata com a recente,
+   e as duas com a atenção sustentada e a velocidade de processamento.
+
+2. Melhora com dica? Comparam-se evocação livre, evocação com pistas e reconhecimento — as três
+   formas que o próprio DSM-5 lista. Se a pista recupera o item, ele estava guardado. Se não
+   recupera, não estava.
+
+3. Atenção ou inibição? São coisas diferentes na tabela: atenção seletiva é manter o foco
+   apesar do distrator; substituição de hábitos e inibição é escolher a resposta difícil em vez
+   da automática — nomear a cor da fonte, e não a palavra escrita.
+
+4. Esquecimento ou acesso lexical? "Não lembro o nome" pode ser memória ou linguagem. A nomeação
+   confrontativa e a fluência separam as duas: quem tem anomia falha em nomear a figura que está
+   vendo — não há nada a esquecer ali.
+
 Anomia: dificuldade específica para nomear, com compreensão preservada.
-Codificação: a entrada da informação no sistema de memória. Armazenamento: a manutenção
-dela ao longo do tempo. Evocação: a recuperação.
+Codificação: a entrada da informação no sistema de memória. Armazenamento: a manutenção dela ao
+longo do tempo. Evocação: a recuperação.
 -->
 
 ---
 layout: esquema
 kicker: Bloco 5
 title: Livre, com pista, reconhecimento
-legenda: Grober e Buschke mostraram que a evocação com pista, depois de uma codificação controlada, separa o déficit genuíno de memória do prejuízo aparente produzido por atenção ou por estratégia de busca ineficiente.
+legenda: Grober e Buschke mostraram que a evocação com pista, depois de uma codificação controlada, separa o déficit genuíno de memória do prejuízo aparente produzido por atenção ou por busca ineficiente.
 ---
 
 <img src="/memoria-com-dica.svg" alt="Dois padrões de recuperação: um paciente melhora com a pista, o outro não" class="w-full max-h-full object-contain">
@@ -617,23 +631,25 @@ layout: default
 <Termo palavra="Atividades instrumentais da vida diária (AIVD)" origem="DSM-5, critério B">
 
 As tarefas complexas de manter a própria vida: **pagar contas, controlar a medicação**, usar
-transporte, telefone, fazer compras, preparar refeição. São elas — e não as atividades
-básicas, como vestir-se e alimentar-se — que o critério B examina.
+transporte, telefone, fazer compras, preparar refeição.
 
 </Termo>
 
 <Nota titulo="Três coisas que só a entrevista responde">
 
-**Existe prejuízo funcional?** — e prejuízo em relação ao que a pessoa fazia antes.
-**Quando começou e como andou?** — súbito ou insidioso, em degraus ou contínuo.
-**O que mais está em jogo?** — medicação, álcool, déficit sensorial não corrigido, dor,
-insônia, doença clínica descompensada.
+**Existe prejuízo funcional?** **Quando começou e como andou?** **O que mais está em jogo?**
 
 </Nota>
 
-<Fonte>APA, <em>DSM-5</em>, critério B · escalas de informante validadas para o Brasil, como o <b>P-FAQ</b>: Assis L.O. et al. Psychometric properties of the Brazilian version of Pfeffer&#39;s Functional Activities Questionnaire. <em>Frontiers in Aging Neuroscience</em>, 2014.</Fonte>
+<Fonte>APA, <em>DSM-5</em>, critério B · escala de informante validada para o Brasil: <b>P-FAQ</b> (Assis L.O. et al., 2014).</Fonte>
 
 <!--
+São as instrumentais — e não as básicas, como vestir-se e alimentar-se — que o critério B
+examina.
+Prejuízo funcional: em relação ao que a pessoa fazia antes.
+Início e curso: súbito ou insidioso, em degraus ou contínuo.
+O que mais está em jogo: medicação, álcool, déficit sensorial não corrigido, dor, insônia,
+doença clínica descompensada.
 Informante: pessoa que convive com o paciente e pode relatar mudanças — não precisa ser
 familiar, mas precisa ter convivência regular e anterior ao quadro.
 -->
@@ -645,20 +661,21 @@ title: A ordem do raciocínio
 legenda: "A sequência não é obrigatória nem de mão única: um achado da história muda a hipótese e faz o caminho voltar atrás."
 ---
 
-<Fluxo :etapas="[
-  { titulo: 'Queixa', desc: 'do próprio, de informante ou do clínico' },
-  { titulo: 'Nível prévio', desc: 'escolaridade, ocupação, história de vida' },
+<Fluxo :por-linha="4" :etapas="[
+  { titulo: 'Queixa', desc: 'do próprio ou do informante' },
+  { titulo: 'Nível prévio', desc: 'escolaridade e ocupação' },
   { titulo: 'Início e curso', desc: 'quando começou, como andou' },
   { titulo: 'Comorbidades', desc: 'clínicas, psiquiátricas, medicações' },
   { titulo: 'Testagem', desc: 'os seis domínios, com norma adequada', cor: 'ouro' },
   { titulo: 'Funcionalidade', desc: 'AIVD, com informante' },
-  { titulo: 'Diferencial', desc: 'e só então a síndrome e a etiologia' },
+  { titulo: 'Diferencial', desc: 'e só então a etiologia' },
 ]" />
 
 <!--
 Nível prévio de desempenho: o critério A do DSM-5 pede comparação com ele, não com a média
 da população. Escolaridade e ocupação são as estimativas de que se dispõe na prática.
 Comorbidade: outra condição presente ao mesmo tempo.
+A queixa pode vir também do clínico.
 -->
 
 ---
@@ -669,22 +686,23 @@ colunas:
   - { titulo: TNC, sub: meses a anos, cor: azul }
   - { titulo: Depressão, sub: semanas a meses, cor: verde }
 linhas:
-  - { criterio: Curso, valores: ["oscila dentro do mesmo dia", "estável no dia, progressivo no tempo", "acompanha o episódio de humor"] }
-  - { criterio: Atenção, valores: ["prejudicada — é a marca obrigatória", "preservada no início", "oscila com o humor e o esforço"] }
+  - { criterio: Curso, valores: ["oscila no mesmo dia", "progressivo no tempo", "acompanha o humor"] }
+  - { criterio: Atenção, valores: ["prejudicada — é obrigatória", "preservada no início", "oscila com o esforço"] }
   - { criterio: Queixa, valores: ["não se queixa", "minimiza ou não percebe", "detalha e amplifica"] }
-  - { criterio: No teste, valores: ["não sustenta a tarefa", "tenta e erra", "responde \"não sei\" sem tentar"] }
+  - { criterio: No teste, valores: ["não sustenta a tarefa", "tenta e erra", "não tenta"] }
 ---
 
 <Nota tipo="erro" titulo="Descartar não é escolher um">
 
-Os três coexistem com frequência, e o critério D fala em "**não mais bem explicado**" — não em
-ausência do outro quadro. A psicose também entra na fila: no TNC, delírios e alucinações
-visuais são comuns, mas **fala e comportamento desorganizados não são característicos** — e é
-isso que ajuda a separá-lo de um transtorno psicótico de início mais precoce.
+Os três coexistem com frequência, e o critério D fala em "**não mais bem explicado**".
 
 </Nota>
 
 <!--
+A psicose também entra na fila: no TNC, delírios e alucinações visuais são comuns, mas fala e
+comportamento desorganizados NÃO são característicos — e é isso que ajuda a separá-lo de um
+transtorno psicótico de início mais precoce.
+No teste, a depressão responde "não sei" sem tentar.
 Pseudodemência: nome antigo para o rebaixamento cognitivo do episódio depressivo. Caiu em
 desuso porque o quadro é frequentemente comórbido, e não alternativo, ao TNC.
 -->
@@ -698,20 +716,19 @@ layout: default
 <Criterios :itens="[
   { letra: '·', texto: '<b>American Psychiatric Association.</b> <i>DSM-5</i>. Porto Alegre: Artmed. Capítulo <b>Transtornos Neurocognitivos</b> — <b>base primária desta aula</b>.' },
   { letra: '·', texto: '<b>Jessen F. et al., 2014.</b> A conceptual framework for research on subjective cognitive decline in preclinical Alzheimer disease. <i>Alzheimer’s &amp; Dementia</i>, 10(6):844-52.' },
-  { letra: '·', texto: '<b>Grober E. e Buschke H., 1987.</b> Genuine memory deficits in dementia. <i>Developmental Neuropsychology</i>, 3(1):13-36; e <i>Neurology</i>, 1988.' },
+  { letra: '·', texto: '<b>Grober E. e Buschke H., 1987.</b> Genuine memory deficits in dementia. <i>Developmental Neuropsychology</i>, 3(1):13-36.' },
   { letra: '·', texto: '<b>Mori E. et al., 2000</b>, <i>Archives of Neurology</i>, 57(4):489-93; <b>Calderón J. et al., 2001</b>, <i>J Neurol Neurosurg Psychiatry</i>, 70(2):157-64.' },
   { letra: '·', texto: '<b>Assis L.O. et al., 2014.</b> Brazilian version of Pfeffer’s Functional Activities Questionnaire. <i>Frontiers in Aging Neuroscience</i>, 6:255.' },
 ]" />
 
-<Fonte>Retrato de Alois Alzheimer: Wikimedia Commons, <b>domínio público</b>. Os esquemas são autorais, feitos para esta aula.</Fonte>
+<Fonte>Retrato de Alois Alzheimer: Wikimedia Commons, <b>domínio público</b>. Os esquemas são autorais.</Fonte>
 
 ---
 layout: fecho
 kicker: Para levar
 title: Três coisas que ficam
 pontos:
-  - O TNC é o transtorno cujo déficit primário é cognitivo, é adquirido e tem etiologia buscada — e a síndrome vem antes da causa.
-  - O que separa leve de maior não é o escore: é a independência nas atividades instrumentais.
-  - Um escore baixo tem muitas origens. Separá-las — atenção, codificação, evocação, acesso lexical — é o trabalho do neuropsicólogo.
-proximo: A avaliação não termina numa medida. Termina numa comparação com quem a pessoa era — e, quando a dúvida persiste, numa reavaliação depois de doze meses.
+  - Déficit primário, adquirido, com etiologia buscada — e a síndrome vem antes da causa.
+  - "O que separa leve de maior não é o escore: é a independência."
+  - Um escore baixo tem muitas origens. Separá-las é o trabalho do neuropsicólogo.
 ---

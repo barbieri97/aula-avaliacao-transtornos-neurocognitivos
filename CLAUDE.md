@@ -9,6 +9,15 @@ Não há tema npm (`theme: none`): o visual vem de um design system local, escri
 como ênfase, serifa nos títulos e sans no corpo. Trocar por um tema pronto, ou gerar outro DS,
 é decisão de quem usa o repositório — os scripts não sabem qual é o visual.
 
+Por cima disso corre a **marca da Giunti**, pedida pelo template do evento: a marca-d'água
+(`public/image1.png`) na faixa direita de todo slide, e o logotipo (`public/image2.png`) no
+canto inferior direito — no canto superior esquerdo, se for a capa. Quem as desenha são
+`aulas/slide-bottom.vue` e `aulas/slide-top.vue`, dois nomes que o Slidev procura sozinho e
+renderiza em cada slide: **nenhum layout precisa saber que elas existem.** Por causa delas o
+deck é todo claro (as duas imagens são azuis sobre claro) e o pé direito do slide é reservado
+— quem escreve lá embaixo para em 33% da largura. Detalhes em
+[`docs/design-system.md`](docs/design-system.md#a-marca-da-giunti).
+
 ## Antes de escrever ou editar qualquer deck
 
 Leia **[`docs/design-system.md`](docs/design-system.md)** — os layouts, os componentes, os
@@ -55,9 +64,10 @@ um componente — a exceção honesta é o desenho que só existe naquele slide.
 | URL | o nome do arquivo (sem `.md`) vira o caminho: `/<repo>/aula-NN-slug-descritivo/` |
 | Deck de bancada | prefixo `_` (`aulas/_design-system.md`) — o site não publica |
 | Tema | `theme: none` + design system local; ou um pacote npm, ver `docs/temas.md` |
-| Cor | claro só: todo deck traz `colorSchema: light` (não existe bloco `.dark` nos tokens) |
+| Cor | claro só: todo deck traz `colorSchema: light` (não existe bloco `.dark` nos tokens); nenhum layout roda sobre fundo escuro |
 | Idioma | conteúdo em português |
 | Imagens | `aulas/public/` — **não** na raiz do repo (veja "Por que `aulas/public/`" abaixo) |
+| Marca | `slide-bottom.vue` (marca-d'água) e `slide-top.vue` (logotipo) na raiz de `aulas/` — automáticos em todo slide |
 | Fontes | `aulas/styles/fontes/*.woff2`, servidas pelo site — nunca o campo `fonts:` (rede) |
 | Headmatter | além de `theme`/`title`, cada aula traz `info:` (ementa de uma linha) e `date:` (`YYYY-MM-DD`, entre aspas) — os dois alimentam a landing page |
 | PDF | `download: true` no headmatter: o build imprime o PDF e o deck ganha o botão de download |

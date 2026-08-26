@@ -55,7 +55,11 @@ const title = props.frontmatter?.title
 <style scoped>
 /* O campo pastel troca o fundo do slide inteiro; os componentes que usam
    `--ds-surface` continuam se destacando porque a superfície segue quase
-   branca. */
+   branca.
+
+   A lavagem é TRANSLÚCIDA de propósito: é o único layout que pinta o próprio
+   fundo, e um pastel opaco apagaria a marca-d'água da Giunti que
+   `slide-bottom.vue` desenha por baixo. */
 .ds-pergunta {
   --ds-bg: var(--ds-pastel-azul);
   --ds-rule: #d3d3e4;
@@ -63,7 +67,10 @@ const title = props.frontmatter?.title
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: var(--ds-pastel-azul);
+  /* A faixa de pistas encosta no pé do slide, e o pé direito é do logotipo:
+     este padding é a folga entre uma coisa e outra. */
+  padding-bottom: 4.4rem;
+  background: rgba(36, 34, 88, 0.06);
 }
 
 .topo {
