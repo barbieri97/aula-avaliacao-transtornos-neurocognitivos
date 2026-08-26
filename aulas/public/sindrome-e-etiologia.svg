@@ -16,45 +16,51 @@
   <path d="M 226 138 L 282 138" stroke="#947b2f" stroke-width="2.5"/>
   <path d="M 282 23 L 282 253" stroke="#947b2f" stroke-width="2.5"/>
 
-  <!-- os ramos: só depois a causa -->
+  <!-- os ramos: só depois a causa.
+       As caixas vão de x=316 a x=600 (284 de largura) e o texto começa em 330,
+       o que deixa 256px de medida útil: cabe a linha mais longa ("Degeneração
+       frontotemporal") em 16px sem encostar na borda direita. -->
   <g>
-    <path d="M 282 23 L 320 23" stroke="#947b2f" stroke-width="1.5"/>
-    <rect x="320" y="6" width="234" height="34" fill="#e7e7f1" stroke="#c3bfb0"/>
-    <text class="rot" x="334" y="28">Doença de Alzheimer</text>
+    <path d="M 282 23 L 316 23" stroke="#947b2f" stroke-width="1.5"/>
+    <rect x="316" y="6" width="284" height="34" fill="#e7e7f1" stroke="#c3bfb0"/>
+    <text class="rot" x="330" y="28">Doença de Alzheimer</text>
 
-    <path d="M 282 69 L 320 69" stroke="#947b2f" stroke-width="1.5"/>
-    <rect x="320" y="52" width="234" height="34" fill="#e7e7f1" stroke="#c3bfb0"/>
-    <text class="rot" x="334" y="74">Doença vascular</text>
+    <path d="M 282 69 L 316 69" stroke="#947b2f" stroke-width="1.5"/>
+    <rect x="316" y="52" width="284" height="34" fill="#e7e7f1" stroke="#c3bfb0"/>
+    <text class="rot" x="330" y="74">Doença vascular</text>
 
-    <path d="M 282 115 L 320 115" stroke="#947b2f" stroke-width="1.5"/>
-    <rect x="320" y="98" width="234" height="34" fill="#e7e7f1" stroke="#c3bfb0"/>
-    <text class="rot" x="334" y="120">Degeneração frontotemporal</text>
+    <path d="M 282 115 L 316 115" stroke="#947b2f" stroke-width="1.5"/>
+    <rect x="316" y="98" width="284" height="34" fill="#e7e7f1" stroke="#c3bfb0"/>
+    <text class="rot" x="330" y="120">Degeneração frontotemporal</text>
 
-    <path d="M 282 161 L 320 161" stroke="#947b2f" stroke-width="1.5"/>
-    <rect x="320" y="144" width="234" height="34" fill="#e7e7f1" stroke="#c3bfb0"/>
-    <text class="rot" x="334" y="166">Doença com corpos de Lewy</text>
+    <path d="M 282 161 L 316 161" stroke="#947b2f" stroke-width="1.5"/>
+    <rect x="316" y="144" width="284" height="34" fill="#e7e7f1" stroke="#c3bfb0"/>
+    <text class="rot" x="330" y="166">Doença com corpos de Lewy</text>
 
-    <path d="M 282 207 L 320 207" stroke="#947b2f" stroke-width="1.5"/>
-    <rect x="320" y="190" width="234" height="34" fill="#e7e7f1" stroke="#c3bfb0"/>
-    <text class="rot" x="334" y="212">Doença do príon</text>
+    <path d="M 282 207 L 316 207" stroke="#947b2f" stroke-width="1.5"/>
+    <rect x="316" y="190" width="284" height="34" fill="#e7e7f1" stroke="#c3bfb0"/>
+    <text class="rot" x="330" y="212">Doença do príon</text>
 
-    <path d="M 282 253 L 320 253" stroke="#947b2f" stroke-width="1.5"/>
-    <rect x="320" y="236" width="234" height="34" fill="#eae7dd" stroke="#c3bfb0"/>
-    <text class="rot" x="334" y="258" font-size="15">Parkinson · TCE · HIV · outras</text>
+    <path d="M 282 253 L 316 253" stroke="#947b2f" stroke-width="1.5"/>
+    <rect x="316" y="236" width="284" height="34" fill="#eae7dd" stroke="#c3bfb0"/>
+    <text class="rot" x="330" y="258">Parkinson · TCE · HIV · outras</text>
   </g>
 
-  <!-- e o grau de certeza -->
-  <path d="M 554 23 L 596 23 L 596 253 L 554 253" fill="none" stroke="#c3bfb0" stroke-width="1.5"/>
-  <path d="M 596 138 L 634 138" stroke="#947b2f" stroke-width="2.5"/>
-  <path d="M 642 138 l -9 -6 v 12 z" fill="#947b2f"/>
+  <!-- e o grau de certeza.
+       As duas fichas ganharam 8px de altura e param em 850: a terceira linha
+       ("sem confirmação") cabia por 8px no desenho antigo e vazava assim que a
+       fonte de sistema mudava de métrica. -->
+  <path d="M 600 23 L 630 23 L 630 253 L 600 253" fill="none" stroke="#c3bfb0" stroke-width="1.5"/>
+  <path d="M 630 138 L 654 138" stroke="#947b2f" stroke-width="2.5"/>
+  <path d="M 662 138 l -9 -6 v 12 z" fill="#947b2f"/>
 
-  <rect x="646" y="66" width="204" height="70" fill="#e3ece4" stroke="#2c6b4f" stroke-width="1.5"/>
-  <text class="chip" x="748" y="92" text-anchor="middle">provável</text>
-  <text class="sub"  x="748" y="112" text-anchor="middle">genética, imagem</text>
-  <text class="sub"  x="748" y="128" text-anchor="middle">ou perfil típico</text>
+  <rect x="667" y="53" width="183" height="80" fill="#e3ece4" stroke="#2c6b4f" stroke-width="1.5"/>
+  <text class="chip" x="758" y="81" text-anchor="middle">provável</text>
+  <text class="sub"  x="758" y="103" text-anchor="middle">genética, imagem</text>
+  <text class="sub"  x="758" y="121" text-anchor="middle">ou perfil típico</text>
 
-  <rect x="646" y="146" width="204" height="70" fill="#f1e9d6" stroke="#a3651b" stroke-width="1.5"/>
-  <text class="chip" x="748" y="172" text-anchor="middle">possível</text>
-  <text class="sub"  x="748" y="192" text-anchor="middle">clínica compatível,</text>
-  <text class="sub"  x="748" y="208" text-anchor="middle">sem confirmação</text>
+  <rect x="667" y="143" width="183" height="80" fill="#f1e9d6" stroke="#a3651b" stroke-width="1.5"/>
+  <text class="chip" x="758" y="171" text-anchor="middle">possível</text>
+  <text class="sub"  x="758" y="193" text-anchor="middle">clínica compatível,</text>
+  <text class="sub"  x="758" y="211" text-anchor="middle">sem confirmação</text>
 </svg>

@@ -36,9 +36,13 @@ body,
   color: var(--ds-ink);
 }
 
+/* O fundo NÃO é pintado aqui: quem pinta o papel é `.slidev-page` (acima), e
+   entre os dois mora a marca-d'água da Giunti que `slide-bottom.vue` desenha.
+   Um layout que precise de outro campo — a `pergunta`, por exemplo — pinta o
+   seu por cima, e aí usa uma cor translúcida para a marca continuar aparecendo. */
 .slidev-layout {
   padding: var(--ds-pad-slide);
-  background: var(--ds-bg);
+  background: transparent;
   color: var(--ds-ink);
   font-family: var(--ds-font-sans);
   font-size: var(--ds-text-base);
@@ -324,35 +328,19 @@ body,
   height: auto !important;
 }
 
-/* --- slides invertidos ----------------------------------------------------
-   Capa, seção e fecho rodam sobre marinho. Em vez de cada um repintar texto,
-   fio e ouro, todos ganham a classe `ds-inverso` e herdam daqui. */
+/* --- a marca da Giunti ---------------------------------------------------
+   O deck inteiro roda sobre o papel — capa, seção e fecho inclusive. Foi o
+   template do evento que pediu: a marca-d'água e o logotipo são azuis sobre
+   claro, e sobre o marinho os dois sumiam. O que marca a virada de bloco
+   passou a ser o numeral e o fio de ouro da `secao`, não o fundo.
 
-.ds-inverso {
-  --ds-bg: var(--ds-marinho-fundo);
-  --ds-surface: rgba(255, 255, 255, 0.06);
-  --ds-ink: #f4f2ea;
-  --ds-muted: #b8b6d4;
-  --ds-rule: rgba(244, 242, 234, 0.22);
-  --ds-rule-forte: rgba(244, 242, 234, 0.38);
-  --ds-accent: var(--ds-ouro-luz);
-  --ds-accent-forte: var(--ds-ouro-luz);
-  --ds-ink-wash: rgba(244, 242, 234, 0.08);
-  --ds-accent-wash: rgba(217, 193, 118, 0.16);
-  background: var(--ds-marinho-fundo);
+   As duas camadas da marca são desenhadas por `slide-bottom.vue` (a
+   marca-d'água, atrás de tudo) e `slide-top.vue` (o logotipo, à frente de
+   tudo). Nenhum layout as chama: o Slidev as insere em todo slide.
+
+   O canto inferior direito é do logotipo. Quem escreve lá embaixo — o
+   <Fonte> de crédito, o `proximo` do fecho — para em 33% da largura. */
+
+.slidev-layout :is(h1, h2, h3) {
   color: var(--ds-ink);
-}
-
-.ds-inverso :is(h1, h2, h3, strong, b) {
-  color: var(--ds-ink);
-}
-
-.ds-inverso h1::after {
-  background: var(--ds-ouro-luz);
-}
-
-/* A marca do v-mark (rough-notation) desenha em SVG por cima do texto; sobre o
-   marinho ela precisa clarear junto. */
-.ds-inverso ul > li::before {
-  background: var(--ds-ouro-luz);
 }

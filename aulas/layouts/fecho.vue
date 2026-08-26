@@ -1,5 +1,5 @@
 <!--
-  fecho — o último slide: o que fica e o que vem. Fundo marinho, como a capa,
+  fecho — o último slide: o que fica e o que vem. Papel, como a capa,
   fechando o deck do jeito que ele abriu.
 
   ---
@@ -28,7 +28,7 @@ const title = props.frontmatter?.title
 </script>
 
 <template>
-  <div class="slidev-layout ds-fecho ds-inverso">
+  <div class="slidev-layout ds-fecho">
     <div class="texto">
       <p v-if="kicker" class="ds-kicker" v-html="kicker" />
       <h1 v-if="title" v-html="title" />
@@ -49,10 +49,16 @@ const title = props.frontmatter?.title
 
 <style scoped>
 .ds-fecho {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
+}
+
+/* O texto para antes da faixa direita, que é da marca-d'água. */
+.texto {
+  max-width: 62%;
 }
 
 .ds-fecho :deep(h1) {
@@ -63,7 +69,7 @@ const title = props.frontmatter?.title
 .pontos {
   display: grid;
   gap: 0;
-  max-width: 46rem;
+  max-width: none;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -84,7 +90,7 @@ const title = props.frontmatter?.title
 
 .num {
   flex: none;
-  color: var(--ds-ouro-luz);
+  color: var(--ds-accent-forte);
   font-size: var(--ds-text-xs);
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -95,15 +101,16 @@ const title = props.frontmatter?.title
   line-height: var(--ds-leading-normal);
 }
 
+/* O rodapé para em 35% da direita: dali para lá é o canto do logotipo. */
 .proximo {
   position: absolute;
   left: 4.4rem;
-  right: 3.2rem;
+  right: 35%;
   bottom: 1.9rem;
   margin: 0;
   max-width: none;
   padding-left: var(--ds-space-4);
-  border-left: var(--ds-border-thick) solid var(--ds-ouro-luz);
+  border-left: var(--ds-border-thick) solid var(--ds-ouro);
   color: var(--ds-muted);
   font-size: var(--ds-text-sm);
   line-height: var(--ds-leading-normal);

@@ -11,45 +11,92 @@
 
   `orientacao`: horizontal (padrão) · vertical — a vertical cabe mais texto por
   etapa; a horizontal mostra melhor que existe um sentido.
+  `porLinha`: quantas etapas cabem numa fileira. Acima de cinco etapas na
+  horizontal cada caixa fica com menos de 60px de texto útil — aí `porLinha`
+  quebra o fluxo em fileiras, que se leem como texto: da esquerda para a
+  direita, de cima para baixo.
   `cor` de cada etapa: nenhuma (padrão) · azul · ouro · verde · terra · cinza.
 -->
 <script setup lang="ts">
-withDefaults(defineProps<{
-  etapas?: { titulo?: string, desc?: string, cor?: string }[]
+import { computed } from 'vue'
+
+type Etapa = { titulo?: string, desc?: string, cor?: string }
+
+const props = withDefaults(defineProps<{
+  etapas?: Etapa[]
   orientacao?: 'horizontal' | 'vertical'
+  porLinha?: number
 }>(), { orientacao: 'horizontal' })
+
+// Uma fileira só é o padrão; `porLinha` fatia a lista em várias. A seta é
+// desenhada DENTRO da fileira, entre duas etapas — nunca no fim dela, que é
+// onde a leitura vira a linha sozinha.
+const fileiras = computed<Etapa[][]>(() => {
+  const etapas = props.etapas ?? []
+  const n = props.porLinha
+  if (!n || n < 1 || etapas.length <= n) return [etapas]
+  const saida: Etapa[][] = []
+  for (let i = 0; i < etapas.length; i += n) saida.push(etapas.slice(i, i + n))
+  return saida
+})
+
+// Sete etapas em fileiras de quatro deixam a segunda com três — e três caixas
+// dividindo a mesma largura ficam mais gordas que as quatro de cima, o que faz
+// a fileira de baixo parecer outra coisa. As vagas que faltam entram como
+// caixas invisíveis, e as duas fileiras voltam a ter a mesma medida.
+const vagasVazias = computed(() => {
+  const n = props.porLinha ?? 0
+  const ultima = fileiras.value[fileiras.value.length - 1]
+  if (fileiras.value.length < 2 || !ultima) return 0
+  return Math.max(0, n - ultima.length)
+})
 </script>
 
 <template>
-  <div class="ds-fluxo" :class="orientacao">
-    <template v-for="(etapa, i) in etapas" :key="i">
-      <div class="etapa" :class="`cor-${etapa.cor ?? 'nenhuma'}`">
-        <span class="titulo" v-html="etapa.titulo" />
-        <span v-if="etapa.desc" class="desc" v-html="etapa.desc" />
-      </div>
+  <div class="ds-fluxo" :class="[orientacao, { fileirado: fileiras.length > 1 }]">
+    <div v-for="(fileira, f) in fileiras" :key="f" class="fileira">
+      <template v-for="(etapa, i) in fileira" :key="i">
+        <div class="etapa" :class="`cor-${etapa.cor ?? 'nenhuma'}`">
+          <span class="titulo" v-html="etapa.titulo" />
+          <span v-if="etapa.desc" class="desc" v-html="etapa.desc" />
+        </div>
 
-      <svg
-        v-if="i < (etapas?.length ?? 0) - 1"
-        class="seta"
-        viewBox="0 0 32 24"
-        aria-hidden="true"
-      >
-        <path d="M3 12 H23" />
-        <path d="M19 6.5 L26 12 L19 17.5" />
-      </svg>
-    </template>
+        <svg
+          v-if="i < fileira.length - 1"
+          class="seta"
+          viewBox="0 0 32 24"
+          aria-hidden="true"
+        >
+          <path d="M3 12 H23" />
+          <path d="M19 6.5 L26 12 L19 17.5" />
+        </svg>
+      </template>
+
+      <template v-if="f === fileiras.length - 1">
+        <template v-for="v in vagasVazias" :key="`vaga-${v}`">
+          <span class="seta" aria-hidden="true" />
+          <div class="etapa vaga" aria-hidden="true" />
+        </template>
+      </template>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .ds-fluxo {
   display: flex;
-  align-items: stretch;
-  gap: var(--ds-space-2);
+  flex-direction: column;
+  gap: var(--ds-space-4);
   margin: var(--ds-space-4) 0;
 }
 
-.ds-fluxo.vertical {
+.fileira {
+  display: flex;
+  align-items: stretch;
+  gap: var(--ds-space-2);
+}
+
+.ds-fluxo.vertical .fileira {
   flex-direction: column;
   align-items: stretch;
 }
@@ -84,10 +131,18 @@ withDefaults(defineProps<{
   font-size: var(--ds-text-lg);
 }
 
+/* Fileira quebrada tem espaço de sobra por caixa — mas o título fica no corpo
+   base mesmo assim: a 23px, "Comorbidades" não cabe numa caixa de quatro por
+   fileira e o `overflow-wrap` a parte no meio. Quem cresce é a descrição. */
+
 .desc {
   color: var(--ds-muted);
   font-size: var(--ds-text-xs);
   line-height: var(--ds-leading-normal);
+}
+
+.ds-fluxo.fileirado .desc {
+  font-size: var(--ds-text-sm);
 }
 
 /* A seta é um SVG de traço, não um caractere: assim ela tem a mesma espessura
@@ -106,6 +161,13 @@ withDefaults(defineProps<{
 
 .ds-fluxo.vertical .seta {
   transform: rotate(90deg);
+}
+
+/* A vaga ocupa o lugar de uma etapa que não existe: mesma medida, nada
+   desenhado. */
+.etapa.vaga {
+  border-color: transparent;
+  background: transparent;
 }
 
 .cor-azul { border-color: transparent; background: var(--ds-pastel-azul); }

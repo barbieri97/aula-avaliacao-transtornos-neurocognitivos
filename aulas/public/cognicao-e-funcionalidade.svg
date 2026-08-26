@@ -53,5 +53,5 @@
   <path d="M 430 218 l -6 -9 h 12 z" fill="#947b2f"/>
   <rect x="150" y="222" width="560" height="64" fill="#242258"/>
   <text class="fim" x="430" y="250" text-anchor="middle">Cognição responde SE há declínio e EM QUÊ.</text>
-  <text class="fim" x="430" y="274" text-anchor="middle">Funcionalidade responde se é LEVE ou MAIOR.</text>
+  <text class="fim" x="430" y="274" text-anchor="middle">Funcionalidade responde se o declinio é um prejuízo real.</text>
 </svg>

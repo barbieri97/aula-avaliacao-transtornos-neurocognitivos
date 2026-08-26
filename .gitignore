@@ -5,3 +5,8 @@ dist
 .vite-inspect
 .remote-assets
 components.d.ts
+
+# fontes de consulta que NÃO vão para o site nem para o repo:
+# o template da Giunti é interno ("Confidential: For internal use") e o
+# capítulo do DSM-5 é material com direitos. Nada aqui é servido pelo build.
+referencias
