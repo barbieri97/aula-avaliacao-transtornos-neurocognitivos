@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 291" width="860" height="291" role="img" aria-label="As duas perguntas da avaliação: o que mudou na cognição e o que mudou no que a pessoa faz">
+  <style>
+    .per { font-family: Helvetica, Arial, sans-serif; font-size: 19px; fill: #242258; }
+    .ite { font-family: Helvetica, Arial, sans-serif; font-size: 15px; fill: #242258; }
+    .sub { font-family: Helvetica, Arial, sans-serif; font-size: 13px; fill: #63628a; }
+    .num { font-family: Helvetica, Arial, sans-serif; font-size: 14px; fill: #6f5a1f; letter-spacing: 1.5px; }
+    .fim { font-family: Helvetica, Arial, sans-serif; font-size: 17px; fill: #f4f2ea; }
+  </style>
+
+  <!-- pergunta 1: a cognição, domínio a domínio -->
+  <rect x="4" y="4" width="392" height="196" fill="#e7e7f1" stroke="#c3bfb0" stroke-width="1"/>
+  <text class="num" x="26" y="26">PERGUNTA 1</text>
+  <text class="per" x="26" y="52">O que mudou na cognição?</text>
+  <rect x="26" y="68"  width="248" height="10" fill="#242258" opacity="0.85"/>
+  <rect x="26" y="86"  width="176" height="10" fill="#242258" opacity="0.7"/>
+  <rect x="26" y="104" width="96"  height="10" fill="#96322c"/>
+  <rect x="26" y="122" width="212" height="10" fill="#242258" opacity="0.7"/>
+  <rect x="26" y="140" width="140" height="10" fill="#a3651b"/>
+  <rect x="26" y="158" width="228" height="10" fill="#242258" opacity="0.85"/>
+  <line x1="292" y1="64" x2="292" y2="172" stroke="#c3bfb0" stroke-width="1" stroke-dasharray="4 4"/>
+  <text class="sub" x="302" y="82">medida</text>
+  <text class="sub" x="302" y="100">objetiva,</text>
+  <text class="sub" x="302" y="118">domínio</text>
+  <text class="sub" x="302" y="136">a domínio</text>
+  <text class="sub" x="26" y="188">seis domínios, contra a norma de idade e escolaridade</text>
+
+  <!-- pergunta 2: a funcionalidade, com informante -->
+  <rect x="464" y="4" width="392" height="196" fill="#f1e9d6" stroke="#c3bfb0" stroke-width="1"/>
+  <text class="num" x="486" y="26">PERGUNTA 2</text>
+  <text class="per" x="486" y="52">O que mudou no que faz?</text>
+
+  <rect x="486" y="66" width="16" height="16" fill="#fbfaf5" stroke="#242258" stroke-width="1.5"/>
+  <path d="M 489 74 l 4 5 l 7 -9" fill="none" stroke="#2c6b4f" stroke-width="2.5"/>
+  <text class="ite" x="514" y="79">Toma o remédio sozinho</text>
+
+  <rect x="486" y="92" width="16" height="16" fill="#fbfaf5" stroke="#242258" stroke-width="1.5"/>
+  <path d="M 489 100 l 4 5 l 7 -9" fill="none" stroke="#2c6b4f" stroke-width="2.5"/>
+  <text class="ite" x="514" y="105">Cuida do próprio dinheiro</text>
+
+  <rect x="486" y="118" width="16" height="16" fill="#fbfaf5" stroke="#96322c" stroke-width="1.5"/>
+  <path d="M 490 122 l 8 8 M 498 122 l -8 8" fill="none" stroke="#96322c" stroke-width="2.5"/>
+  <text class="ite" x="514" y="131">Chega sozinho a outro bairro</text>
+
+  <rect x="486" y="144" width="16" height="16" fill="#fbfaf5" stroke="#96322c" stroke-width="1.5"/>
+  <path d="M 490 148 l 8 8 M 498 148 l -8 8" fill="none" stroke="#96322c" stroke-width="2.5"/>
+  <text class="ite" x="514" y="157">Prepara a própria refeição</text>
+
+  <text class="sub" x="486" y="188">atividades instrumentais, com informante que convive</text>
+
+  <!-- e as duas juntas -->
+  <path d="M 200 200 L 200 210 L 430 210" fill="none" stroke="#947b2f" stroke-width="2"/>
+  <path d="M 660 200 L 660 210 L 430 210" fill="none" stroke="#947b2f" stroke-width="2"/>
+  <path d="M 430 218 l -6 -9 h 12 z" fill="#947b2f"/>
+  <rect x="150" y="222" width="560" height="64" fill="#242258"/>
+  <text class="fim" x="430" y="250" text-anchor="middle">Cognição responde SE há declínio e EM QUÊ.</text>
+  <text class="fim" x="430" y="274" text-anchor="middle">Funcionalidade responde se é LEVE ou MAIOR.</text>
+</svg>

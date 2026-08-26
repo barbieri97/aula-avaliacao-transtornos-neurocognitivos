@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 600" width="360" height="600" role="img" aria-label="Três patamares descendentes de cognição, com os seis domínios ao lado">
+  <rect width="360" height="600" fill="#1c1a46"/>
+
+  <!-- a lombada da faixa: fio vertical com tique de ouro no alto -->
+  <line x1="44" y1="86" x2="44" y2="514" stroke="#d9c176" stroke-width="1" opacity="0.45"/>
+  <rect x="41" y="86" width="7" height="26" fill="#d9c176"/>
+
+  <!-- os três patamares: cognição típica, TNC leve, TNC maior -->
+  <rect x="44" y="150" width="232" height="66" fill="#d9c176" opacity="0.88"/>
+  <rect x="44" y="252" width="164" height="66" fill="#d9c176" opacity="0.55"/>
+  <rect x="44" y="354" width="96"  height="66" fill="#d9c176" opacity="0.28"/>
+
+  <!-- a linha que liga um patamar ao seguinte -->
+  <path d="M 276 216 L 276 236 L 208 236 L 208 252" fill="none" stroke="#d9c176" stroke-width="1.5" opacity="0.6"/>
+  <path d="M 208 318 L 208 338 L 140 338 L 140 354" fill="none" stroke="#d9c176" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- os seis domínios, à direita -->
+  <g fill="#d9c176">
+    <rect x="308" y="150" width="14" height="14" opacity="0.9"/>
+    <rect x="308" y="188" width="14" height="14" opacity="0.75"/>
+    <rect x="308" y="226" width="14" height="14" opacity="0.6"/>
+    <rect x="308" y="264" width="14" height="14" opacity="0.45"/>
+    <rect x="308" y="302" width="14" height="14" opacity="0.34"/>
+    <rect x="308" y="340" width="14" height="14" opacity="0.25"/>
+  </g>
+
+  <!-- a base: a funcionalidade, que é o que separa leve de maior -->
+  <line x1="44" y1="470" x2="316" y2="470" stroke="#d9c176" stroke-width="2" opacity="0.7"/>
+  <circle cx="44"  cy="470" r="5" fill="#d9c176"/>
+  <circle cx="316" cy="470" r="5" fill="#d9c176" opacity="0.4"/>
+</svg>

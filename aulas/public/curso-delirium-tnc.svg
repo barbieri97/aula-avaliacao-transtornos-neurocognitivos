@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 291" width="860" height="291" role="img" aria-label="Duas curvas de curso: o delirium oscila ao longo de um dia; o transtorno neurocognitivo declina ao longo de anos">
+  <style>
+    .tit { font-family: Helvetica, Arial, sans-serif; font-size: 19px; fill: #242258; }
+    .sub { font-family: Helvetica, Arial, sans-serif; font-size: 14px; fill: #63628a; }
+    .eix { font-family: Helvetica, Arial, sans-serif; font-size: 13px; fill: #63628a; }
+    .cap { font-family: Helvetica, Arial, sans-serif; font-size: 15px; fill: #242258; }
+  </style>
+
+  <!-- delirium: oscila dentro de um dia -->
+  <rect x="4" y="4" width="414" height="283" fill="#f2e6dd" stroke="#c3bfb0" stroke-width="1"/>
+  <text class="tit" x="30" y="38">Delirium</text>
+  <text class="sub" x="30" y="60">instala-se em horas a poucos dias e oscila no mesmo dia</text>
+  <line x1="60" y1="222" x2="392" y2="222" stroke="#c3bfb0" stroke-width="1.5"/>
+  <line x1="60" y1="84"  x2="60"  y2="222" stroke="#c3bfb0" stroke-width="1.5"/>
+  <path d="M 60 102 L 92 106 L 118 191 L 146 115 L 176 202 L 206 123 L 238 207 L 268 110 L 300 196 L 330 132 L 362 204 L 392 121"
+        fill="none" stroke="#96322c" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <text class="eix" x="52" y="90" text-anchor="end" font-size="12">alerta</text>
+  <text class="eix" x="60" y="242">manhã</text>
+  <text class="eix" x="226" y="242" text-anchor="middle">tarde</text>
+  <text class="eix" x="392" y="242" text-anchor="end">noite</text>
+  <text class="cap" x="30" y="272">um único dia · a atenção é o que falha</text>
+
+  <!-- TNC: declina ao longo de anos -->
+  <rect x="442" y="4" width="414" height="283" fill="#e7e7f1" stroke="#c3bfb0" stroke-width="1"/>
+  <text class="tit" x="468" y="38">Transtorno neurocognitivo</text>
+  <text class="sub" x="468" y="60">instala-se em meses a anos e é estável dentro do dia</text>
+  <line x1="498" y1="222" x2="830" y2="222" stroke="#c3bfb0" stroke-width="1.5"/>
+  <line x1="498" y1="84"  x2="498" y2="222" stroke="#c3bfb0" stroke-width="1.5"/>
+  <path d="M 498 101 C 570 106, 632 125, 690 152 C 744 178, 790 196, 830 207"
+        fill="none" stroke="#242258" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#947b2f">
+    <circle cx="498" cy="101" r="5"/>
+    <circle cx="690" cy="152" r="5"/>
+    <circle cx="830" cy="207" r="5"/>
+  </g>
+  <text class="eix" x="490" y="90" text-anchor="end" font-size="12">cognição</text>
+  <text class="eix" x="498" y="242">ano 1</text>
+  <text class="eix" x="690" y="242" text-anchor="middle">ano 3</text>
+  <text class="eix" x="830" y="242" text-anchor="end">ano 5</text>
+  <text class="cap" x="468" y="272">anos · o declínio é o que se documenta</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 291" width="860" height="291" role="img" aria-label="Os seis domínios neurocognitivos do DSM-5 dispostos ao redor de um centro">
+  <style>
+    .no  { font-family: Helvetica, Arial, sans-serif; font-size: 17px; fill: #242258; }
+    .ce  { font-family: Helvetica, Arial, sans-serif; font-size: 19px; fill: #f4f2ea; }
+    .ces { font-family: Helvetica, Arial, sans-serif; font-size: 13px; fill: #d9c176; }
+  </style>
+
+  <!-- os fios, desenhados antes para passarem por baixo do centro -->
+  <g stroke="#c3bfb0" stroke-width="1.5">
+    <line x1="430" y1="145" x2="180" y2="50"/>
+    <line x1="430" y1="145" x2="430" y2="28"/>
+    <line x1="430" y1="145" x2="680" y2="50"/>
+    <line x1="430" y1="145" x2="680" y2="240"/>
+    <line x1="430" y1="145" x2="430" y2="262"/>
+    <line x1="430" y1="145" x2="180" y2="240"/>
+  </g>
+
+  <!-- os seis domínios -->
+  <rect x="76"  y="28"  width="208" height="44" fill="#e7e7f1" stroke="#242258" stroke-width="1.5"/>
+  <text class="no" x="180" y="56" text-anchor="middle">Atenção complexa</text>
+
+  <rect x="326" y="6"   width="208" height="44" fill="#e7e7f1" stroke="#242258" stroke-width="1.5"/>
+  <text class="no" x="430" y="34" text-anchor="middle">Função executiva</text>
+
+  <rect x="576" y="28"  width="208" height="44" fill="#e7e7f1" stroke="#242258" stroke-width="1.5"/>
+  <text class="no" x="680" y="45" text-anchor="middle">Aprendizagem</text>
+  <text class="no" x="680" y="64" text-anchor="middle">e memória</text>
+
+  <rect x="576" y="218" width="208" height="44" fill="#e7e7f1" stroke="#242258" stroke-width="1.5"/>
+  <text class="no" x="680" y="246" text-anchor="middle">Linguagem</text>
+
+  <rect x="326" y="240" width="208" height="44" fill="#e7e7f1" stroke="#242258" stroke-width="1.5"/>
+  <text class="no" x="430" y="268" text-anchor="middle">Perceptomotor</text>
+
+  <rect x="76"  y="218" width="208" height="44" fill="#e7e7f1" stroke="#242258" stroke-width="1.5"/>
+  <text class="no" x="180" y="246" text-anchor="middle">Cognição social</text>
+
+  <!-- o centro -->
+  <ellipse cx="430" cy="145" rx="112" ry="50" fill="#242258"/>
+  <text class="ce"  x="430" y="140" text-anchor="middle">Cognição</text>
+  <text class="ces" x="430" y="164" text-anchor="middle">DSM-5, Tabela 1</text>
+</svg>

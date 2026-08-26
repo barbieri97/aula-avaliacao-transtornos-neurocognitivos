@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 291" width="860" height="291" role="img" aria-label="As três marcas do transtorno neurocognitivo: déficit primário na cognição, caráter adquirido e etiologia determinável">
+  <style>
+    .rot { font-family: Helvetica, Arial, sans-serif; font-size: 19px; fill: #242258; }
+    .sub { font-family: Helvetica, Arial, sans-serif; font-size: 15px; fill: #63628a; }
+    .num { font-family: Helvetica, Arial, sans-serif; font-size: 14px; fill: #6f5a1f; letter-spacing: 1.5px; }
+  </style>
+
+  <!-- 01 · o déficit primário está na cognição -->
+  <rect x="4" y="4" width="266" height="283" fill="#e7e7f1" stroke="#c3bfb0" stroke-width="1"/>
+  <text class="num" x="24" y="30">01</text>
+  <g transform="translate(137,122)">
+    <circle cx="0" cy="0" r="42" fill="#242258"/>
+    <text x="0" y="6" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#f4f2ea">cognição</text>
+    <circle cx="-72" cy="-42" r="14" fill="#fbfaf5" stroke="#c3bfb0"/>
+    <circle cx="72"  cy="-42" r="14" fill="#fbfaf5" stroke="#c3bfb0"/>
+    <circle cx="-72" cy="42"  r="14" fill="#fbfaf5" stroke="#c3bfb0"/>
+    <circle cx="72"  cy="42"  r="14" fill="#fbfaf5" stroke="#c3bfb0"/>
+  </g>
+  <text class="rot" x="137" y="215" text-anchor="middle">Déficit primário</text>
+  <text class="sub" x="137" y="239" text-anchor="middle">o centro do quadro é cognitivo,</text>
+  <text class="sub" x="137" y="259" text-anchor="middle">não afetivo nem psicótico</text>
+
+  <!-- 02 · adquirido -->
+  <rect x="297" y="4" width="266" height="283" fill="#f1e9d6" stroke="#c3bfb0" stroke-width="1"/>
+  <text class="num" x="317" y="30">02</text>
+  <line x1="330" y1="170" x2="530" y2="170" stroke="#c3bfb0" stroke-width="1"/>
+  <path d="M 330 96 L 452 96 L 522 154" fill="none" stroke="#242258" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M 531 161 l -13 2 l 2 -12 z" fill="#242258"/>
+  <circle cx="452" cy="96" r="6" fill="#947b2f"/>
+  <text class="sub" x="330" y="88" font-size="14">nível prévio</text>
+  <text class="sub" x="330" y="188" font-size="13">nascimento</text>
+  <text class="sub" x="530" y="188" text-anchor="end" font-size="13">hoje</text>
+  <text class="rot" x="430" y="215" text-anchor="middle">Adquirido</text>
+  <text class="sub" x="430" y="239" text-anchor="middle">a função existiu e se perdeu —</text>
+  <text class="sub" x="430" y="259" text-anchor="middle">não é do desenvolvimento</text>
+
+  <!-- 03 · etiologia determinável -->
+  <rect x="590" y="4" width="266" height="283" fill="#e3ece4" stroke="#c3bfb0" stroke-width="1"/>
+  <text class="num" x="610" y="30">03</text>
+  <rect x="606" y="76" width="234" height="42" fill="#242258"/>
+  <text x="723" y="103" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#f4f2ea">síndrome de TNC</text>
+  <path d="M 723 118 L 723 140" stroke="#947b2f" stroke-width="2.5"/>
+  <path d="M 723 148 l -6 -9 h 12 z" fill="#947b2f"/>
+  <rect x="606" y="150" width="234" height="46" fill="#fbfaf5" stroke="#c3bfb0"/>
+  <text x="723" y="169" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#242258">Alzheimer · vascular</text>
+  <text x="723" y="188" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#242258">Lewy · príon · outras</text>
+  <text class="rot" x="723" y="215" text-anchor="middle">Etiologia determinável</text>
+  <text class="sub" x="723" y="239" text-anchor="middle">única categoria do DSM-5 em que</text>
+  <text class="sub" x="723" y="259" text-anchor="middle">a patologia subjacente é buscada</text>
+</svg>
