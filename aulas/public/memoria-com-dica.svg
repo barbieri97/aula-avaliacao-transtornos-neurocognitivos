@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 291" width="860" height="291" role="img" aria-label="Dois padrões de recuperação: com a dica um paciente melhora e o outro não">
+  <style>
+    .eix { font-family: Helvetica, Arial, sans-serif; font-size: 15px; fill: #242258; }
+    .esc { font-family: Helvetica, Arial, sans-serif; font-size: 13px; fill: #63628a; }
+    .rot { font-family: Helvetica, Arial, sans-serif; font-size: 14px; fill: #242258; }
+    .tag { font-family: Helvetica, Arial, sans-serif; font-size: 14px; }
+  </style>
+
+  <!-- eixos -->
+  <line x1="112" y1="212" x2="600" y2="212" stroke="#c3bfb0" stroke-width="1.5"/>
+  <line x1="112" y1="26"  x2="112" y2="212" stroke="#c3bfb0" stroke-width="1.5"/>
+  <text class="esc" x="104" y="34"  text-anchor="end">todos</text>
+  <text class="esc" x="104" y="216" text-anchor="end">nenhum</text>
+  <text class="esc" x="14"  y="112">itens</text>
+  <text class="esc" x="14"  y="130">recuperados</text>
+
+  <!-- as três condições -->
+  <g stroke="#ddd9cb" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="176" y1="26" x2="176" y2="212"/>
+    <line x1="356" y1="26" x2="356" y2="212"/>
+    <line x1="536" y1="26" x2="536" y2="212"/>
+  </g>
+  <text class="eix" x="176" y="236" text-anchor="middle">Evocação livre</text>
+  <text class="eix" x="356" y="236" text-anchor="middle">Evocação com pista</text>
+  <text class="eix" x="536" y="236" text-anchor="middle">Reconhecimento</text>
+
+  <!-- padrão A: a dica recupera -->
+  <path d="M 176 182 L 356 81 L 536 51" fill="none" stroke="#2c6b4f" stroke-width="3.5" stroke-linejoin="round"/>
+  <g fill="#2c6b4f">
+    <circle cx="176" cy="182" r="6"/>
+    <circle cx="356" cy="81"  r="6"/>
+    <circle cx="536" cy="51"  r="6"/>
+  </g>
+
+  <!-- padrão B: a dica não recupera -->
+  <path d="M 176 187 L 356 174 L 536 164" fill="none" stroke="#96322c" stroke-width="3.5" stroke-linejoin="round"/>
+  <g fill="#96322c">
+    <circle cx="176" cy="187" r="6"/>
+    <circle cx="356" cy="174" r="6"/>
+    <circle cx="536" cy="164" r="6"/>
+  </g>
+
+  <!-- a leitura de cada padrão -->
+  <rect x="616" y="30" width="240" height="84" fill="#e3ece4" stroke="#2c6b4f" stroke-width="1.5"/>
+  <text class="tag" x="632" y="54" fill="#2c6b4f">A dica recupera</text>
+  <text class="rot" x="632" y="76">o material foi guardado;</text>
+  <text class="rot" x="632" y="94">falhou a estratégia de busca</text>
+  <text class="esc" x="632" y="108" font-size="12">perfil frontal / subcortical</text>
+
+  <rect x="616" y="124" width="240" height="84" fill="#f2e6dd" stroke="#96322c" stroke-width="1.5"/>
+  <text class="tag" x="632" y="148" fill="#96322c">A dica não recupera</text>
+  <text class="rot" x="632" y="170">o material não foi guardado;</text>
+  <text class="rot" x="632" y="188">falhou codificar ou armazenar</text>
+  <text class="esc" x="632" y="202" font-size="12">perfil amnéstico / hipocampal</text>
+
+  <text class="esc" x="112" y="272">O mesmo escore de evocação livre, dois mecanismos diferentes — a diferença só aparece quando a pista entra.</text>
+</svg>
