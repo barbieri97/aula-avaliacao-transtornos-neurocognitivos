@@ -412,7 +412,10 @@ usadas na necropsia.
 ---
 layout: figura
 imagem: /pet-amiloide-alzheimer.jpg
-legenda: "PET com composto B de Pittsburgh. À esquerda, doença de Alzheimer; à direita, controle cognitivamente saudável. Vermelho e amarelo marcam alta ligação ao <b>beta-amiloide</b>. Klunk e Mathis, University of Pittsburgh, <b>CC BY-SA 3.0</b>, Wikimedia Commons."
+legenda: "PET com composto B de Pittsburgh. À esquerda, doença de Alzheimer; à
+  direita, controle cognitivamente saudável. Vermelho e amarelo marcam alta
+  ligação ao <b>beta-amiloide</b>. Klunk e Mathis, University of Pittsburgh,
+  <b>CC BY-SA 3.0</b>, Wikimedia Commons."
 lado: esquerda
 ajuste: contain
 ---
@@ -423,12 +426,6 @@ ajuste: contain
 - No líquido cerebrospinal, **beta-amiloide 42 baixa** e **tau alta**
 - **Ressonância** — atrofia do hipocampo e do temporoparietal
 - **PET com FDG** — hipometabolismo temporoparietal
-
-<Nota tipo="alerta" titulo="O que o exame não faz">
-
-O DSM-5 registra que esses marcadores ainda não estão plenamente validados. A síndrome continua vindo do critério A; o exame decide entre **provável** e **possível**.
-
-</Nota>
 
 <!--
 PET: tomografia por emissão de pósitrons. FDG: fluordesoxiglicose, o marcador que mede
@@ -621,7 +618,9 @@ idosos com doença isquêmica de pequenos vasos.
 ---
 layout: figura
 imagem: /hist-lewy-sinucleina.jpg
-legenda: "Neocórtex, imuno-histoquímica para <b>alfa-sinucleína</b>. Em castanho, os <b>corpos de Lewy</b> — os grumos arredondados — e as <b>neuritas de Lewy</b>, os filamentos finos. Movalley, <b>CC0</b>, Wikimedia Commons."
+legenda: "Neocórtex, imuno-histoquímica para <b>alfa-sinucleína</b>. Em
+  castanho, os <b>corpos de Lewy</b> — os grumos arredondados — e as <b>neuritas
+  de Lewy</b>, os filamentos finos. Movalley, <b>CC0</b>, Wikimedia Commons."
 lado: esquerda
 ajuste: contain
 ---
@@ -631,12 +630,6 @@ ajuste: contain
 - Agregados de **alfa-sinucleína** mal enovelada dentro do neurônio
 - No TNC com corpos de Lewy eles são sobretudo **corticais**
 - Na doença de Parkinson, sobretudo nos **núcleos da base**
-
-<Nota titulo="Raramente sozinha">
-
-Patologia de Lewy e patologia de Alzheimer costumam coexistir: há sinucleína concomitante em cerca de **60%** dos casos de Alzheimer.
-
-</Nota>
 
 <!--
 Alfa-sinucleína: proteína pré-sináptica que, mal enovelada, se agrega em corpos e neuritas.
@@ -793,11 +786,51 @@ colunas:
   - { titulo: Regiões, sub: onde ela se instala, cor: azul }
   - { titulo: O que cai primeiro, sub: o domínio de entrada, cor: ouro }
 linhas:
-  - { criterio: Alzheimer, valores: ["placas de <b>beta-amiloide</b> e emaranhados de <b>tau</b>", "entorrinal e hipocampo", "aprendizagem e memória"] }
-  - { criterio: Frontotemporal, valores: ["DLFT — <b>tau</b>, <b>TDP-43</b> ou <b>FET</b>", "frontal medial e temporal anterior", "cognição social e executiva"] }
-  - { criterio: Vascular, valores: ["infarto e lesão da substância branca", "circuito córtico-subcortical", "velocidade e executiva"] }
-  - { criterio: Corpos de Lewy, valores: ["agregados de <b>alfa-sinucleína</b>", "occipital e nigroestriatal", "atenção complexa, oscilante"] }
-  - { criterio: Príon, valores: ["<b>PrP</b> mal enovelada, tecido espongiforme", "córtex, estriado e tálamo", "tudo, em poucos meses"] }
+  - {
+      criterio: Alzheimer,
+      valores:
+        [
+          "placas de <b>beta-amiloide</b> e emaranhados de <b>tau</b>",
+          "entorrinal e hipocampo",
+          "aprendizagem e memória"
+        ]
+    }
+  - {
+      criterio: Frontotemporal,
+      valores:
+        [
+          "DLFT — <b>tau</b>, <b>TDP-43</b> ou <b>FET</b>",
+          "frontal medial e temporal anterior",
+          "cognição social e executiva"
+        ]
+    }
+  - {
+      criterio: Vascular,
+      valores:
+        [
+          "infarto e lesão da substância branca",
+          "circuito córtico-subcortical",
+          "velocidade e executiva"
+        ]
+    }
+  - {
+      criterio: Corpos de Lewy,
+      valores:
+        [
+          "agregados de <b>alfa-sinucleína</b>",
+          "occipital e nigroestriatal",
+          "atenção complexa, oscilante"
+        ]
+    }
+  - {
+      criterio: Príon,
+      valores:
+        [
+          "<b>PrP</b> mal enovelada, tecido espongiforme",
+          "córtex, estriado e tálamo",
+          "tudo, em poucos meses"
+        ]
+    }
 ---
 
 <Fonte>Síntese do capítulo de Transtornos Neurocognitivos do <em>DSM-5</em>.</Fonte>
