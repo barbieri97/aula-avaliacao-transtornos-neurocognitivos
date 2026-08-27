@@ -1135,33 +1135,20 @@ A queixa pode vir também do clínico.
 -->
 
 ---
-layout: comparacao
-title: O que descartar antes de fechar a síndrome
-colunas:
-  - { titulo: Delirium, sub: horas a dias, cor: terra }
-  - { titulo: TNC, sub: meses a anos, cor: azul }
-  - { titulo: Depressão, sub: semanas a meses, cor: verde }
-linhas:
-  - { criterio: Curso, valores: ["oscila no mesmo dia", "progressivo no tempo", "acompanha o humor"] }
-  - { criterio: Atenção, valores: ["prejudicada — é obrigatória", "preservada no início", "oscila com o esforço"] }
-  - { criterio: Queixa, valores: ["não se queixa", "minimiza ou não percebe", "detalha e amplifica"] }
-  - { criterio: No teste, valores: ["não sustenta a tarefa", "tenta e erra", "não tenta"] }
+layout: fecho
+kicker: Para levar
+title: Três coisas que ficam
+pontos:
+  - Déficit primário, adquirido, com etiologia buscada — e a síndrome vem antes da causa.
+  - "O que separa leve de maior não é o escore: é a independência."
+  - Um escore baixo tem muitas origens. Separá-las é o trabalho do neuropsicólogo.
 ---
 
-<Nota tipo="erro" titulo="Descartar não é escolher um">
+---
+layout: default
+---
 
-Os três coexistem com frequência, e o critério D fala em "**não mais bem explicado**".
-
-</Nota>
-
-<!--
-A psicose também entra na fila: no TNC, delírios e alucinações visuais são comuns, mas fala e
-comportamento desorganizados NÃO são característicos — e é isso que ajuda a separá-lo de um
-transtorno psicótico de início mais precoce.
-No teste, a depressão responde "não sei" sem tentar.
-Pseudodemência: nome antigo para o rebaixamento cognitivo do episódio depressivo. Caiu em
-desuso porque o quadro é frequentemente comórbido, e não alternativo, ao TNC.
--->
+<img src="/oqueachamoquee.jpg" alt="As três marcas do TNC: déficit primário na cognição, caráter adquirido e etiologia determinável" class="w-full max-h-full object-contain">
 
 ---
 layout: default
@@ -1202,12 +1189,4 @@ os biomarcadores dos corpos de Lewy e o mecanismo da conversão priônica.
 doi: identificador digital de objeto — o endereço permanente de um artigo científico.
 -->
 
----
-layout: fecho
-kicker: Para levar
-title: Três coisas que ficam
-pontos:
-  - Déficit primário, adquirido, com etiologia buscada — e a síndrome vem antes da causa.
-  - "O que separa leve de maior não é o escore: é a independência."
-  - Um escore baixo tem muitas origens. Separá-las é o trabalho do neuropsicólogo.
----
+
