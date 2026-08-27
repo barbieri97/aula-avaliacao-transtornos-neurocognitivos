@@ -1,14 +1,13 @@
 ---
 theme: none
 title: "Transtornos Neurocognitivos: alterações na cognição e funcionalidade"
-info: Conceito, critérios diagnósticos, etiologias, domínios cognitivos e o lugar da avaliação neuropsicológica
+info: Conceito, critérios diagnósticos, etiologias, domínios cognitivos e o
+  lugar da avaliação neuropsicológica
 date: "2026-09-14"
 colorSchema: light
 download: true
 layout: capa
 kicker: Semana da Psicologia · Psicologia e Neurociências
-subtitle: O que o DSM-5 pede para diagnosticar, e o que a avaliação neuropsicológica acrescenta.
-meta: "Base: DSM-5 · capítulo de Transtornos Neurocognitivos"
 ---
 
 <!--
@@ -112,7 +111,7 @@ layout: secao
 numero: "02"
 kicker: Bloco 2
 title: Critérios diagnósticos
-note: Delirium, TNC maior e TNC leve. O que interessa aqui não é decorar cada critério — é ver onde eles diferem.
+note: Delirium, TNC maior e TNC leve.
 ---
 
 ---
@@ -253,8 +252,8 @@ Não é categoria do DSM-5.
 
 <Nota titulo="Queixa não é diagnóstico">
 
-Pode ser a **primeira manifestação sintomática** da doença de Alzheimer, anterior ao CCL. Ainda
-assim a maior parte não evolui — o que o quadro pede é **reavaliação no tempo**.
+Pode ser a **primeira manifestação sintomática** da demência, anterior ao CCL. Ainda
+assim a maior parte não evolui — o que o quadro pede é **acompanhamento**.
 
 </Nota>
 
@@ -272,7 +271,7 @@ layout: secao
 numero: "03"
 kicker: Bloco 3
 title: Etiologias
-note: A síndrome vem primeiro. A causa é acrescentada depois — e com o grau de certeza declarado.
+note: O declínio vem primeiro. A etiologia é acrescentada depois.
 ---
 
 ---
@@ -294,7 +293,7 @@ TCE — traumatismo cranioencefálico.
 layout: default
 ---
 
-# Cinco causas, um mesmo diagnóstico de base
+# Principais Etiologias
 
 <Grade :cols="3">
 
@@ -378,6 +377,468 @@ Alzheimer descreveu, na necropsia de Auguste Deter, a alteração do tecido cere
 leva seu nome.
 Necropsia: exame do corpo após a morte. Até hoje a confirmação definitiva de várias dessas
 etiologias — a doença do príon inclusive — só é possível por biópsia ou necropsia.
+-->
+
+---
+layout: figura
+imagem: /hist-alzheimer.jpg
+legenda: "Hipocampo, hematoxilina-eosina. No painel grande, a <b>placa neurítica</b> entre as setas; abaixo, à esquerda, o <b>emaranhado neurofibrilar</b> em chama, dentro do neurônio. Mikael Häggström e brainmaps.org, <b>CC BY 3.0</b>, Wikimedia Commons."
+lado: direita
+ajuste: contain
+---
+
+# Alzheimer: duas lesões, dois compartimentos
+
+- **Fora** do neurônio — placas de **beta-amiloide**
+- **Dentro** do neurônio — emaranhados de proteína **tau** hiperfosforilada
+- Perda neuronal e atrofia cortical, a começar pelo hipocampo
+
+<Nota titulo="A ordem das duas">
+
+O amiloide se deposita antes e se espalha por fases; os emaranhados vêm depois, em estágios. É a distribuição dos **emaranhados** que acompanha o declínio cognitivo (Trejo-Lopez et al., 2021).
+
+</Nota>
+
+<!--
+Beta-amiloide (Aβ): peptídeo derivado da clivagem da proteína precursora do amiloide (APP).
+Tau: proteína que estabiliza os microtúbulos do neurônio; hiperfosforilada, solta-se deles e
+se agrega em filamentos.
+Hiperfosforilada: com excesso de grupos fosfato ligados à molécula.
+Placa neurítica: depósito extracelular de amiloide cercado de prolongamentos neuronais doentes.
+Fases de Thal (amiloide) e estágios de Braak (emaranhados): as duas escalas de distribuição
+usadas na necropsia.
+-->
+
+---
+layout: figura
+imagem: /pet-amiloide-alzheimer.jpg
+legenda: "PET com composto B de Pittsburgh. À esquerda, doença de Alzheimer; à
+  direita, controle cognitivamente saudável. Vermelho e amarelo marcam alta
+  ligação ao <b>beta-amiloide</b>. Klunk e Mathis, University of Pittsburgh,
+  <b>CC BY-SA 3.0</b>, Wikimedia Commons."
+lado: esquerda
+ajuste: contain
+---
+
+# O que se vê antes da necropsia
+
+- **PET de amiloide** — o depósito aparece cedo na cascata
+- No líquido cerebrospinal, **beta-amiloide 42 baixa** e **tau alta**
+- **Ressonância** — atrofia do hipocampo e do temporoparietal
+- **PET com FDG** — hipometabolismo temporoparietal
+
+<!--
+PET: tomografia por emissão de pósitrons. FDG: fluordesoxiglicose, o marcador que mede
+consumo de glicose e, por ele, a atividade do tecido.
+Composto B de Pittsburgh (PiB): o primeiro traçador que se liga ao amiloide no cérebro vivo.
+Líquido cerebrospinal (LCS): o líquido que banha o encéfalo e a medula, colhido por punção lombar.
+Beta-amiloide 42: a fração de 42 aminoácidos, a que se agrega com mais facilidade. Cai no LCS
+porque fica retida no cérebro.
+Apolipoproteína E4 (APOE4) não é marcador diagnóstico: é fator de risco, nem necessário nem
+suficiente.
+-->
+
+---
+layout: default
+---
+
+# Alzheimer: onde, e o que cai
+
+<Grade :cols="2">
+
+<Cartao rotulo="regiões" titulo="Onde a lesão se instala" cor="azul">
+
+- **Córtex entorrinal** e **hipocampo**, primeiro
+- **Associação temporoparietal**, em seguida
+- **Neocórtex** difuso, na fase maior
+
+</Cartao>
+
+<Cartao rotulo="cognição" titulo="O que cai, nesta ordem" cor="ouro">
+
+- **Aprendizagem e memória** — a apresentação amnéstica
+- **Função executiva**, já na fase leve
+- **Visuoconstrutiva** e **linguagem**, na fase maior
+- **Cognição social** poupada até tarde
+
+</Cartao>
+
+</Grade>
+
+<Fonte>APA, <em>DSM-5</em> — TNC maior ou leve devido à doença de Alzheimer.</Fonte>
+
+<!--
+Córtex entorrinal: a porta de entrada do hipocampo, no lobo temporal medial.
+Amnéstica: a apresentação em que a perda de memória é o achado principal. Há apresentações
+não amnésticas, mais raras — a visuoespacial e a afásica logopênica.
+Visuoconstrutiva: a capacidade de copiar ou montar uma figura.
+Cognição social: reconhecer emoção no outro, ajustar o comportamento ao contexto.
+-->
+
+---
+layout: figura
+imagem: /rm-frontotemporal.png
+legenda: "Ressonância em T2, T1 e FLAIR na doença de Pick. Os sulcos frontais estão alargados e os cornos frontais dilatados: a atrofia é anterior, e poupa o território posterior. Mikhail Kalinin, <b>CC BY-SA 3.0</b>, Wikimedia Commons."
+lado: direita
+ajuste: contain
+---
+
+# Frontotemporal: uma síndrome, três proteínas
+
+- A patologia se chama **degeneração lobar frontotemporal** (DLFT)
+- Três grupos moleculares: **tau**, **TDP-43** e **FET** (Neumann e Mackenzie, 2019)
+- Mutações conhecidas: **MAPT**, **GRN**, **C9ORF72**
+
+<Nota titulo="Herança e idade">
+
+Cerca de **40%** têm história familiar de TNC precoce e **10%**, padrão autossômico dominante. É causa comum de TNC **antes dos 65 anos**.
+
+</Nota>
+
+<!--
+DLFT: degeneração lobar frontotemporal, o achado de necropsia. TNC frontotemporal é a
+síndrome clínica.
+TDP-43: proteína de resposta transativa de ligação ao DNA de 43 kDa. FET: a família que reúne
+FUS, EWS e TAF15.
+MAPT: gene da proteína tau associada aos microtúbulos. GRN: gene da granulina.
+C9ORF72: expansão repetida no cromossomo 9, ligada também à esclerose lateral amiotrófica.
+Autossômico dominante: basta uma cópia alterada do gene para a doença aparecer.
+FLAIR: sequência de ressonância que apaga o sinal do líquido e realça a lesão.
+-->
+
+---
+layout: default
+---
+
+# Frontotemporal: onde, e o que cai
+
+<Grade :cols="2">
+
+<Cartao rotulo="regiões" titulo="Onde a atrofia aparece" cor="azul">
+
+- **Frontal medial** e **temporal anterior** — variante comportamental
+- **Temporal anterior esquerdo** — variante semântica
+- **Insular-frontal posterior esquerdo** — variante não fluente
+
+</Cartao>
+
+<Cartao rotulo="cognição" titulo="O que cai" cor="ouro">
+
+- **Cognição social** — desinibição, perda de empatia, apatia
+- **Função executiva** — planejar, inibir, alternar
+- **Linguagem**, nas variantes linguísticas
+- **Memória** e **perceptomotor** relativamente poupados
+
+</Cartao>
+
+</Grade>
+
+<Fonte>APA, <em>DSM-5</em> — TNC frontotemporal maior ou leve.</Fonte>
+
+<!--
+Variante comportamental: mudança de personalidade e conduta, com relativa preservação
+cognitiva no início.
+Variante semântica: perda do significado das palavras e dos objetos, com fala fluente.
+Variante não fluente: fala esforçada e agramatical, com compreensão de palavra preservada.
+Variante logopênica: pausas para encontrar a palavra e falha na repetição; costuma ser, na
+verdade, doença de Alzheimer.
+Insular: relativo à ínsula, o córtex escondido no fundo da fissura de Sylvius.
+Perceptomotor: o domínio que reúne percepção visual, práxis e coordenação visuomotora.
+-->
+
+---
+layout: figura
+imagem: /rm-vascular-leucoaraiose.jpg
+legenda: "Ressonância em FLAIR, corte coronal. As setas marcam a <b>leucoaraiose</b> — o hipersinal confluente da substância branca periventricular — em paciente com atrofia associada. Jmarchn, <b>CC BY-SA 3.0</b>, Wikimedia Commons."
+lado: direita
+ajuste: contain
+---
+
+# Vascular: a lesão é tecido perdido
+
+- **Grande vaso** — o território arterial inteiro
+- **Infarto estratégico** — tálamo, giro angular, prosencéfalo basal
+- **Pequenos vasos** — lacunas e substância branca confluente
+
+<Nota titulo="A certeza vem da imagem">
+
+Sem neuroimagem o infarto silencioso passa despercebido. O DSM-5 só chama de **provável** com lesão documentada ou evento cerebrovascular datado.
+
+</Nota>
+
+<!--
+Leucoaraiose: rarefação da substância branca, vista como hipersinal difuso na ressonância.
+Também chamada de doença de pequenos vasos ou alteração isquêmica subcortical.
+Lacuna: infarto pequeno e profundo, de um ramo arterial terminal.
+Infarto estratégico: lesão única que, pela posição, basta para o quadro cognitivo.
+Prosencéfalo basal: região da base do cérebro, origem da inervação colinérgica do córtex.
+CADASIL: arteriopatia cerebral autossômica dominante com infartos subcorticais e
+leucoencefalopatia — a forma hereditária.
+Angiopatia amiloide cerebral: depósito de amiloide na parede dos vasos.
+-->
+
+---
+layout: default
+---
+
+# Vascular: onde, e o que cai
+
+<Grade :cols="2">
+
+<Cartao rotulo="regiões" titulo="Onde a lesão se instala" cor="azul">
+
+- **Substância branca** frontal e periventricular
+- **Núcleos da base** e **tálamo**
+- O que se rompe é o **circuito córtico-subcortical**
+
+</Cartao>
+
+<Cartao rotulo="cognição" titulo="O que cai" cor="ouro">
+
+- **Velocidade de processamento** — o critério B do DSM-5
+- **Atenção complexa**
+- **Função executiva frontal**
+- Memória responde melhor à **pista** que no Alzheimer
+
+</Cartao>
+
+</Grade>
+
+<Fonte>APA, <em>DSM-5</em> — TNC vascular maior ou leve; subtipos em Sachdev et al., 2014.</Fonte>
+
+<!--
+Circuito córtico-subcortical: as alças que ligam o córtex pré-frontal aos núcleos da base e ao
+tálamo, e voltam ao córtex. A lesão da substância branca as interrompe.
+Velocidade de processamento: quanto tempo se leva para executar uma tarefa cognitiva simples;
+mede-se cronometrando.
+Depressão vascular: sintomas depressivos tardios com lentificação e disfunção executiva, em
+idosos com doença isquêmica de pequenos vasos.
+-->
+
+---
+layout: figura
+imagem: /hist-lewy-sinucleina.jpg
+legenda: "Neocórtex, imuno-histoquímica para <b>alfa-sinucleína</b>. Em
+  castanho, os <b>corpos de Lewy</b> — os grumos arredondados — e as <b>neuritas
+  de Lewy</b>, os filamentos finos. Movalley, <b>CC0</b>, Wikimedia Commons."
+lado: esquerda
+ajuste: contain
+---
+
+# Corpos de Lewy: uma sinucleinopatia
+
+- Agregados de **alfa-sinucleína** mal enovelada dentro do neurônio
+- No TNC com corpos de Lewy eles são sobretudo **corticais**
+- Na doença de Parkinson, sobretudo nos **núcleos da base**
+
+<!--
+Alfa-sinucleína: proteína pré-sináptica que, mal enovelada, se agrega em corpos e neuritas.
+Sinucleinopatia: a família de doenças definidas por esses agregados.
+Imuno-histoquímica: técnica que marca uma proteína específica com anticorpo, e a revela em
+castanho no tecido.
+Corpo de Lewy: inclusão arredondada no corpo do neurônio. Neurita de Lewy: a mesma proteína
+agregada dentro do prolongamento.
+Mal enovelada: com a forma tridimensional errada, o que a torna insolúvel e propensa a agregar.
+-->
+
+---
+layout: default
+---
+
+# Corpos de Lewy: onde, e o que cai
+
+<Grade :cols="2">
+
+<Cartao rotulo="regiões" titulo="Onde a lesão se instala" cor="azul">
+
+- **Córtex occipital** — hipometabolismo em PET e SPECT
+- **Via nigroestriatal** — captação reduzida do transportador de dopamina
+- **Temporal medial** relativamente **preservado**
+
+</Cartao>
+
+<Cartao rotulo="cognição" titulo="O que cai" cor="ouro">
+
+- **Atenção complexa** — e ela **oscila** ao longo do dia
+- **Função executiva**
+- **Visuoperceptivo** e **visuoconstrutivo**
+- **Memória** menos afetada no começo
+
+</Cartao>
+
+</Grade>
+
+<Fonte>APA, <em>DSM-5</em>; marcadores em McKeith et al., 2017.</Fonte>
+
+<!--
+SPECT: tomografia computadorizada por emissão de fóton único.
+Via nigroestriatal: o feixe dopaminérgico que liga a substância negra ao estriado.
+Transportador de dopamina (DAT): a proteína que recolhe a dopamina da fenda sináptica; a
+captação baixa indica perda dos terminais.
+Cintilografia miocárdica com MIBG: exame que mostra denervação simpática do coração, marcador
+sugestivo no consenso de 2017.
+Sono REM: fase do sono com movimento rápido dos olhos. No transtorno comportamental do sono
+REM a pessoa executa fisicamente o que sonha.
+Sensibilidade neuroléptica: reação grave a antipsicóticos, em até metade dos casos.
+-->
+
+---
+layout: figura
+imagem: /hist-prion-espongiforme.jpg
+legenda: "Córtex em hematoxilina-eosina na variante da doença de Creutzfeldt-Jakob. Os vacúolos claros dão ao tecido o aspecto de esponja, sem sinal de inflamação. Zaki e Shieh, CDC / Public Health Image Library #10131, <b>domínio público</b>."
+lado: direita
+ajuste: contain
+---
+
+# Príon: uma proteína que muda de forma
+
+- A **PrP** normal é rica em **alfa-hélice**; a alterada, em **folha beta**
+- A forma alterada **molda** as moléculas seguintes — ela se autopropaga
+- O resultado é a **encefalopatia espongiforme** (Colby e Prusiner, 2011)
+
+<Nota tipo="alerta" titulo="Rara e rápida">
+
+Cerca de **1 a 2 casos por milhão** ao ano. Progride para TNC maior em **semanas a meses**, não em anos.
+
+</Nota>
+
+<!--
+Príon: partícula infecciosa feita só de proteína, sem ácido nucleico.
+PrP: proteína priônica. PrP-C é a isoforma celular normal; PrP-Sc, a isoforma patogênica,
+insolúvel e resistente às proteases.
+Alfa-hélice e folha beta: as duas formas básicas de dobramento de uma cadeia de proteína.
+DCJ: doença de Creutzfeldt-Jakob. A esporádica é a mais comum; a variante está ligada à
+encefalopatia espongiforme bovina.
+Encefalopatia espongiforme: perda neuronal com vacúolos no tecido, sem inflamação.
+Kuru, síndrome de Gerstmann-Sträussler-Scheinker e insônia fatal completam o grupo.
+-->
+
+---
+layout: figura
+imagem: /rm-prion-flair.jpg
+legenda: "Ressonância na doença de Creutzfeldt-Jakob. <b>A</b> e <b>B</b>: hipersinal nos núcleos da base em FLAIR e em DWI. <b>C</b>: a fita cortical. <b>D</b>: o tálamo. <i>Practical Neurology</i>, <b>CC BY 4.0</b>, Wikimedia Commons."
+lado: esquerda
+ajuste: contain
+---
+
+# O exame que sustenta a suspeita
+
+- **Ressonância com DWI** — hoje o teste mais sensível
+- **Eletrencefalograma** — descargas trifásicas periódicas, de 0,5 a 2 Hz
+- No líquido cerebrospinal, proteína **14-3-3** e **tau**
+
+<Nota titulo="A confirmação definitiva">
+
+Só por **biópsia ou necropsia**. O DSM-5 pede ao menos um marcador característico antes de dar o diagnóstico.
+
+</Nota>
+
+<!--
+DWI: difusão ponderada, sequência de ressonância sensível ao movimento das moléculas de água.
+Fita cortical: o hipersinal fino que acompanha o contorno do córtex.
+Eletrencefalograma (EEG): registro da atividade elétrica do córtex. Hz: hertz, ciclos por segundo.
+Onda trifásica: onda lenta com três deflexões, achado clássico mas nem sempre presente.
+Proteína 14-3-3: marcador de destruição neuronal rápida; útil sobretudo na DCJ esporádica.
+-->
+
+---
+layout: default
+---
+
+# Príon: onde, e o que cai
+
+<Grade :cols="2">
+
+<Cartao rotulo="regiões" titulo="Onde o sinal aparece" cor="azul">
+
+- **Córtex** — a fita cortical em DWI e FLAIR
+- **Estriado** — caudado e putame
+- **Tálamo**, sobretudo na variante
+- **Cerebelo**, nos sinais motores
+
+</Cartao>
+
+<Cartao rotulo="cognição" titulo="O que cai" cor="ouro">
+
+- Declínio **global**, e não de um domínio só
+- Junto vêm **mioclonia**, **ataxia** e reflexo de sobressalto
+- Na variante, os sintomas **psiquiátricos** vêm antes
+
+</Cartao>
+
+</Grade>
+
+<Fonte>APA, <em>DSM-5</em> — TNC maior ou leve devido à doença do príon.</Fonte>
+
+<!--
+Estriado: caudado e putame, dois dos núcleos da base.
+Mioclonia: contração muscular breve e involuntária. Ataxia: incoordenação do movimento.
+Reflexo de sobressalto: resposta motora exagerada a um estímulo súbito.
+Pela velocidade, o transtorno costuma ser encontrado só no nível maior — quase não há
+janela de TNC leve.
+-->
+
+---
+layout: comparacao
+title: Cinco etiologias, cinco assinaturas
+colunas:
+  - { titulo: Lesão, sub: o que se acumula ou se perde, cor: terra }
+  - { titulo: Regiões, sub: onde ela se instala, cor: azul }
+  - { titulo: O que cai primeiro, sub: o domínio de entrada, cor: ouro }
+linhas:
+  - {
+      criterio: Alzheimer,
+      valores:
+        [
+          "placas de <b>beta-amiloide</b> e emaranhados de <b>tau</b>",
+          "entorrinal e hipocampo",
+          "aprendizagem e memória"
+        ]
+    }
+  - {
+      criterio: Frontotemporal,
+      valores:
+        [
+          "DLFT — <b>tau</b>, <b>TDP-43</b> ou <b>FET</b>",
+          "frontal medial e temporal anterior",
+          "cognição social e executiva"
+        ]
+    }
+  - {
+      criterio: Vascular,
+      valores:
+        [
+          "infarto e lesão da substância branca",
+          "circuito córtico-subcortical",
+          "velocidade e executiva"
+        ]
+    }
+  - {
+      criterio: Corpos de Lewy,
+      valores:
+        [
+          "agregados de <b>alfa-sinucleína</b>",
+          "occipital e nigroestriatal",
+          "atenção complexa, oscilante"
+        ]
+    }
+  - {
+      criterio: Príon,
+      valores:
+        [
+          "<b>PrP</b> mal enovelada, tecido espongiforme",
+          "córtex, estriado e tálamo",
+          "tudo, em poucos meses"
+        ]
+    }
+---
+
+<Fonte>Síntese do capítulo de Transtornos Neurocognitivos do <em>DSM-5</em>.</Fonte>
+
+<!--
+A tabela lê-se da esquerda para a direita: a lesão explica a região, e a região explica o
+domínio. Nenhuma linha é exclusiva — patologias mistas são a regra no idoso, e nesse caso o
+DSM-5 pede o subtipo "devido a múltiplas etiologias".
 -->
 
 ---
@@ -473,7 +934,7 @@ lembretes frequentes.
 <Cartao rotulo="aprendizagem e memória" titulo="No TNC leve" cor="ouro">
 
 Conta **cada vez mais com listas e calendário**. Precisa reler para acompanhar os personagens
-de um filme.
+de um livro.
 
 </Cartao>
 
@@ -527,7 +988,6 @@ layout: secao
 numero: "05"
 kicker: Bloco 5
 title: Avaliação neuropsicológica — função e cognição
-note: Duas perguntas, não uma. A cognição diz se há declínio e em quê; a funcionalidade diz se é leve ou maior.
 ---
 
 ---
@@ -547,7 +1007,7 @@ clínico) E prejuízo documentado. Uma sozinha não fecha o critério.
 ---
 layout: pergunta
 kicker: Bloco 5 · para discutir
-title: O escore caiu. <em>De quê</em> ele caiu?
+title: O escore caiu. <em>por qual caminho?</em>
 pistas:
   - Prejuízo de memória ou de atenção?
   - A memória melhora com dica?
@@ -555,12 +1015,8 @@ pistas:
   - Esquecimento ou acesso lexical?
 ---
 
-<v-click>
-
 Um escore baixo é o **fim** de uma cadeia, não o começo. Separar as hipóteses que levam a ele
 é o trabalho da avaliação neuropsicológica — **nenhum rastreio faz isso**.
-
-</v-click>
 
 <!--
 A mesma pontuação em evocação livre pode vir de não ter prestado atenção, de não ter guardado,
@@ -722,6 +1178,29 @@ layout: default
 ]" />
 
 <Fonte>Retrato de Alois Alzheimer: Wikimedia Commons, <b>domínio público</b>. Os esquemas são autorais.</Fonte>
+
+---
+layout: default
+---
+
+# Referências · etiologias
+
+<Criterios :itens="[
+  { letra: '·', texto: '<b>Trejo-Lopez J.A., Yachnis A.T. e Prokop S., 2021.</b> Neuropathology of Alzheimer&rsquo;s disease. <i>Neurotherapeutics</i>, 19(1):173-85. doi:10.1007/s13311-021-01146-y' },
+  { letra: '·', texto: '<b>Neumann M. e Mackenzie I.R.A., 2019.</b> Neuropathology of non-tau frontotemporal lobar degeneration. <i>Neuropathology and Applied Neurobiology</i>, 45(1):19-40. doi:10.1111/nan.12526' },
+  { letra: '·', texto: '<b>Sachdev P. et al., 2014.</b> Diagnostic criteria for vascular cognitive disorders: a VASCOG statement. <i>Alzheimer Disease &amp; Associated Disorders</i>, 28(3):206-18. doi:10.1097/WAD.0000000000000034' },
+  { letra: '·', texto: '<b>McKeith I.G. et al., 2017.</b> Diagnosis and management of dementia with Lewy bodies: fourth consensus report of the DLB Consortium. <i>Neurology</i>, 89(1):88-100. doi:10.1212/WNL.0000000000004058' },
+  { letra: '·', texto: '<b>Colby D.W. e Prusiner S.B., 2011.</b> Prions. <i>Cold Spring Harbor Perspectives in Biology</i>, 3(1):a006833. doi:10.1101/cshperspect.a006833' },
+]" />
+
+<Fonte>As imagens de exame vêm do Wikimedia Commons, creditadas slide a slide.</Fonte>
+
+<!--
+As cinco referências complementam o DSM-5 no que ele não detalha: o estadiamento das lesões
+do Alzheimer, a classificação molecular da degeneração frontotemporal, os subtipos vasculares,
+os biomarcadores dos corpos de Lewy e o mecanismo da conversão priônica.
+doi: identificador digital de objeto — o endereço permanente de um artigo científico.
+-->
 
 ---
 layout: fecho
