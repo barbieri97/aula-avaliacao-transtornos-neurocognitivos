@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 350" width="880" height="350" role="img" aria-label="Sobreposicao entre TEA e TDAH: o que e proprio de cada quadro nas extremidades e o que os dois compartilham na interseccao, como dificuldade social, desregulacao emocional e falhas executivas">
+  <style>
+    .tt { font-family: Helvetica, Arial, sans-serif; font-size: 17px; fill: #242258; }
+    .sb { font-family: Helvetica, Arial, sans-serif; font-size: 13px; fill: #63628a; }
+    .kk { font-family: Helvetica, Arial, sans-serif; font-size: 12px; fill: #6f5a1f; letter-spacing: 1.4px; }
+    .ct { font-family: Helvetica, Arial, sans-serif; font-size: 13px; fill: #242258; }
+  </style>
+
+  <text class="kk" x="16" y="22">O QUE É DE CADA UM, E O QUE É DOS DOIS</text>
+
+  <ellipse cx="300" cy="170" rx="270" ry="126" fill="#e7e7f1" stroke="#c3bfb0"/>
+  <ellipse cx="580" cy="170" rx="270" ry="126" fill="#f1e9d6" fill-opacity="0.8" stroke="#c3bfb0"/>
+
+  <text class="tt" x="130" y="70">TEA</text>
+  <text class="tt" x="750" y="70" text-anchor="end">TDAH</text>
+
+  <!-- proprio TEA -->
+  <text class="sb" x="52" y="120">déficit de reciprocidade social</text>
+  <text class="sb" x="52" y="142">comunicação não verbal atípica</text>
+  <text class="sb" x="52" y="164">interesses restritos e rituais</text>
+  <text class="sb" x="52" y="186">insistência nas mesmas coisas</text>
+  <text class="sb" x="52" y="208">hiper e hiporreatividade sensorial</text>
+  <text class="sb" x="52" y="230">brincadeira simbólica empobrecida</text>
+
+  <!-- interseccao -->
+  <text class="ct" x="440" y="118" text-anchor="middle">desatenção</text>
+  <text class="ct" x="440" y="140" text-anchor="middle">hiperatividade</text>
+  <text class="ct" x="440" y="162" text-anchor="middle">rejeição pelos pares</text>
+  <text class="ct" x="440" y="184" text-anchor="middle">desregulação emocional</text>
+  <text class="ct" x="440" y="206" text-anchor="middle">falhas executivas</text>
+  <text class="ct" x="440" y="228" text-anchor="middle">queixa escolar</text>
+
+  <!-- proprio TDAH -->
+  <text class="sb" x="828" y="120" text-anchor="end">desatenção por atração ao externo</text>
+  <text class="sb" x="828" y="142" text-anchor="end">impulsividade sem premeditação</text>
+  <text class="sb" x="828" y="164" text-anchor="end">inquietude generalizada</text>
+  <text class="sb" x="828" y="186" text-anchor="end">interrompe, intromete-se, quer entrar</text>
+  <text class="sb" x="828" y="208" text-anchor="end">sintomas em dois ou mais ambientes</text>
+  <text class="sb" x="828" y="230" text-anchor="end">antes dos 12 anos</text>
+
+  <rect x="16" y="308" width="848" height="34" fill="#eae7dd" stroke="#c3bfb0"/>
+  <text class="sb" x="32" y="330" font-size="13.5">Desde o DSM-5 os dois diagnósticos <tspan fill="#242258">podem ser dados juntos</tspan>. A pergunta clínica deixou de ser “qual dos dois” e passou a ser “o que, aqui, cada um explica”.</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 20 880 280" width="880" height="280" role="img" aria-label="Curvas de sensibilidade a experiencia por dominio ao longo da idade: visao binocular fecha cedo, linguagem declina ate a puberdade, processamento de faces permanece flexivel ate os 10 a 12 anos e funcoes executivas seguem plasticas na adolescencia">
+  <style>
+    .lb { font-family: Helvetica, Arial, sans-serif; font-size: 14px; fill: #242258; }
+    .ax { font-family: Helvetica, Arial, sans-serif; font-size: 13px; fill: #6f5a1f; }
+    .kk { font-family: Helvetica, Arial, sans-serif; font-size: 12px; fill: #6f5a1f; letter-spacing: 1.4px; }
+    .yl { font-family: Helvetica, Arial, sans-serif; font-size: 13px; fill: #63628a; }
+  </style>
+
+  <line x1="120" y1="46" x2="120" y2="252" stroke="#c3bfb0" stroke-width="1"/>
+  <line x1="120" y1="252" x2="840" y2="252" stroke="#c3bfb0" stroke-width="1"/>
+  <text class="yl" x="112" y="52" text-anchor="end">alta</text>
+  <text class="yl" x="112" y="252" text-anchor="end">baixa</text>
+  <g class="ax" text-anchor="middle">
+    <text x="140" y="274">nasc.</text>
+    <text x="240" y="274">1 ano</text>
+    <text x="360" y="274">3 anos</text>
+    <text x="500" y="274">6 anos</text>
+    <text x="660" y="274">12 anos</text>
+    <text x="820" y="274">18 anos</text>
+  </g>
+  <g stroke="#eae7dd" stroke-width="1">
+    <line x1="240" y1="46" x2="240" y2="252"/><line x1="360" y1="46" x2="360" y2="252"/>
+    <line x1="500" y1="46" x2="500" y2="252"/><line x1="660" y1="46" x2="660" y2="252"/>
+  </g>
+
+  <path d="M 140 246 C 165 56 200 52 230 100 C 258 146 290 238 330 250" fill="none" stroke="#96322c" stroke-width="3"/>
+  <text class="lb" x="236" y="60" fill="#96322c" font-size="13">visão binocular</text>
+
+  <path d="M 140 194 C 190 66 250 62 330 96 C 440 144 560 212 700 246" fill="none" stroke="#242258" stroke-width="3"/>
+  <text class="lb" x="344" y="86" fill="#242258" font-size="13">linguagem</text>
+
+  <path d="M 140 232 C 210 122 300 114 420 140 C 540 166 620 212 720 246" fill="none" stroke="#947b2f" stroke-width="3"/>
+  <text class="lb" x="470" y="140" fill="#6f5a1f" font-size="13">processamento de faces</text>
+
+  <path d="M 140 240 C 260 210 340 170 440 158 C 560 144 680 146 838 182" fill="none" stroke="#2c6b4f" stroke-width="3"/>
+  <text class="lb" x="836" y="172" fill="#2c6b4f" font-size="13" text-anchor="end">funções executivas</text>
+</svg>

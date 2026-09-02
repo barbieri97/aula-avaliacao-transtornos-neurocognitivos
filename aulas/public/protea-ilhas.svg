@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 350" width="880" height="350" role="img" aria-label="Planta da sala do PROTEA-R com tres arranjos: o chao com brinquedos de faz de conta e potes transparentes, a mesa com encaixes e material grafico, e a caixa do avaliador com estimulos sensoriais fora do alcance da crianca">
+  <style>
+    .tt { font-family: Helvetica, Arial, sans-serif; font-size: 15px; fill: #242258; }
+    .sb { font-family: Helvetica, Arial, sans-serif; font-size: 12.5px; fill: #63628a; }
+    .kk { font-family: Helvetica, Arial, sans-serif; font-size: 12px; fill: #6f5a1f; letter-spacing: 1.4px; }
+    .nu { font-family: Helvetica, Arial, sans-serif; font-size: 13px; fill: #6f5a1f; letter-spacing: 1.4px; }
+  </style>
+
+  <text class="kk" x="16" y="22">TRÊS ARRANJOS NA MESMA SALA</text>
+
+  <!-- sala -->
+  <rect x="16" y="36" width="848" height="238" fill="#fbfaf5" stroke="#c3bfb0" stroke-width="2"/>
+  <rect x="16" y="150" width="10" height="56" fill="#f4f2ea" stroke="#c3bfb0" stroke-width="2"/>
+  <text class="sb" x="34" y="182" font-size="11">porta</text>
+
+  <!-- 1 chão -->
+  <rect x="86" y="60" width="230" height="190" fill="#e7e7f1" stroke="#c3bfb0"/>
+  <text class="nu" x="102" y="84">01</text>
+  <text class="tt" x="102" y="106">O chão</text>
+  <text class="sb" x="102" y="128">kit de chá, carrinhos, bonecos,</text>
+  <text class="sb" x="102" y="146">mesinha e cadeiras em miniatura</text>
+  <text class="sb" x="102" y="172" fill="#6f5a1f">pote e caixa transparentes,</text>
+  <text class="sb" x="102" y="190" fill="#6f5a1f">fechados de propósito</text>
+  <text class="sb" x="102" y="216">→ brincadeira simbólica,</text>
+  <text class="sb" x="102" y="234">atenção compartilhada, busca de auxílio</text>
+
+  <!-- 2 mesa -->
+  <rect x="332" y="60" width="230" height="190" fill="#f1e9d6" stroke="#c3bfb0"/>
+  <text class="nu" x="348" y="84">02</text>
+  <text class="tt" x="348" y="106">A mesa</text>
+  <text class="sb" x="348" y="128">encaixes, quebra-cabeças,</text>
+  <text class="sb" x="348" y="146">lápis de cor e papel</text>
+  <text class="sb" x="348" y="172" fill="#6f5a1f">a criança precisa sentar-se</text>
+  <text class="sb" x="348" y="190" fill="#6f5a1f">e sustentar a tarefa</text>
+  <text class="sb" x="348" y="216">→ brincadeira funcional,</text>
+  <text class="sb" x="348" y="234">exploração, habilidade gráfica</text>
+
+  <!-- 3 caixa -->
+  <rect x="578" y="60" width="270" height="190" fill="#e3ece4" stroke="#c3bfb0"/>
+  <text class="nu" x="594" y="84">03</text>
+  <text class="tt" x="594" y="106">A caixa do avaliador</text>
+  <text class="sb" x="594" y="128">brinquedos sonoros, luminosos</text>
+  <text class="sb" x="594" y="146">e que produzem movimento</text>
+  <text class="sb" x="594" y="172" fill="#6f5a1f">opaca, sobre o armário, fora do</text>
+  <text class="sb" x="594" y="190" fill="#6f5a1f">alcance — um item por vez</text>
+  <text class="sb" x="594" y="216">→ reação sensorial, resposta atípica,</text>
+  <text class="sb" x="594" y="234">imitação e troca de turnos</text>
+
+  <!-- rodapé -->
+  <rect x="16" y="286" width="848" height="58" fill="#eae7dd" stroke="#c3bfb0"/>
+  <text class="tt" x="32" y="308" font-size="14">A entrada é combinada: a criança e um cuidador entram primeiro e ficam sozinhos por cerca de um minuto.</text>
+  <text class="sb" x="32" y="330" font-size="13.5">Só então o avaliador bate na porta, entra, cumprimenta e senta-se na altura da criança — sem tê-la conhecido antes. Ao todo, três sessões de cerca de 45 minutos.</text>
+</svg>

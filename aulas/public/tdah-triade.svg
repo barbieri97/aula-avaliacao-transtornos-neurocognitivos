@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="880" height="340" role="img" aria-label="Os dois conjuntos de sintomas do TDAH, desatencao e hiperatividade-impulsividade, e as tres apresentacoes que resultam de preencher um deles ou os dois">
+  <style>
+    .tt { font-family: Helvetica, Arial, sans-serif; font-size: 16px; fill: #242258; }
+    .sb { font-family: Helvetica, Arial, sans-serif; font-size: 13px; fill: #63628a; }
+    .kk { font-family: Helvetica, Arial, sans-serif; font-size: 12px; fill: #6f5a1f; letter-spacing: 1.4px; }
+    .hd { font-family: Helvetica, Arial, sans-serif; font-size: 16px; fill: #f4f2ea; }
+  </style>
+
+  <text class="kk" x="16" y="22">DOIS CONJUNTOS, TRÊS APRESENTAÇÕES</text>
+
+  <!-- conjunto A1 -->
+  <rect x="16" y="42" width="330" height="34" fill="#242258"/>
+  <text class="hd" x="32" y="65">A1 · Desatenção</text>
+  <text x="330" y="65" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#d9c176">6 de 9 sintomas</text>
+  <rect x="16" y="76" width="330" height="94" fill="#e7e7f1" stroke="#c3bfb0"/>
+  <text class="sb" x="32" y="98">detalhes que passam · foco que não sustenta</text>
+  <text class="sb" x="32" y="118">parece não escutar · não termina a tarefa</text>
+  <text class="sb" x="32" y="138">desorganização · evita esforço mental · perde coisas</text>
+  <text class="sb" x="32" y="158">distrai-se com o externo · esquece o cotidiano</text>
+
+  <!-- conjunto A2 -->
+  <rect x="534" y="42" width="330" height="34" fill="#242258"/>
+  <text class="hd" x="550" y="65">A2 · Hiperatividade-impulsividade</text>
+  <rect x="534" y="76" width="330" height="94" fill="#f1e9d6" stroke="#c3bfb0"/>
+  <text class="sb" x="550" y="98">remexe · levanta da cadeira · corre e sobe</text>
+  <text class="sb" x="550" y="118">não brinca com calma · “com o motor ligado”</text>
+  <text class="sb" x="550" y="138">fala demais · responde antes da pergunta terminar</text>
+  <text class="sb" x="550" y="158">não espera a vez · interrompe e se intromete</text>
+
+  <!-- setas -->
+  <g stroke="#947b2f" stroke-width="2.5" fill="none">
+    <path d="M 130 170 L 130 214"/>
+    <path d="M 346 123 L 400 123 L 400 214"/>
+    <path d="M 534 123 L 480 123 L 480 214"/>
+    <path d="M 750 170 L 750 214"/>
+  </g>
+  <g fill="#947b2f">
+    <path d="M 130 222 l -6 -9 h 12 z"/><path d="M 400 222 l -6 -9 h 12 z"/>
+    <path d="M 480 222 l -6 -9 h 12 z"/><path d="M 750 222 l -6 -9 h 12 z"/>
+  </g>
+
+  <!-- apresentações -->
+  <rect x="16" y="226" width="228" height="74" fill="#fbfaf5" stroke="#c3bfb0"/>
+  <text class="tt" x="130" y="252" text-anchor="middle">Predominantemente</text>
+  <text class="tt" x="130" y="272" text-anchor="middle">desatenta</text>
+  <text class="sb" x="130" y="292" text-anchor="middle">só A1 preenchido</text>
+
+  <rect x="326" y="226" width="228" height="74" fill="#242258"/>
+  <text x="440" y="252" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#f4f2ea">Combinada</text>
+  <text x="440" y="274" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#d9c176">A1 e A2 preenchidos</text>
+  <text x="440" y="292" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#d9c176">nos últimos seis meses</text>
+
+  <rect x="636" y="226" width="228" height="74" fill="#fbfaf5" stroke="#c3bfb0"/>
+  <text class="tt" x="750" y="252" text-anchor="middle">Predominantemente</text>
+  <text class="tt" x="750" y="272" text-anchor="middle">hiperativa/impulsiva</text>
+  <text class="sb" x="750" y="292" text-anchor="middle">só A2 preenchido</text>
+
+  <text class="sb" x="16" y="326" font-size="13.5">A partir dos 17 anos, cinco sintomas bastam em cada conjunto. A apresentação descreve os <tspan fill="#242258">últimos seis meses</tspan> — pode mudar ao longo da vida.</text>
+</svg>

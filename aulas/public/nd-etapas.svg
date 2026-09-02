@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 350" width="880" height="350" role="img" aria-label="Linha do tempo do neurodesenvolvimento: proliferação e migração neuronal na gestação, sinaptogênese no primeiro biênio, poda sináptica até a adolescência e mielinização até a vida adulta">
+  <style>
+    .et { font-family: Helvetica, Arial, sans-serif; font-size: 16px; fill: #242258; }
+    .sub{ font-family: Helvetica, Arial, sans-serif; font-size: 13px; fill: #63628a; }
+    .ax { font-family: Helvetica, Arial, sans-serif; font-size: 13px; fill: #6f5a1f; }
+    .kk { font-family: Helvetica, Arial, sans-serif; font-size: 12px; fill: #6f5a1f; letter-spacing: 1.4px; }
+  </style>
+
+  <text class="kk" x="16" y="22">DA CONCEPÇÃO À VIDA ADULTA</text>
+
+  <!-- eixo -->
+  <line x1="176" y1="52" x2="856" y2="52" stroke="#c3bfb0" stroke-width="1"/>
+  <g class="ax" text-anchor="middle">
+    <text x="196" y="42">concepção</text>
+    <text x="336" y="42">nascimento</text>
+    <text x="452" y="42">2 anos</text>
+    <text x="568" y="42">6 anos</text>
+    <text x="720" y="42">adolescência</text>
+    <text x="836" y="42">adulto</text>
+  </g>
+  <g stroke="#c3bfb0" stroke-width="1">
+    <line x1="196" y1="52" x2="196" y2="300"/>
+    <line x1="336" y1="52" x2="336" y2="300"/>
+    <line x1="452" y1="52" x2="452" y2="300"/>
+    <line x1="568" y1="52" x2="568" y2="300"/>
+    <line x1="720" y1="52" x2="720" y2="300"/>
+  </g>
+  <line x1="336" y1="52" x2="336" y2="300" stroke="#947b2f" stroke-width="2"/>
+
+  <!-- barras -->
+  <g>
+    <rect x="200" y="70" width="118" height="26" fill="#e7e7f1" stroke="#c3bfb0"/>
+    <text class="et" x="16" y="88">Proliferação</text>
+    <text class="sub" x="16" y="106">os neurônios são feitos</text>
+
+    <rect x="216" y="116" width="128" height="26" fill="#e7e7f1" stroke="#c3bfb0"/>
+    <text class="et" x="16" y="134">Migração</text>
+    <text class="sub" x="16" y="152">cada um chega ao seu lugar</text>
+
+    <rect x="300" y="162" width="230" height="26" fill="#f1e9d6" stroke="#c3bfb0"/>
+    <rect x="530" y="168" width="140" height="14" fill="#f1e9d6" stroke="#c3bfb0" opacity="0.55"/>
+    <text class="et" x="16" y="180">Sinaptogênese</text>
+    <text class="sub" x="16" y="198">as conexões se multiplicam</text>
+
+    <rect x="420" y="208" width="330" height="26" fill="#e3ece4" stroke="#c3bfb0"/>
+    <text class="et" x="16" y="226">Poda sináptica</text>
+    <text class="sub" x="16" y="244">o que não é usado se perde</text>
+
+    <rect x="312" y="254" width="544" height="26" fill="#f2e6dd" stroke="#c3bfb0"/>
+    <text class="et" x="16" y="272">Mielinização</text>
+    <text class="sub" x="16" y="290">a condução fica rápida</text>
+  </g>
+
+  <!-- rodapé -->
+  <rect x="16" y="312" width="840" height="32" fill="#eae7dd" stroke="#c3bfb0"/>
+  <text class="sub" x="30" y="333" font-size="14">Um transtorno do neurodesenvolvimento se instala em algum ponto desta linha — <tspan fill="#242258">antes</tspan> de a função estar pronta. Por isso o déficit nunca foi adquirido: ele nunca chegou a se instalar.</text>
+</svg>

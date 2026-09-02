@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 350" width="880" height="350" role="img" aria-label="Plano velocidade por precisao do MFFT: quem responde rapido e erra muito e impulsivo, quem responde devagar e erra pouco e reflexivo, quem responde rapido e erra pouco e eficiente e quem responde devagar e erra muito e ineficiente">
+  <style>
+    .q  { font-family: Helvetica, Arial, sans-serif; font-size: 17px; fill: #242258; }
+    .sb { font-family: Helvetica, Arial, sans-serif; font-size: 13px; fill: #63628a; }
+    .ax { font-family: Helvetica, Arial, sans-serif; font-size: 13.5px; fill: #6f5a1f; }
+    .kk { font-family: Helvetica, Arial, sans-serif; font-size: 12px; fill: #6f5a1f; letter-spacing: 1.4px; }
+  </style>
+
+  <text class="kk" x="16" y="22">DOIS EIXOS, QUATRO ESTILOS</text>
+
+  <!-- quadrantes -->
+  <rect x="170" y="44" width="290" height="118" fill="#f2e6dd" stroke="#c3bfb0"/>
+  <rect x="460" y="44" width="290" height="118" fill="#eae7dd" stroke="#c3bfb0"/>
+  <rect x="170" y="162" width="290" height="118" fill="#e3ece4" stroke="#c3bfb0"/>
+  <rect x="460" y="162" width="290" height="118" fill="#e7e7f1" stroke="#c3bfb0"/>
+
+  <text class="q" x="315" y="86" text-anchor="middle">Impulsivo</text>
+  <text class="sb" x="315" y="110" text-anchor="middle">responde rápido,</text>
+  <text class="sb" x="315" y="128" text-anchor="middle">erra muito</text>
+  <text class="sb" x="315" y="150" text-anchor="middle" fill="#96322c">prioriza a velocidade</text>
+
+  <text class="q" x="605" y="86" text-anchor="middle">Ineficiente</text>
+  <text class="sb" x="605" y="110" text-anchor="middle">responde devagar,</text>
+  <text class="sb" x="605" y="128" text-anchor="middle">erra muito</text>
+  <text class="sb" x="605" y="150" text-anchor="middle" fill="#96322c">não ganha nem em uma coisa</text>
+
+  <text class="q" x="315" y="204" text-anchor="middle">Eficiente</text>
+  <text class="sb" x="315" y="228" text-anchor="middle">responde rápido,</text>
+  <text class="sb" x="315" y="246" text-anchor="middle">erra pouco</text>
+  <text class="sb" x="315" y="268" text-anchor="middle" fill="#2c6b4f">concilia as duas</text>
+
+  <text class="q" x="605" y="204" text-anchor="middle">Reflexivo</text>
+  <text class="sb" x="605" y="228" text-anchor="middle">responde devagar,</text>
+  <text class="sb" x="605" y="246" text-anchor="middle">erra pouco</text>
+  <text class="sb" x="605" y="268" text-anchor="middle" fill="#2c6b4f">prioriza a precisão</text>
+
+  <!-- eixos -->
+  <line x1="460" y1="36" x2="460" y2="290" stroke="#242258" stroke-width="2"/>
+  <line x1="162" y1="162" x2="760" y2="162" stroke="#242258" stroke-width="2"/>
+  <text class="ax" x="180" y="304" >← tempo de reação mais curto</text>
+  <text class="ax" x="748" y="304" text-anchor="end">tempo de reação mais longo →</text>
+  <text class="ax" x="810" y="80" text-anchor="middle">mais</text>
+  <text class="ax" x="810" y="98" text-anchor="middle">erros</text>
+  <text class="ax" x="810" y="230" text-anchor="middle">menos</text>
+  <text class="ax" x="810" y="248" text-anchor="middle">erros</text>
+
+  <text class="sb" x="16" y="332" font-size="13.5">O MFFT-BR devolve as duas medidas separadas — erros e tempo — e o cruzamento delas. Um escore de erros alto <tspan fill="#242258">com</tspan> tempo curto é o padrão que interessa ao TDAH; erros altos com tempo longo apontam para outro lugar.</text>
+</svg>
