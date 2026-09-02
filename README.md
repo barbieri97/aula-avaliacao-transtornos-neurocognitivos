@@ -1,6 +1,6 @@
-# Avaliação de transtornos neurocognitivos — aulas
+# Aulas — Giunti Psychometrics · Vetor Editora
 
-As aulas da disciplina, escritas em [Slidev](https://sli.dev/) e publicadas no GitHub Pages,
+As aulas, escritas em [Slidev](https://sli.dev/) e publicadas no GitHub Pages,
 **uma aula por arquivo** em [`aulas/`](aulas/), cada uma na sua própria URL — e cada uma
 também em PDF.
 

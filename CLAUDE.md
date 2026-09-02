@@ -1,4 +1,4 @@
-# Aulas em Slidev — avaliação de transtornos neurocognitivos
+# Aulas em Slidev — Giunti Psychometrics · Vetor Editora
 
 Um repositório de decks [Slidev](https://sli.dev/) **agnóstico de tema**. **Uma aula por
 arquivo `.md`** em `aulas/`, publicadas no GitHub Pages, cada uma na sua própria URL — e cada
@@ -71,7 +71,7 @@ um componente — a exceção honesta é o desenho que só existe naquele slide.
 | Fontes | `aulas/styles/fontes/*.woff2`, servidas pelo site — nunca o campo `fonts:` (rede) |
 | Headmatter | além de `theme`/`title`, cada aula traz `info:` (ementa de uma linha) e `date:` (`YYYY-MM-DD`, entre aspas) — os dois alimentam a landing page |
 | PDF | `download: true` no headmatter: o build imprime o PDF e o deck ganha o botão de download |
-| Identidade do curso | `site.config.json` na raiz (`title`, `institution`, `description`, `intro`) — o único lugar com o nome da disciplina |
+| Identidade do site | `site.config.json` na raiz (`title`, `institution`, `description`, `intro`) — o único lugar com o nome do conjunto de aulas |
 
 O bloco de abertura de um deck é headmatter **e** frontmatter do primeiro slide ao mesmo
 tempo. O `title:` dele é o título do deck e o que a `capa` mostra — não repita o campo.
