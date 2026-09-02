@@ -5,8 +5,8 @@ As aulas da disciplina, escritas em [Slidev](https://sli.dev/) e publicadas no G
 também em PDF.
 
 ```
-https://<usuario>.github.io/<repo>/                                            ← índice
-https://<usuario>.github.io/<repo>/aula-01-avaliacao-dos-transtornos-neurocognitivos/
+https://barbieri97.github.io/aulas-vetor/                             ← índice
+https://barbieri97.github.io/aulas-vetor/aula-01-neuropsicologia-tnc/
 ```
 
 O PDF de cada aula é gerado no build e baixado pelo **botão de download na barra do próprio
