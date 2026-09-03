@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 350" width="880" height="350" role="img" aria-label="Tres perfis com o mesmo diagnostico de TEA: um com linguagem ausente e alto apoio, um com linguagem fluente e rigidez marcada, e um com camuflagem social e sobrecarga sensorial">
+  <style>
+    .nm { font-family: Helvetica, Arial, sans-serif; font-size: 14px; fill: #242258; }
+    .dm { font-family: Helvetica, Arial, sans-serif; font-size: 12.5px; fill: #63628a; }
+    .kk { font-family: Helvetica, Arial, sans-serif; font-size: 12px; fill: #6f5a1f; letter-spacing: 1.4px; }
+    .hd { font-family: Helvetica, Arial, sans-serif; font-size: 14px; fill: #f4f2ea; }
+  </style>
+
+  <text class="kk" x="16" y="22">O MESMO DIAGNÓSTICO, TRÊS CRIANÇAS</text>
+
+  <!-- cabeçalhos -->
+  <rect x="230" y="36" width="204" height="30" fill="#242258"/><text class="hd" x="332" y="56" text-anchor="middle">Criança A · 4 anos</text>
+  <rect x="442" y="36" width="204" height="30" fill="#242258"/><text class="hd" x="544" y="56" text-anchor="middle">Criança B · 8 anos</text>
+  <rect x="654" y="36" width="210" height="30" fill="#242258"/><text class="hd" x="759" y="56" text-anchor="middle">Criança C · 12 anos</text>
+
+  <!-- linhas de domínio -->
+  <g class="dm">
+    <text class="nm" x="16" y="94">Linguagem</text>
+    <text class="nm" x="16" y="140">Funcionamento intelectual</text>
+    <text class="nm" x="16" y="186">Rigidez e rituais</text>
+    <text class="nm" x="16" y="232">Reatividade sensorial</text>
+    <text class="nm" x="16" y="278">Adaptação no dia a dia</text>
+  </g>
+
+  <g stroke="#ddd9cb"><line x1="230" y1="74" x2="864" y2="74"/><line x1="230" y1="120" x2="864" y2="120"/><line x1="230" y1="166" x2="864" y2="166"/><line x1="230" y1="212" x2="864" y2="212"/><line x1="230" y1="258" x2="864" y2="258"/><line x1="230" y1="298" x2="864" y2="298"/></g>
+
+  <!-- barras: largura proporcional ao prejuízo -->
+  <!-- A -->
+  <g>
+    <rect x="238" y="80" width="188" height="20" fill="#96322c"/><text class="dm" x="242" y="95" fill="#f4f2ea">sem fala funcional</text>
+    <rect x="238" y="126" width="150" height="20" fill="#a3651b"/><text class="dm" x="242" y="141" fill="#f4f2ea">rebaixado</text>
+    <rect x="238" y="172" width="120" height="20" fill="#a3651b"/><text class="dm" x="242" y="187" fill="#f4f2ea">enfileira objetos</text>
+    <rect x="238" y="218" width="188" height="20" fill="#96322c"/><text class="dm" x="242" y="233" fill="#f4f2ea">cobre os ouvidos</text>
+    <rect x="238" y="264" width="180" height="20" fill="#96322c"/><text class="dm" x="242" y="279" fill="#f4f2ea">apoio muito substancial</text>
+  </g>
+  <!-- B -->
+  <g>
+    <rect x="450" y="80" width="70" height="20" fill="#2c6b4f"/><text class="dm" x="526" y="95">fala fluente e formal</text>
+    <rect x="450" y="126" width="60" height="20" fill="#2c6b4f"/><text class="dm" x="516" y="141">na média</text>
+    <rect x="450" y="172" width="188" height="20" fill="#96322c"/><text class="dm" x="454" y="187" fill="#f4f2ea">sofre com qualquer mudança</text>
+    <rect x="450" y="218" width="96" height="20" fill="#a3651b"/><text class="dm" x="552" y="233">evita texturas</text>
+    <rect x="450" y="264" width="120" height="20" fill="#a3651b"/><text class="dm" x="576" y="279">apoio na escola</text>
+  </g>
+  <!-- C -->
+  <g>
+    <rect x="662" y="80" width="60" height="20" fill="#2c6b4f"/><text class="dm" x="728" y="95">sem atraso</text>
+    <rect x="662" y="126" width="60" height="20" fill="#2c6b4f"/><text class="dm" x="728" y="141">acima da média</text>
+    <rect x="662" y="172" width="90" height="20" fill="#a3651b"/><text class="dm" x="758" y="187">rotinas próprias</text>
+    <rect x="662" y="218" width="150" height="20" fill="#96322c"/><text class="dm" x="666" y="233" fill="#f4f2ea">exausta ao fim do dia</text>
+    <rect x="662" y="264" width="110" height="20" fill="#a3651b"/><text class="dm" x="778" y="279">custa caro</text>
+  </g>
+
+  <text class="dm" x="16" y="318" font-size="13.5">A barra mede o <tspan fill="#242258">prejuízo</tspan>, não o traço. As três preenchem os critérios A e B — e nenhuma se parece com as outras.</text>
+  <text class="dm" x="16" y="338" font-size="13.5">É por isso que a palavra do diagnóstico é <tspan fill="#242258">espectro</tspan>, e por isso que um único instrumento não dá conta.</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 330" width="880" height="330" role="img" aria-label="Curso do TDAH ao longo da vida: a hiperatividade motora e a manifestacao principal na pre-escola e recua na adolescencia, enquanto a desatencao ganha destaque no ensino fundamental e a impulsividade persiste na vida adulta">
+  <style>
+    .lb { font-family: Helvetica, Arial, sans-serif; font-size: 14px; fill: #242258; }
+    .ax { font-family: Helvetica, Arial, sans-serif; font-size: 13px; fill: #6f5a1f; }
+    .sb { font-family: Helvetica, Arial, sans-serif; font-size: 12.5px; fill: #63628a; }
+    .kk { font-family: Helvetica, Arial, sans-serif; font-size: 12px; fill: #6f5a1f; letter-spacing: 1.4px; }
+  </style>
+
+  <text class="kk" x="16" y="22">O QUE APARECE, E QUANDO</text>
+
+  <line x1="120" y1="52" x2="120" y2="216" stroke="#c3bfb0"/>
+  <line x1="120" y1="216" x2="850" y2="216" stroke="#c3bfb0"/>
+  <text class="sb" x="112" y="58" text-anchor="end">alta</text>
+  <text class="sb" x="112" y="216" text-anchor="end">baixa</text>
+
+  <g class="ax" text-anchor="middle">
+    <text x="215" y="238">pré-escola</text>
+    <text x="405" y="238">fundamental</text>
+    <text x="600" y="238">adolescência</text>
+    <text x="790" y="238">vida adulta</text>
+  </g>
+  <g stroke="#eae7dd"><line x1="310" y1="52" x2="310" y2="216"/><line x1="500" y1="52" x2="500" y2="216"/><line x1="695" y1="52" x2="695" y2="216"/></g>
+
+  <!-- hiperatividade motora -->
+  <path d="M 140 72 C 250 66 330 96 420 130 C 520 168 640 196 840 206" fill="none" stroke="#96322c" stroke-width="3"/>
+  <text class="lb" x="150" y="62" fill="#96322c">hiperatividade motora</text>
+
+  <!-- desatenção -->
+  <path d="M 140 190 C 240 178 320 106 420 88 C 540 68 680 74 840 86" fill="none" stroke="#242258" stroke-width="3"/>
+  <text class="lb" x="700" y="72" fill="#242258" text-anchor="end">desatenção</text>
+
+  <!-- impulsividade -->
+  <path d="M 140 140 C 260 132 380 130 500 132 C 640 134 720 132 840 136" fill="none" stroke="#947b2f" stroke-width="3"/>
+  <text class="lb" x="846" y="130" fill="#6f5a1f" text-anchor="end">impulsividade</text>
+
+  <rect x="16" y="254" width="848" height="62" fill="#eae7dd" stroke="#c3bfb0"/>
+  <text class="sb" x="32" y="276" font-size="13.5">Antes dos 4 anos o comportamento típico é muito variável, e separar sintoma de temperamento é difícil. O critério B pede apenas que <tspan fill="#242258">vários sintomas estejam presentes antes dos 12 anos</tspan>.</text>
+  <text class="sb" x="32" y="298" font-size="13.5">Na adolescência a hiperatividade costuma virar inquietude interna; na vida adulta persistem desatenção, desorganização, dificuldade de planejar e impulsividade.</text>
+</svg>

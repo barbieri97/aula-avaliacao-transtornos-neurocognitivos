@@ -83,12 +83,13 @@ const colunas = props.colunas ?? []
   flex: none;
 }
 
-/* A tabela flutua no meio do que sobra: com quatro linhas ela encostaria no
-   título e deixaria meio slide vazio embaixo. */
+/* A tabela começa logo abaixo do título: com quatro linhas (ou um slot
+   depois dela), centralizar faria a tabela crescer para cima e encostar
+   no título — melhor sobrar espaço embaixo do que sobrepor o de cima. */
 .tabela-caixa {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   flex: 1;
   min-height: 0;
 }
