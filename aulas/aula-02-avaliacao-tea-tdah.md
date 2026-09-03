@@ -156,17 +156,19 @@ linhas:
   - { criterio: Leitura clínica, valores: ["não pede investigação", "pede investigação — <b>não</b> equivale a diagnóstico"] }
 ---
 
-<Nota titulo="Não existe um marcador de laboratório">
-
-Não há exame que diga se um neurodesenvolvimento é atípico. A leitura é **comportamental e
-comparativa**: o que esta criança faz, comparado ao que crianças da mesma idade fazem.
-
-</Nota>
-
 <!--
 Faixa de variação esperada: o intervalo de idades em que a maioria das crianças adquire
 determinada habilidade.
 -->
+
+---
+layout: destaque
+kicker: Neurodesenvolvimento típico e atípico
+title: Não existe um marcador de laboratório
+---
+
+Não há exame que diga se um neurodesenvolvimento é atípico. A leitura é **comportamental e
+comparativa**: o que esta criança faz, comparado ao que crianças da mesma idade fazem.
 
 ---
 layout: default
@@ -261,18 +263,19 @@ layout: default
   { letra: '·', titulo: 'Não autoriza esperar', texto: 'O critério dos 75% foi adotado justamente para desencorajar a conduta de aguardar e ver.' },
 ]" />
 
-<Nota tipo="alerta" titulo="As causas de um atraso são muitas">
-
-Transtorno do neurodesenvolvimento é **uma** delas. Privação de oportunidade, perda
-auditiva, doença crônica, prematuridade, quadro genético e ambiente empobrecido são outras
-— e várias podem coexistir.
-
-</Nota>
-
 <!--
 Estimulação dirigida: intervenção planejada para a dificuldade identificada, distinta de
 "estimular a criança" em sentido genérico.
 -->
+
+---
+layout: destaque
+kicker: Atraso de desenvolvimento
+title: As causas de um atraso são muitas
+---
+
+Transtorno do neurodesenvolvimento é **uma** delas — privação, perda auditiva, doença
+crônica, prematuridade, quadro genético e ambiente empobrecido são outras, e podem coexistir.
 
 ---
 layout: pergunta
@@ -526,18 +529,20 @@ layout: default
   { letra: 'A3', titulo: 'Desenvolver, manter e compreender relacionamentos', texto: 'De dificuldade de ajustar o comportamento ao contexto, a dificuldade em compartilhar <b>brincadeiras imaginativas</b> ou fazer amigos, até a ausência de interesse por pares.' },
 ]" />
 
-<Nota titulo="Cada item é um contínuo, não um sim ou não">
-
-O manual descreve cada déficit por uma **faixa de gravidade** — os exemplos vão do sutil ao
-grave. O que se julga é se há prejuízo, não se a criança se parece com o exemplo extremo.
-
-</Nota>
-
 <Fonte>APA, <em>DSM-5</em> · critério A do transtorno do espectro autista. Os exemplos são ilustrativos, não exaustivos.</Fonte>
 
 <!--
 Brincadeira imaginativa: faz de conta, em que um objeto ou uma ação representa outra coisa.
 -->
+
+---
+layout: destaque
+kicker: Critério A · TEA
+title: Cada item é um contínuo, não um sim ou não
+---
+
+O manual descreve cada déficit por uma **faixa de gravidade** — os exemplos vão do sutil ao
+grave. O que se julga é se há prejuízo, não se a criança se parece com o exemplo extremo.
 
 ---
 layout: default
@@ -602,10 +607,10 @@ layout: default
 # Os especificadores completam o registro
 
 <Criterios :itens="[
-  { letra: '·', titulo: 'Comprometimento intelectual concomitante', texto: 'Com ou sem. Exige estimativas <b>separadas</b> das habilidades verbal e não verbal — o perfil intelectual costuma ser irregular.' },
-  { letra: '·', titulo: 'Comprometimento da linguagem concomitante', texto: 'Com ou sem, e o nível atual descrito: sem fala inteligível, palavras isoladas, fala telegráfica, frases completas, fala fluente.' },
-  { letra: '·', titulo: 'Condição médica ou genética conhecida, ou fator ambiental', texto: 'Síndrome de Rett, X-frágil, síndrome de Down, epilepsia, exposição a ácido valproico, síndrome alcoólica fetal, muito baixo peso ao nascer.' },
-  { letra: '·', titulo: 'Outro transtorno do neurodesenvolvimento, mental ou comportamental', texto: 'TDAH, transtorno do desenvolvimento da coordenação, ansiedade, depressão, tiques — registrados com código adicional.' },
+  { letra: '·', titulo: 'Comprometimento intelectual concomitante', texto: 'Com ou sem. Exige estimativas <b>verbais e não verbais separadas</b> — o perfil costuma ser irregular.' },
+  { letra: '·', titulo: 'Comprometimento da linguagem concomitante', texto: 'Com ou sem, e o nível atual: sem fala inteligível, palavras isoladas, fala telegráfica ou fluente.' },
+  { letra: '·', titulo: 'Condição médica ou genética conhecida, ou fator ambiental', texto: 'Rett, X-frágil, Down, epilepsia, exposição a ácido valproico, síndrome alcoólica fetal, muito baixo peso ao nascer.' },
+  { letra: '·', titulo: 'Outro transtorno do neurodesenvolvimento, mental ou comportamental', texto: 'TDAH, transtorno do desenvolvimento da coordenação, ansiedade, depressão, tiques — com código adicional.' },
   { letra: '·', titulo: 'Com catatonia', texto: 'O risco parece maior nos anos da adolescência.' },
 ]" />
 
@@ -819,21 +824,23 @@ linhas:
   - { criterio: Percurso, valores: ["encaminhado cedo, pela escola", "diagnósticos prévios de ansiedade ou depressão antes de se cogitar TEA"] }
 ---
 
-<Nota titulo="A cautela que a literatura pede">
+<Fonte>Cruz S. et al., <em>Neuropsychology Review</em>, 2024 · Lai M-C. et al., <em>J Child Psychol Psychiatry</em>, 2020.</Fonte>
+
+<!--
+Script social: sequência de falas e gestos aprendida e reproduzida em situações previsíveis.
+-->
+
+---
+layout: destaque
+kicker: Apresentação clínica
+title: A cautela que a literatura pede
+fonte: Fenótipo — o conjunto de características observáveis, por oposição ao genótipo.
+---
 
 Metanálise de 67 estudos indica que **homens** pontuam mais grave nas medidas clínicas
 padrão, enquanto **mulheres** usam mais compensação e mascaramento — o que sustenta a
 existência de viés nos instrumentos. Ainda assim, camuflagem **não é sinônimo** de fenótipo
 feminino: ela ocorre em todos os gêneros.
-
-</Nota>
-
-<Fonte>Cruz S. et al., <em>Neuropsychology Review</em>, 2024 · Lai M-C. et al., <em>J Child Psychol Psychiatry</em>, 2020.</Fonte>
-
-<!--
-Fenótipo: o conjunto de características observáveis, por oposição ao genótipo.
-Script social: sequência de falas e gestos aprendida e reproduzida em situações previsíveis.
--->
 
 ---
 layout: default
@@ -1028,9 +1035,9 @@ Crianças de **2 a 12 anos**, com normas construídas para a população brasile
 
 <Cartao rotulo="aplicação" titulo="Como se aplica" cor="ouro" :destaque="true">
 
-**Entrevista semiestruturada com os pais ou responsáveis**, conduzida pelo profissional,
-que lê cada item, esclarece os termos e registra ele mesmo as respostas. O material **nunca**
-é levado para casa: o processo, e não o questionário respondido, é o instrumento.
+**Entrevista semiestruturada com os pais ou responsáveis**: o profissional lê cada item,
+esclarece os termos e registra as respostas. O material **nunca** vai para casa — o processo,
+não o questionário, é o instrumento.
 
 </Cartao>
 
@@ -1061,22 +1068,24 @@ linhas:
   - { criterio: O que investiga, valores: ["<b>12 itens gerais</b> de sintomatologia autística, cada um com subitens e derivações", "itens mais finos, organizados do mais novo para o mais velho, com descrições de nível <b>leve, moderado e severo</b>"] }
   - { criterio: Pontuação, valores: ["<b>frequência</b> (0 a 12 itens gerais) e <b>intensidade</b> (soma dos pesos dos subitens)", "grau de comprometimento por item (1 leve · 2 moderado · 3 severo)"] }
   - { criterio: Tempo, valores: ["30 a 40 minutos", "o restante das cerca de <b>2h30</b> da aplicação completa"] }
-  - { criterio: Quando usar, valores: ["sempre primeiro — conclui sobre o potencial autístico dos dados", "criança <b>menor de 5 anos</b>; detalhar áreas comprometidas; delinear intervenções; separar comportamento atípico de falha desenvolvimental"] }
+  - { criterio: Quando usar, valores: ["sempre primeiro — conclui sobre o potencial autístico dos dados", "criança <b>menor de 5 anos</b>: detalha áreas e intervenções; separa atípico de falha desenvolvimental"] }
 ---
-
-<Nota titulo="A regra do ponto de corte">
-
-De **7 a 8** itens gerais pontuados: probabilidade de TEA com caracterização moderada a
-forte, considerando o percentil detalhado. De **9 a 12**: caracterização forte. Nos dois
-casos, o manual **sugere aplicar a Escala II**.
-
-</Nota>
 
 <!--
 Derivação: exemplo concreto de comportamento listado sob cada subitem; assinalar uma
 derivação já compromete o subitem, e um subitem comprometido já pontua o item geral.
 NSA — não se aplica. COA — comportamento ocorrido anteriormente.
 -->
+
+---
+layout: destaque
+kicker: BINAUT
+title: A regra do ponto de corte
+---
+
+De **7 a 8** itens gerais pontuados: probabilidade de TEA com caracterização moderada a
+forte, considerando o percentil detalhado. De **9 a 12**: caracterização forte. Nos dois
+casos, o manual **sugere aplicar a Escala II**.
 
 ---
 layout: default
@@ -1154,9 +1163,9 @@ outros transtornos da comunicação.
 
 <Cartao rotulo="aplicação" titulo="Como se aplica" cor="ouro" :destaque="true">
 
-**Três sessões, em dias diferentes**, de cerca de 45 minutos cada — número que permite à
-criança se ambientar e ao avaliador observar mudanças ao longo do processo. Cada sessão tem
-dois contextos: brincadeira livre (≈15 min) e semiestruturada (≈30 min).
+**Três sessões, em dias diferentes**, de ~45 minutos — tempo para a criança se ambientar e o
+avaliador notar mudanças. Cada sessão tem dois contextos: brincadeira livre (≈15 min) e
+semiestruturada (≈30 min).
 
 </Cartao>
 
@@ -1262,9 +1271,9 @@ Crianças e adolescentes de **6 a 15 anos**.
 
 <Cartao rotulo="aplicação" titulo="Como se aplica" cor="ouro" :destaque="true">
 
-**Escala de relato parental**, respondida pelo cuidador que participa do convívio diário.
-50 itens, respondidos como *Sim*, *Só com ajuda*, *Não* ou *Não sei*, em cerca de 30
-minutos. Aplicação por link e **correção automática on-line** na plataforma VOL.
+**Escala de relato parental**, respondida pelo cuidador. 50 itens (*Sim*, *Só com ajuda*,
+*Não*, *Não sei*), em ~30 minutos. Aplicação por link, com **correção automática on-line**
+na VOL.
 
 </Cartao>
 
@@ -1353,14 +1362,14 @@ layout: default
 # Critério A1 · desatenção — primeira metade
 
 <Criterios :itens="[
-  { letra: 'a', titulo: 'Detalhes e erros por descuido', texto: 'Não presta atenção em detalhes em tarefas escolares ou outras atividades; o trabalho sai impreciso.' },
-  { letra: 'b', titulo: 'Manter a atenção na tarefa', texto: 'Dificuldade de sustentar o foco em aulas, conversas ou leituras prolongadas — inclusive em atividades lúdicas.' },
-  { letra: 'c', titulo: 'Parece não escutar', texto: 'Quando alguém lhe dirige a palavra diretamente, parece estar com a cabeça longe, mesmo sem distração óbvia.' },
-  { letra: 'd', titulo: 'Não termina o que começa', texto: 'Começa as tarefas, perde o foco rapidamente e perde o rumo — não por oposição nem por não entender.' },
-  { letra: 'e', titulo: 'Organizar tarefas e atividades', texto: 'Dificuldade com tarefas sequenciais, com manter materiais em ordem, com o tempo e com prazos.' },
+  { letra: 'a', titulo: 'Detalhes e erros por descuido', texto: 'Não presta atenção a detalhes em tarefas escolares; o trabalho sai impreciso.' },
+  { letra: 'b', titulo: 'Manter a atenção na tarefa', texto: 'Dificuldade de sustentar o foco em aulas, conversas ou leituras — inclusive em atividades lúdicas.' },
+  { letra: 'c', titulo: 'Parece não escutar', texto: 'Quando alguém lhe dirige a palavra, parece com a cabeça longe, mesmo sem distração óbvia.' },
+  { letra: 'd', titulo: 'Não termina o que começa', texto: 'Começa as tarefas, perde o foco e o rumo rapidamente — não por oposição ou incompreensão.' },
+  { letra: 'e', titulo: 'Organizar tarefas e atividades', texto: 'Dificuldade com tarefas em sequência, manter materiais em ordem, tempo e prazos.' },
 ]" />
 
-<Fonte>APA, <em>DSM-5</em> · critério A1 do TDAH. São necessários <b>seis</b> dos nove sintomas, por pelo menos seis meses — <b>cinco</b>, a partir dos 17 anos.</Fonte>
+<Fonte>APA, <em>DSM-5</em> · critério A1 — <b>6</b> de 9 sintomas, 6 meses (<b>5</b>, a partir dos 17 anos).</Fonte>
 
 <!--
 O manual acrescenta uma nota a cada conjunto: os sintomas não podem ser apenas manifestação
@@ -1405,17 +1414,33 @@ ambientes** e o **prejuízo** — quatro exigências que nenhum comportamento is
 layout: default
 ---
 
-# Critério A2 · hiperatividade e impulsividade
+# Critério A2 · hiperatividade
 
 <Criterios :itens="[
-  { letra: 'a–c', titulo: 'O corpo que não para', texto: 'Remexe ou batuca mãos e pés, contorce-se na cadeira; levanta quando se espera que permaneça sentado; corre ou sobe nas coisas onde é inapropriado — em adolescentes e adultos, pode ficar só na sensação de inquietude.' },
+  { letra: 'a–c', titulo: 'O corpo que não para', texto: 'Remexe mãos e pés, contorce-se na cadeira; levanta quando se espera que permaneça sentado; corre ou sobe onde é inapropriado.' },
   { letra: 'd–e', titulo: 'Sem calma, com o motor ligado', texto: 'Incapaz de brincar ou se envolver em lazer calmamente; não para, e os outros o veem como inquieto ou difícil de acompanhar.' },
   { letra: 'f', titulo: 'Fala demais', texto: 'Volume e quantidade de fala acima do que a situação comporta.' },
+]" />
+
+<Fonte>APA, <em>DSM-5</em> · critério A2 do TDAH, primeiros seis sintomas — os de hiperatividade.</Fonte>
+
+<!--
+Em adolescentes e adultos, a hiperatividade motora pode ficar só na sensação subjetiva de
+inquietude, sem o componente motor visível da infância.
+-->
+
+---
+layout: default
+---
+
+# Critério A2 · impulsividade
+
+<Criterios :itens="[
   { letra: 'g–h', titulo: 'A resposta que escapa', texto: 'Deixa escapar a resposta antes de a pergunta terminar, completa as frases dos outros, tem dificuldade de esperar a vez.' },
   { letra: 'i', titulo: 'Interrompe e se intromete', texto: 'Mete-se em conversas, jogos e atividades; usa coisas dos outros sem pedir; em adultos, assume o controle do que os outros estão fazendo.' },
 ]" />
 
-<Fonte>APA, <em>DSM-5</em> · critério A2 do TDAH, condensado em cinco linhas a partir dos nove sintomas.</Fonte>
+<Fonte>APA, <em>DSM-5</em> · critério A2 do TDAH, últimos três sintomas — os de impulsividade.</Fonte>
 
 <!--
 Impulsividade, no DSM-5: ações precipitadas, no momento, sem premeditação, com potencial
@@ -1931,15 +1956,15 @@ atual: 3
 
 ---
 layout: comparacao
-title: Diferenciais do TEA · o que se parece com o critério A
+title: Diferenciais do TEA · critério A
 colunas:
   - { titulo: Deficiência intelectual, sub: sem TEA, cor: terra }
   - { titulo: Transtorno da linguagem, sub: e da comunicação social pragmática, cor: azul }
   - { titulo: Mutismo seletivo, sub: quadro ansioso, cor: verde }
 linhas:
-  - { criterio: O que se parece, valores: ["atraso social e comportamentos repetitivos, sobretudo em crianças muito jovens ou sem linguagem", "problemas de comunicação e dificuldades sociais <b>secundárias</b> a eles", "criança que não fala com o avaliador e parece não interagir"] }
-  - { criterio: O que separa, valores: ["não há <b>discrepância</b>: o social acompanha o nível das demais habilidades não verbais", "comunicação não verbal <b>preservada</b>; <b>não há</b> padrões restritos e repetitivos", "desenvolvimento precoce típico; fala e <b>reciprocidade preservadas</b> em outros contextos"] }
-  - { criterio: A pergunta que decide, valores: ["a comunicação social está abaixo do <b>nível geral de desenvolvimento</b>?", "há — ou houve — comportamento restrito ou repetitivo?", "existe algum lugar em que essa criança conversa normalmente?"] }
+  - { criterio: O que se parece, valores: ["atraso social e repetições, mais evidente em crianças pequenas ou sem linguagem", "problemas de comunicação e dificuldades sociais <b>secundárias</b> a eles", "criança que não fala com o avaliador e parece não interagir"] }
+  - { criterio: O que separa, valores: ["não há <b>discrepância</b>: o social acompanha as demais habilidades", "comunicação não verbal <b>preservada</b>; <b>não há</b> padrões restritos e repetitivos", "desenvolvimento típico; fala e <b>reciprocidade preservadas</b> em outros contextos"] }
+  - { criterio: A pergunta que decide, valores: ["a comunicação social está abaixo do <b>nível geral</b>?", "há — ou houve — comportamento restrito ou repetitivo?", "há algum lugar em que ela conversa normalmente?"] }
 ---
 
 <Fonte>APA, <em>DSM-5</em> · diagnóstico diferencial do transtorno do espectro autista.</Fonte>
@@ -1953,28 +1978,30 @@ padrões restritos e repetitivos.
 
 ---
 layout: comparacao
-title: Diferenciais do TEA · o que se parece com o critério B
+title: Diferenciais do TEA · critério B
 colunas:
-  - { titulo: Transtorno do movimento estereotipado, sub: motor, cor: ouro }
+  - { titulo: Movimento estereotipado, sub: motor, cor: ouro }
   - { titulo: Síndrome de Rett, sub: genética, cor: terra }
   - { titulo: Esquizofrenia de início na infância, sub: psicótico, cor: azul }
 linhas:
-  - { criterio: O que se parece, valores: ["estereotipias motoras — que também são critério do TEA", "ruptura da interação social durante a fase regressiva, em geral entre 1 e 4 anos", "prejuízo social, interesses e crenças atípicos no estado prodrômico"] }
-  - { criterio: O que separa, valores: ["se as repetições se explicam pelo TEA, <b>não se faz</b> o diagnóstico adicional", "depois da fase regressiva a comunicação social <b>melhora</b>, e as características autistas deixam de ser o foco", "desenvolve-se após período de desenvolvimento normal ou quase normal; há <b>alucinações e delírios</b>"] }
-  - { criterio: A pergunta que decide, valores: ["as estereotipias causam autolesão e são foco do tratamento?", "os critérios completos de TEA seguem preenchidos <b>depois</b> da regressão?", "há alucinação ou delírio — e a pergunta foi entendida literalmente?"] }
+  - { criterio: O que se parece, valores: ["estereotipias motoras, também critério do TEA", "ruptura da interação social durante a fase regressiva, em geral entre 1 e 4 anos", "prejuízo social, interesses e crenças atípicos no estado prodrômico"] }
+  - { criterio: O que separa, valores: ["se as repetições se explicam pelo TEA, sem <b>diagnóstico adicional</b>", "depois da fase regressiva a comunicação social <b>melhora</b>, e as características autistas deixam de ser o foco", "desenvolve-se após período de desenvolvimento normal ou quase normal; há <b>alucinações e delírios</b>"] }
+  - { criterio: A pergunta que decide, valores: ["as estereotipias causam autolesão e são foco do tratamento?", "os critérios completos de TEA seguem preenchidos <b>depois</b> da regressão?", "há alucinação ou delírio genuínos?"] }
 ---
-
-<Nota titulo="Uma armadilha que o próprio DSM-5 registra">
-
-Pessoas com TEA podem responder de forma **concreta** a perguntas sobre psicose. *“Você
-ouve vozes quando não há ninguém por perto?”* — *“Sim, no rádio.”*
-
-</Nota>
 
 <!--
 Estado prodrômico: fase que antecede o quadro completo, com sintomas inespecíficos.
 Fase regressiva: período de perda de habilidades já adquiridas.
 -->
+
+---
+layout: destaque
+kicker: Diferenciais do TEA
+title: Uma armadilha que o próprio DSM-5 registra
+---
+
+Pessoas com TEA podem responder de forma **concreta** a perguntas sobre psicose. *“Você
+ouve vozes quando não há ninguém por perto?”* — *“Sim, no rádio.”*
 
 ---
 layout: destaque
@@ -1985,15 +2012,15 @@ fonte: Duas crianças podem apresentar a mesma cena por razões diferentes — e
 
 ---
 layout: comparacao
-title: Diferenciais do TDAH · dentro do neurodesenvolvimento e da escola
+title: Diferenciais do TDAH · no neurodesenvolvimento
 colunas:
   - { titulo: Transtorno de oposição desafiante, sub: comportamental, cor: terra }
   - { titulo: Transtorno específico da aprendizagem, sub: acadêmico, cor: ouro }
   - { titulo: Deficiência intelectual, sub: cognitivo, cor: azul }
 linhas:
   - { criterio: O que se parece, valores: ["resistência a tarefas escolares e profissionais que exigem autodeterminação", "criança que parece desatenta em sala e não termina o que começa", "sintomas de desatenção em ambiente acadêmico inadequado à capacidade"] }
-  - { criterio: O que separa, valores: ["negatividade, <b>hostilidade e desafio</b> — recusa a se conformar à exigência do outro, não falha de sustentação", "a desatenção <b>não produz prejuízo fora</b> do trabalho acadêmico", "os sintomas <b>não aparecem</b> em tarefas não acadêmicas"] }
-  - { criterio: A pergunta que decide, valores: ["a criança <b>não consegue</b> ou <b>não quer</b>? — e o TDAH pode gerar oposição secundária", "fora da leitura e da conta, há prejuízo atencional?", "a desatenção é excessiva <b>para a idade mental</b>?"] }
+  - { criterio: O que separa, valores: ["negatividade e desafio: recusa a se conformar, <b>não falha de sustentação</b>", "a desatenção <b>não produz prejuízo fora</b> do trabalho acadêmico", "os sintomas <b>não aparecem</b> em tarefas não acadêmicas"] }
+  - { criterio: A pergunta que decide, valores: ["<b>não consegue</b> ou <b>não quer</b>? — o TDAH também pode gerar oposição secundária", "fora da leitura e da conta, há prejuízo atencional?", "a desatenção é excessiva <b>para a idade mental</b>?"] }
 ---
 
 <Fonte>APA, <em>DSM-5</em> · diagnóstico diferencial do TDAH.</Fonte>
@@ -2006,7 +2033,7 @@ repetido na tarefa.
 
 ---
 layout: comparacao
-title: Diferenciais do TDAH · humor, ansiedade e regulação
+title: Diferenciais do TDAH · humor e regulação
 colunas:
   - { titulo: Transtornos de ansiedade, sub: e depressivos, cor: azul }
   - { titulo: Transtorno bipolar, sub: episódico, cor: terra }
@@ -2017,17 +2044,19 @@ linhas:
   - { criterio: A pergunta que decide, valores: ["a distração é atração pelo <b>externo</b> ou fuga para <b>dentro</b>?", "houve um <b>período</b> distinto, de quatro dias ou mais, diferente do habitual?", "a labilidade do TDAH muda dentro do mesmo dia; o episódio maníaco, não"] }
 ---
 
-<Nota titulo="A regra prática, quando os dois estão presentes">
-
-A maioria das crianças com desregulação disruptiva do humor **também** preenche critérios de
-TDAH — e o manual pede que ele seja **diagnosticado em separado**.
-
-</Nota>
-
 <!--
 Labilidade: mudança rápida e frequente do estado emocional.
 Pervasiva: presente de modo constante e em vários contextos.
 -->
+
+---
+layout: destaque
+kicker: Diferenciais do TDAH
+title: A regra prática, quando os dois estão presentes
+---
+
+A maioria das crianças com desregulação disruptiva do humor **também** preenche critérios de
+TDAH — e o manual pede que ele seja **diagnosticado em separado**.
 
 ---
 layout: comparacao
@@ -2151,7 +2180,7 @@ layout: default
 # Três coisas a saber sobre essa coocorrência
 
 <Criterios :itens="[
-  { letra: '·', titulo: 'Antes do DSM-5, o duplo diagnóstico era proibido', texto: 'O DSM-IV impedia diagnosticar TDAH na presença de transtorno global do desenvolvimento — parte da variação nas cifras vem dessa mudança de regra.' },
+  { letra: '·', titulo: 'Antes do DSM-5, o duplo diagnóstico era proibido', texto: 'O DSM-IV proibia diagnosticar TDAH junto com transtorno global do desenvolvimento — daí parte da variação nas cifras.' },
   { letra: '·', titulo: 'A coocorrência tem base familiar', texto: 'Parentes de pessoas com TEA têm risco aumentado de TDAH, e o padrão entre monozigóticos, dizigóticos e irmãos aponta sobreposição genética (Ghirardi et al., 2017).' },
   { letra: '·', titulo: 'O quadro somado é mais grave', texto: 'O perfil executivo do grupo TEA+TDAH aproxima-se do TDAH isolado e apresenta mais dificuldade que o TEA isolado (Ceruti et al., 2024).' },
 ]" />
@@ -2159,7 +2188,7 @@ layout: default
 <Nota titulo="O que o DSM-5 pede quando os dois estão presentes">
 
 Considerar TDAH quando a desatenção ou a hiperatividade **excedem** o típico para a idade
-mental — e, preenchidos os critérios dos dois, dar **ambos** os diagnósticos.
+mental — e dar **ambos** os diagnósticos, se os dois critérios forem preenchidos.
 
 </Nota>
 
@@ -2265,23 +2294,27 @@ layout: default
 
 </Grade>
 
-<Fonte><b>E a terceira possibilidade:</b> os dois. Nesse caso o DSM-5 pede os dois diagnósticos — e a intervenção precisa endereçar as duas coisas, porque nenhuma delas explica sozinha o que a escola descreve.</Fonte>
-
 <!--
 Registro linguístico: a variação da fala conforme o interlocutor e a situação — falar com o
 diretor e com o colega de modo diferente.
 -->
 
 ---
+layout: destaque
+kicker: L., 8 anos, 3º ano
+title: E a terceira possibilidade? <span class="ds-grifo">Os dois.</span>
+fonte: O DSM-5 pede os dois diagnósticos, e a intervenção precisa endereçar as duas coisas — nenhuma delas explica sozinha o que a escola descreve.
+---
+
+---
 layout: fecho
 kicker: Para levar
 title: Quatro coisas que ficam
 pontos:
-  - Sem a régua do desenvolvimento típico, nenhum comportamento tem tamanho — e nenhum atraso tem significado.
-  - "Atraso não é transtorno: o que separa os dois é a resposta à intervenção, observada por tempo suficiente."
-  - Não existe teste que diagnostique TEA ou TDAH. Existem instrumentos que descrevem funções — e um clínico que integra.
-  - O diferencial não é o último parágrafo do laudo. É o que decide, desde a primeira entrevista, o que perguntar.
-proximo: Os manuais técnicos de todos os instrumentos apresentados estão disponíveis na plataforma VOL.
+  - Sem a régua do desenvolvimento típico, nenhum atraso tem significado.
+  - "Atraso não é transtorno: o que separa os dois é a resposta à intervenção."
+  - Não existe teste que diagnostique TEA ou TDAH — só instrumentos, e um clínico que integra.
+  - O diferencial decide o que perguntar — não é o último parágrafo do laudo.
 ---
 
 ---
@@ -2297,6 +2330,8 @@ layout: default
   { letra: '·', texto: '<b>Vetor Editora.</b> <i>EFA — Escala de Funcionamento Adaptativo</i>. Guia de aplicação on-line, v. 2.0, e modelos de relatório. · <i>TAVIS-4 — Teste de Atenção Visual</i>, 4ª ed. Manual técnico.' },
   { letra: '·', texto: '<b>Vetor Editora.</b> Coleção <b>SAFE</b> — <i>Torre de Londres (TOL-BR)</i>, <i>CPT-Flex</i> e <i>MFFT-BR</i>. Manuais técnicos.' },
 ]" />
+
+<Fonte>Os manuais técnicos de todos os instrumentos citados estão disponíveis na plataforma VOL — Vetor Online.</Fonte>
 
 <!--
 VOL — Vetor Online: plataforma em que os manuais técnicos da coleção SAFE são

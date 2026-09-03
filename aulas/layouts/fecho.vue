@@ -48,11 +48,16 @@ const title = props.frontmatter?.title
 </template>
 
 <style scoped>
+/* `justify-content: center` centralizaria o bloco verticalmente — mas com
+   quatro pontos o bloco pode ficar mais alto que o slide, e centralizar
+   faria o título sumir por cima tanto quanto o `proximo` é encostado por
+   baixo. Começar do topo garante que, se sobrar conteúdo, ele sobra só
+   embaixo — nunca por cima do título. */
 .ds-fecho {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
 }
 
